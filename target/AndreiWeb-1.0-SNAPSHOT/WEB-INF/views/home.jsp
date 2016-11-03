@@ -17,7 +17,7 @@
 <head>
     <%@include file="/WEB-INF/views/template/headering.jsp"%>
     <%@include file="/WEB-INF/views/template/footer.jsp"%>
-    <title>Elaborat de Andrei Rotari</title>
+    <title>Totul se face repede si usoara</title>
 </head>
 
 <body>
@@ -214,15 +214,15 @@ Se Incarca
     //alert( "Load was performed. 1" );
     $( document ).ready(function() {
         //alert( "Load was performed. 2" );
-        $.get( "/userList", function( data ) {
+        $.get( "/DentalApointment/userList", function( data ) {
             $( "#userList" ).html( data );
             //alert( "Load was performed." );
         });
-        $.get( "/calendar", function( data ) {
+        $.get( "/DentalApointment/calendar", function( data ) {
             $( "#getCalendar" ).html( data );
             //alert( "Load was performed." );
         });
-        $.get( "/register", function( data ) {
+        $.get( "/DentalApointment/register", function( data ) {
             $( "#register-client" ).html( data );
             //alert( "Load was performed." );
         });
