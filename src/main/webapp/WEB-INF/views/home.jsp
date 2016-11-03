@@ -13,6 +13,7 @@
 <meta charset="UTF-8">
 <meta name="description" content="Serviciu pentru Programarea la medic">
 <meta name="keywords" content="Dinti, programare, dental, stomatologie ">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
     <%@include file="/WEB-INF/views/template/headering.jsp"%>

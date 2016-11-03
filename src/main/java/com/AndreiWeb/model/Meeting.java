@@ -27,12 +27,12 @@ public class Meeting implements Serializable{
 
     private java.sql.Time hourTime;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "doctorId")
     @JsonIgnore
     private Doctor doctor;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "clientId")
     @JsonIgnore
     private Client client;
