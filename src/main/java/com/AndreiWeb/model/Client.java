@@ -39,7 +39,7 @@ public class Client implements Serializable {
         private boolean enabled;
         
        
-        @OneToMany( mappedBy = "client", orphanRemoval= true)
+        @OneToMany( mappedBy = "client", orphanRemoval= true , fetch = FetchType.EAGER))
         public List<Meeting> meetings;
 
 //        @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
