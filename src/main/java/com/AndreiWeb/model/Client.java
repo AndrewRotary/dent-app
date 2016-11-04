@@ -38,7 +38,7 @@ public class Client implements Serializable {
 
         private boolean enabled;
         
-        @Fetch(FetchMode.JOIN) 
+       
         @OneToMany( mappedBy = "client", orphanRemoval= true)
         public List<Meeting> meetings;
 
