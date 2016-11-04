@@ -49,10 +49,12 @@ public class Doctor implements Serializable{
     @OneToOne
     @JoinColumn(name="usersId")
     private Users users;
-    
-    @ElementCollection(fetch = FetchType.EAGER)
-    @OneToMany(mappedBy = "doctor", orphanRemoval= true)
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "doctor", orphanRemoval= true)
     public List<Meeting> meetings;
+
+
+
 
     public int getDoctorId() {
         return doctorId;

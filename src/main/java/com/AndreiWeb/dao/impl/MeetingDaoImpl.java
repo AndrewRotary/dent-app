@@ -29,12 +29,13 @@ public class MeetingDaoImpl implements MeetingDao{
         @Autowired
         private SessionFactory sessionFactory;
 
-     @Autowired
+    @Autowired
     private DoctorDao doctorDao;
-@Autowired
+
+    @Autowired
     private UsersService usersService;
 
-@Autowired
+    @Autowired
     private ClientDao clientDao;
 
 
