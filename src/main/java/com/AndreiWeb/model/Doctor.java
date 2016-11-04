@@ -51,7 +51,7 @@ public class Doctor implements Serializable{
     private Users users;
     
  
-    @OneToMany(mappedBy = "doctor", orphanRemoval= true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "doctor", orphanRemoval= true, fetch = FetchType.LAZY)
     public List<Meeting> meetings;
 
     public int getDoctorId() {
