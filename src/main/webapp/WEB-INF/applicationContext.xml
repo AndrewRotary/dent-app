@@ -38,19 +38,17 @@
         <property name="maxUploadSize" value="1024000"/>
     </bean>
 
-    <security:http auto-config="true">
-        <security:intercept-url pattern="/admin/**" access="ROLE_ADMIN"/>
-        <security:intercept-url pattern="/customer/**" access="ROLE_USER"/>
+ <security:http auto-config="true">
+        <security:intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
         <security:form-login
-                login-page="/login"
-                default-target-url="/product/productList/all"
-                authentication-failure-url="/login?error"
-                username-parameter="username"
-                password-parameter="password"/>
+            login-page="/login"
+            default-target-url="/"
+            authentication-failure-url="/login?error"
+            username-parameter="username"
+            password-parameter="password" />
         <security:logout
-                logout-success-url="/login?logout"/>
+            logout-success-url="/login?logout"/>
     </security:http>
-
 
     <security:authentication-manager>
         <security:authentication-provider>
