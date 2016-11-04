@@ -94,7 +94,7 @@ public class DoctorController {
             MultipartFile doctorImage = doctor.getDoctorImage();
             String rootDirectory = request.getSession().getServletContext().getRealPath("/");
 //            path = Paths.get(rootDirectory + "WEB-INF/resources/images/"+ doctor.getDoctorId() +".png");
-            path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ doctor.getDoctorId() +".png");
+            path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ doctor.getDoctorId() + "img" + ".png");
 
 
             if (doctorImage != null && !doctorImage.isEmpty()) {
