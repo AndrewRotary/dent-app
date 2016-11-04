@@ -51,7 +51,7 @@ public class Doctor implements Serializable{
     private Users users;
     
  
-    @OneToMany(fetch = fetchType.LAZY, mappedBy = "doctor", orphanRemoval= true)
+    @OneToMany(mappedBy = "doctor", orphanRemoval= true)
     public List<Meeting> meetings;
 
 
