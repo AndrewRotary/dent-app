@@ -37,8 +37,9 @@ public class Client implements Serializable {
         private Users users;
 
         private boolean enabled;
-
-        @OneToMany(fetch = FetchType.LAZY,  mappedBy = "client", orphanRemoval= true)
+        
+        @Fetch(FetchMode.JOIN) 
+        @OneToMany( mappedBy = "client", orphanRemoval= true)
         public List<Meeting> meetings;
 
 //        @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
