@@ -50,7 +50,7 @@ public class Doctor implements Serializable{
     @JoinColumn(name="usersId")
     private Users users;
     
-    @Fetch(FetchMode.JOIN) 
+ 
     @OneToMany(mappedBy = "doctor", orphanRemoval= true)
     public List<Meeting> meetings;
 
