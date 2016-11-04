@@ -50,8 +50,8 @@ public class Doctor implements Serializable{
     @JoinColumn(name="usersId")
     private Users users;
     
- 
-    @OneToMany(mappedBy = "doctor", orphanRemoval= true, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ElementCollection(fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "doctor", orphanRemoval= true)
     public List<Meeting> meetings;
 
     public int getDoctorId() {
