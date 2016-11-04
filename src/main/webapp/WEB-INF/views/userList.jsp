@@ -14,7 +14,7 @@
             <section class="text-center">
                 <h1 class="h1-main">Medicii Oficiului "Dinti Sanatosi SRL"</h1>
                 <c:forEach items="${doctors}" var="doctor">
-                <div class="about-doctor col-xs-3">
+                <div class="about-doctor col-lg-3 col-sm-6 col-xs-12">
                     <div class="wr-img">
                         <img src="<c:url value="/resources/images/${doctor.doctorId}.png" /> " alt="image"/>
                         <div class="img-overlay">
