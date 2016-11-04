@@ -32,7 +32,7 @@ public class Meeting implements Serializable{
     @JsonIgnore
     private Doctor doctor;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "clientId")
     @JsonIgnore
     private Client client;
