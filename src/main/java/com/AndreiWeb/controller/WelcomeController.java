@@ -1,23 +1,12 @@
 package com.AndreiWeb.controller;
 
-import com.AndreiWeb.dao.ApointmentDao;
-import com.AndreiWeb.dao.DoctorDao;
-import com.AndreiWeb.model.Apointment;
-import com.AndreiWeb.model.Client;
-import com.AndreiWeb.model.Doctor;
-import com.AndreiWeb.model.Users;
 import com.AndreiWeb.service.ClientService;
 import com.AndreiWeb.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -25,9 +14,6 @@ import java.util.List;
  */
 @Controller
 public class  WelcomeController {
-
-    @Autowired
-    private ApointmentDao apointmentDao;
 
     @Autowired
     private ClientService clientService;
@@ -40,13 +26,6 @@ public class  WelcomeController {
         return "home";
     }
 
-
-    @RequestMapping("/apointmentList")
-    public String getApointment(Model model){
-        List<Apointment> apointments = apointmentDao.getAllApointments();
-        model.addAttribute("apointments", apointments );
-        return "apointmentList";
-    }
 
     //login controller
 //    public String login(@RequestParam(value = "error", required = false) String error,

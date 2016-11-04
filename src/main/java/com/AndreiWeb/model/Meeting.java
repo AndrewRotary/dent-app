@@ -1,6 +1,8 @@
 package com.AndreiWeb.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -27,12 +29,14 @@ public class Meeting implements Serializable{
 
     private java.sql.Time hourTime;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
+    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinColumn(name = "doctorId")
     @JsonIgnore
     private Doctor doctor;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
+    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinColumn(name = "clientId")
     @JsonIgnore
     private Client client;

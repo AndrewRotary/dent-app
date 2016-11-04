@@ -1,6 +1,8 @@
 package com.AndreiWeb.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -50,7 +52,8 @@ public class Doctor implements Serializable{
     @JoinColumn(name="usersId")
     private Users users;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "doctor", orphanRemoval= true)
+    @OneToMany(mappedBy = "doctor", orphanRemoval= true)
+    @LazyCollection(LazyCollectionOption.FALSE)
     public List<Meeting> meetings;
 
 

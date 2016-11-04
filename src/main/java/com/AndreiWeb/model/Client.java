@@ -1,6 +1,8 @@
 package com.AndreiWeb.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
@@ -38,7 +40,8 @@ public class Client implements Serializable {
 
         private boolean enabled;
 
-        @OneToMany(fetch = FetchType.EAGER,  mappedBy = "client", orphanRemoval= true)
+        @OneToMany(mappedBy = "client", orphanRemoval= true)
+        @LazyCollection(LazyCollectionOption.FALSE)
         public List<Meeting> meetings;
 
 //        @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
