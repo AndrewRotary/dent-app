@@ -49,8 +49,9 @@ public class Doctor implements Serializable{
     @OneToOne
     @JoinColumn(name="usersId")
     private Users users;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "doctor", orphanRemoval= true)
+    
+    @Fetch(FetchMode.JOIN) 
+    @OneToMany(mappedBy = "doctor", orphanRemoval= true)
     public List<Meeting> meetings;
 
 
