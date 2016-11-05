@@ -18,7 +18,7 @@
 <head>
     <%@include file="/WEB-INF/views/template/headering.jsp"%>
     <%@include file="/WEB-INF/views/template/footer.jsp"%>
-    <title>Elaborat de Andrei Rotari</title>
+    <title>In curs de dezvoltare</title>
 </head>
 
 <body>
@@ -71,7 +71,8 @@
                     <!-- Modal Login and Modal Register -->
 
                     <button type="button" class="log col-xs-6 choose-login" id="login">Logare <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-                    <button type="button" id="register" class="reg col-xs-6 choose-register">Inregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></button>
+                    <%--<button type="button" id="register" class="reg col-xs-6 choose-register">Inregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></button>--%>
+                    <a href="<c:url value="/register"/>" class="reg col-xs-6 choose-register">Inregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></a>
                 </div>
             </div>
             <!-- The Modal REgister -->
@@ -123,11 +124,11 @@
         <div class="container">
             <h2 class="h1-main">Programeazate</h2>
             <form>
-                <div class="col-xs-3 clinick-news">
+                <div class="col-lg-3 col-xs-6 clinick-news">
                     <h3>Informatii</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sunt et, reprehenderit asperiores!</p>
                 </div>
-                <div class="col-xs-3 opening-hours">
+                <div class="col-lg-3 col-xs-6 opening-hours">
                     <h3>Orele de lucru</h3>
                     <table>
                         <tr>
@@ -144,17 +145,17 @@
                         </tr>
                     </table>
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-lg-2 col-xs-4">
                     <input type="text" placeholder="Numele"/>
                     <input type="date">
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-lg-2 col-xs-4">
                     <input type="text" placeholder="Email"/>
                     <select>
                         <option>Medic</option>
                     </select>
                 </div>
-                <div class="form-group col-xs-2">
+                <div class="form-group col-lg-2 col-xs-4">
                     <input type="text" placeholder="Nr Tel"/>
                     <button type="submit">Send</button>
                 </div>
@@ -165,7 +166,7 @@
         <div class="row">
             <section class="wr-services">
                 <h3 class="h1-main">Serviciile prestate de "Dinti sanatosi SRL"</h3>
-                <div class="col-xs-4">
+                <div class="col-lg-4 col-xs-12">
                     <div id="ex3" class="one-service">
                         <button id="overrlay-open1"><i class="fa fa-check-circle-o"></i> Albirea a dinților</button>
                     </div>
@@ -179,7 +180,7 @@
                         <button id="overrlay-open4"><i class="fa fa-check-circle-o"></i> PROTETICĂ DENTARĂ</button>
                     </div>
                 </div>
-                <div class="col-xs-8 info-service">
+                <div class="col-lg-8 col-xs-12 info-service">
                     <div id="info-service1">
                         Prin albirea dinților se poate obține un zâmbet alb și strălucitor. Sunt mai multe metode de albire, însă tehnica cea mai recomandată de medicii stomatologi este albirea profesională. Fără îndoială, aceasta este cea mai rapidă și mai eficientă metodă.
                     </div>
@@ -229,3 +230,5 @@ Se Incarca
         });
     });
 </script>
+</body>
+</html>

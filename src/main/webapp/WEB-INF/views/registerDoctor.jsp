@@ -17,69 +17,58 @@
 
 
 <body>
-<%@include file="/WEB-INF/views/template/nav.jsp"%>
-<div class="container-wrapper">
-    <div class="container">
-        <div class="page-header">
-            <h1>Register Doctor</h1>
-
-
-        </div>
-
+<header>
+    <div class="container-fluid">
+        <%@include file="/WEB-INF/views/template/nav.jsp"%>
+    </div>
+</header>
+<div class="wr-register clearfix">
         <form:form action="${pageContext.request.contextPath}/registerD" method="post"
-                   commandName="doctor" enctype="multipart/form-data">
-
-            <h3>Basic Info</h3>
-
-            <div class="form-group">
-                <label for="name">Name</label><form:errors path="doctorName" cssStyle="color: #ff0000"/>
-                <form:input path="doctorName" id="name" class="form-Control"/>
+                   commandName="doctor" enctype="multipart/form-data" class="form-register">
+            <h3>Inregistrare Medic</h3>
+            <div class="form-group mt-30">
+                <form:errors path="doctorName" cssStyle="color: #ff0000"/>
+                <form:input path="doctorName" id="name" class="form-Control input-register" placeholder="Nume"/>
             </div>
 
             <div class="form-group">
-                <label for="doctorSurname">Surname</label>
-                <form:input path="doctorSurname" id="doctorSurname" class="form-Control"/>
+                <form:input path="doctorSurname" id="doctorSurname" class="form-Control input-register" placeholder="Prenume"/>
             </div>
 
             <div class="form-group">
-                <label for="doctorDegree">Degree</label>
-                <form:input path="doctorDegree" id="doctorDegree" class="form-Control"/>
+                <form:input path="doctorDegree" id="doctorDegree" class="form-Control input-register" placeholder="Specialitatea" />
             </div>
 
             <div class="form-group">
-                <label for="email">Email</label><span style="color: #ff0000">${emailMsgg}</span><form:errors
+                <span style="color: #ff0000">${emailMsgg}</span><form:errors
                     path="doctorEmail" cssStyle="color: #ff0000"/>
-                <form:input path="doctorEmail" id="email" class="form-Control"/>
+                <form:input path="doctorEmail" id="email" class="form-Control input-register" placeholder="Email"/>
             </div>
 
             <div class="form-group">
-                <label for="phone">Phone</label>
-                <form:input path="doctorPhone" id="phone" class="form-Control"/>
+                <form:input path="doctorPhone" id="phone" class="form-Control input-register" placeholder="Telefon"/>
             </div>
 
             <div class="form-group">
-                <label for="skayp">Skayp</label>
-                <form:input path="doctorSkayp" id="skayp" class="form-Control"/>
+                <form:input path="doctorSkayp" id="skayp" class="form-Control input-register" placeholder="skayp"/>
             </div>
 
             <div class="form-group">
-                <label for="username">Username</label>
-                <form:input path="users.username" id="username" class="form-Control"/>
+                <form:input path="users.username" id="username" class="form-Control input-register" placeholder="Nume Utilizator"/>
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <form:input path="users.password" id="password" type="password" class="form-Control"/>
+                <form:input path="users.password" id="password" type="password" class="form-Control input-register" placeholder="Parola"/>
             </div>
             <div class="form-group">
                 <label class="control-label" for="doctorImage">Incarca Imaginea</label>
-                <form:input id="doctorImage" path="doctorImage" type="file" class="" />
+                <form:input id="doctorImage" path="doctorImage" type="file" class="" lang="ro" />
             </div>
             <br><br>
-            <input type="submit" value="submit" class="btn btn-default">
-            <a href="<c:url value="/" />" class="btn btn-default">Cancel</a>
+            <input type="submit" value="submit" class="btn-register">
+            <a href="<c:url value="/" />" class="btn-cancel">Cancel</a>
         </form:form>
-    </div>
-</div>
 
+</div>
 </body>
 </html>
+
