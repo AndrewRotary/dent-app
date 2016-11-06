@@ -19,8 +19,17 @@
         <c:if test="${pageContext.request.userPrincipal.name == 'admin'}" >
             <span class="col-xs-3"><a href="<c:url value="/admin"/> ">Admin</a> </span>
         </c:if>
+        <c:if test="${not empty pageContext.request.userPrincipal}">
+
+            <c:if test="${pageContext.request.isUserInRole('DOCTOR')}">
+
+                User ${pageContext.request.userPrincipal.name} in Doctor Group
+                <span class="col-xs-3"><a href="<c:url value="/CalendarExtended"/> ">Calendar</a> </span>
+            </c:if>
+
+        </c:if>
     </div>
-    <nav id="menu" class="menu-header">
+    <nav class="menu-header">
         <a href="<c:url value="/"/>"  class="col-xs-3"><i class="fa fa-home fa-fw"></i> Acasa</a>
         <a href="#ex2" class="col-xs-3"><i class="fa fa-calendar fa-fw"></i> Orar</a>
         <a href="#ex3" class="col-xs-3"><i class="fa fa-user-md" aria-hidden="true"></i> Medici</a>

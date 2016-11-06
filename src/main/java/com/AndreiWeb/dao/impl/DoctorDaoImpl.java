@@ -34,7 +34,7 @@ public class DoctorDaoImpl implements DoctorDao{
             //la useru dat setem Rolu de User
             Authorities newAuthority = new Authorities();
             newAuthority.setUsername(doctor.getUsers().getUsername());
-            newAuthority.setAuthority("ROLE_USER");
+            newAuthority.setAuthority("ROLE_DOCTOR");
             session.saveOrUpdate(doctor.getUsers());
             session.saveOrUpdate(newAuthority);
 
