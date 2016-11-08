@@ -38,22 +38,6 @@
                         <img class="img-responsive " src="<a:url value="/resources/images/paralax-3.jpg" />"alt="slide1"/>
                     </li>
                     <li>
-                        <div class="content x2-width large">
-                            <div class="frame-white small-pading">
-                                <p id="txt-cooky">Gaseste prajituri pentru mine =)</p>
-                                <div class="drag-drop col-xs-8">
-                                    <div class="wr-teeth row">
-                                        <div id="droppable" class="mouth-open"></div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4">
-                                    <div id="draggable" class="cokie-1"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <img class="img-responsive" src="<a:url value="/resources/images/slide-1.jpg" />" alt="slide-2"/>
-                    </li>
-                    <li>
                         <div class="content large">
                             <div class="frame-white">
                                 <p>Pacienti Multumiti</p>
