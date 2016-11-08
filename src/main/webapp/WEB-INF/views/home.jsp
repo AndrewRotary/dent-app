@@ -31,7 +31,7 @@
                     <li>
                         <div class="content x2-width">
                             <div class="frame-white small-pading">
-                                <p>Informatii</p>
+                                <p>Informații</p>
                                 <span>Este important ca toate tratamentele dentare să fie efectuate de medici care fac parte din aceeași echipă. Astfel, la "Dinti Sanatosi SRL", oferim un set complet de servicii medicale prin care răspundem oricărui tip de nevoie stomatologică, fie ea de natură estetică sau funcțională.</span>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                     <li>
                         <div class="content large">
                             <div class="frame-white">
-                                <p>Pacienti Multumiti</p>
+                                <p>Pacienți Multumiți</p>
                                 <iframe src="https://www.youtube.com/embed/10r9ozshGVE" allowfullscreen>
                                 </iframe>
                             </div>
@@ -56,14 +56,14 @@
 
                     <button type="button" class="log col-xs-6 choose-login" id="login">Logare <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                     <%--<button type="button" id="register" class="reg col-xs-6 choose-register">Inregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></button>--%>
-                    <a href="<c:url value="/register"/>" class="reg col-xs-6 choose-register">Inregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                    <a href="<c:url value="/register"/>" class="reg col-xs-6 choose-register">Înregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></a>
                 </div>
             </div>
             <!-- The Modal REgister -->
             <div id="register-modal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <div class="close"><i class="fa fa-times fa-fw"></i> Inchide</div>
+                    <div class="close"><i class="fa fa-times fa-fw"></i> Închide</div>
                     <form class="form-reg" id="register-client">
                         <div class="form-group">
                             <input class="form-control" type="text" placeholder="Nume"/>
@@ -74,7 +74,7 @@
                         <div class="form-group">
                             <input class="form-control" type="text" placeholder="Parola"/>
                         </div>
-                        <button type="submit">Inregistrare</button>
+                        <button type="submit">Înregistrare</button>
                     </form>
                     <%--<%@include file="/WEB-INF/views/registerClient.jsp"%>--%>
                     <c:if test="${not empty msg}">
@@ -101,15 +101,15 @@
 </header>
 <div class="main container-fluid">
     <section class="text-center row" id="userList">
-        <h1 class="h1-main">Se incarca..</h1>
+        <h1 class="h1-main"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></h1>
 
     </section>
     <section class="row wr-make-appointment">
         <div class="container">
-            <h2 class="h1-main">Programeazate</h2>
+            <h2 class="h1-main">Programeazăte</h2>
             <form>
                 <div class="col-lg-3 col-xs-6 clinick-news">
-                    <h3>Informatii</h3>
+                    <h3>Informații</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sunt et, reprehenderit asperiores!</p>
                 </div>
                 <div class="col-lg-3 col-xs-6 opening-hours">
@@ -120,11 +120,11 @@
                             <td>8.00 - 17.00</td>
                         </tr>
                         <tr>
-                            <td>Simbata</td>
+                            <td>Simbată</td>
                             <td>9.30 - 17.30</td>
                         </tr>
                         <tr>
-                            <td>Duminica</td>
+                            <td>Duminică</td>
                             <td>9.30 - 15.00</td>
                         </tr>
                     </table>
@@ -141,7 +141,7 @@
                 </div>
                 <div class="form-group col-lg-2 col-xs-4">
                     <input type="text" placeholder="Nr Tel"/>
-                    <button type="submit">Send</button>
+                    <button type="submit">Trimite</button>
                 </div>
             </form>
         </div>
@@ -149,13 +149,13 @@
     <div class="container">
         <div class="row">
             <section class="wr-services">
-                <h3 class="h1-main">Serviciile prestate de "Dinti sanatosi SRL"</h3>
+                <h3 class="h1-main">Serviciile prestate de "Dinți sănătoși SRL"</h3>
                 <div class="col-lg-4 col-xs-12">
                     <div id="ex3" class="one-service">
                         <button id="overrlay-open1"><i class="fa fa-check-circle-o"></i> Albirea a dinților</button>
                     </div>
                     <div class="one-service">
-                        <button id="overrlay-open2"><i class="fa fa-check-circle-o"></i> Consultatie</button>
+                        <button id="overrlay-open2"><i class="fa fa-check-circle-o"></i> Consultație</button>
                     </div>
                     <div class="one-service">
                         <button id="overrlay-open3"><i class="fa fa-check-circle-o"></i> ENDODONȚIE</button>
