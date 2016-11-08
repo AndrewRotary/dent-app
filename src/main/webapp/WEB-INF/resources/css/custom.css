@@ -54,7 +54,7 @@ textarea:active {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #434343;
-  font: 400 16px 'Open Sans Condensed';
+  font: 400 16px 'Open Sans';
   text-align: center;
 }
 .wr-header-detail span .fa {
@@ -64,7 +64,7 @@ textarea:active {
   vertical-align: middle;
 }
 .menu-header a {
-  font: 400 20px / 20px 'Open Sans Condensed';
+  font: 400 20px / 20px 'Open Sans';
   text-align: center;
   background-color: #f6fbfb;
   color: #434343;
@@ -141,7 +141,7 @@ textarea:active {
 }
 .wr-slider .content h1,
 .wr-slider .content p {
-  font: 900 40px / 50px 'Open Sans Condensed';
+  font: 900 40px / 50px 'Open Sans';
   color: #434343;
   text-transform: uppercase;
 }
@@ -155,7 +155,7 @@ textarea:active {
   padding: 30px;
 }
 .wr-slider .content span {
-  font: 500 25px / 25px 'Open Sans Condensed';
+  font: 500 25px / 25px 'Open Sans';
   color: #434343;
   padding: 50px;
   display: block;
@@ -210,7 +210,7 @@ textarea:active {
   height: 35px;
   border: none;
   display: inline-block;
-  font: 400 15px 'Open Sans Condensed';
+  font: 400 15px 'Open Sans';
 }
 .wr-slider input:focus {
   background-color: rgba(182, 182, 182, 0.54);
@@ -228,7 +228,7 @@ textarea:active {
   text-align: center;
   height: 35px;
   color: #434343;
-  font: 400 15px / 35px 'Open Sans Condensed';
+  font: 400 15px / 35px 'Open Sans';
 }
 .wr-slider a:hover,
 .wr-slider button:hover {
@@ -249,7 +249,7 @@ main {
 .h1-main {
   margin: 30px auto 30px;
   color: #434343;
-  font: 700 30px / 48px 'Open Sans Condensed';
+  font: 700 30px / 48px 'Open Sans';
 }
 .wr-make-appointment {
   padding: 40px;
@@ -294,7 +294,7 @@ main {
 }
 .wr-make-appointment h3,
 .wr-make-appointment .td-title {
-  font: 700 25px / 48px 'Open Sans Condensed';
+  font: 700 25px / 48px 'Open Sans';
   color: #fff;
 }
 .wr-make-appointment .clinick-news {
@@ -302,7 +302,7 @@ main {
   height: 180px;
 }
 .wr-make-appointment .clinick-news p {
-  font: 400 15px / 20px 'Open Sans Condensed';
+  font: 400 15px / 20px 'Open Sans';
   color: #fff;
   padding: 0 20px;
 }
@@ -319,7 +319,7 @@ main {
 }
 .wr-make-appointment .opening-hours td {
   color: #fff;
-  font: 400 13px / 20px 'Open Sans Condensed';
+  font: 400 13px / 20px 'Open Sans';
   display: inline-block;
   width: 50%;
   margin-bottom: 10px;
@@ -347,22 +347,22 @@ main {
   -ms-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  font: 400 15px 'Open Sans Condensed';
+  font: 400 15px 'Open Sans';
 }
 .wr-make-appointment .form-group input:-moz-placeholder,
 .wr-make-appointment .form-group select:-moz-placeholder {
   color: #434343;
-  font: 400 15px 'Open Sans Condensed';
+  font: 400 15px 'Open Sans';
 }
 .wr-make-appointment .form-group input::-webkit-input-placeholder,
 .wr-make-appointment .form-group select::-webkit-input-placeholder {
   color: #434343;
-  font: 400 15px 'Open Sans Condensed';
+  font: 400 15px 'Open Sans';
 }
 .wr-make-appointment .form-group input::-webkit-select-placeholder,
 .wr-make-appointment .form-group select::-webkit-select-placeholder {
   color: #434343;
-  font: 400 15px 'Open Sans Condensed';
+  font: 400 15px 'Open Sans';
 }
 .wr-make-appointment .form-group input:focus,
 .wr-make-appointment .form-group select:focus,
@@ -376,21 +376,21 @@ main {
 .wr-make-appointment .form-group input:hover:-moz-placeholder,
 .wr-make-appointment .form-group select:hover:-moz-placeholder {
   color: #434343;
-  font: 400 15px 'Open Sans Condensed';
+  font: 400 15px 'Open Sans';
 }
 .wr-make-appointment .form-group input:focus::-webkit-input-placeholder,
 .wr-make-appointment .form-group select:focus::-webkit-input-placeholder,
 .wr-make-appointment .form-group input:hover::-webkit-input-placeholder,
 .wr-make-appointment .form-group select:hover::-webkit-input-placeholder {
   color: #434343;
-  font: 400 15px 'Open Sans Condensed';
+  font: 400 15px 'Open Sans';
 }
 .wr-make-appointment .form-group input:focus::-webkit-select-placeholder,
 .wr-make-appointment .form-group select:focus::-webkit-select-placeholder,
 .wr-make-appointment .form-group input:hover::-webkit-select-placeholder,
 .wr-make-appointment .form-group select:hover::-webkit-select-placeholder {
   color: #434343;
-  font: 400 15px 'Open Sans Condensed';
+  font: 400 15px 'Open Sans';
 }
 .wr-make-appointment .form-group button {
   width: 100%;
@@ -398,7 +398,7 @@ main {
   height: 40px;
   border: none;
   background-color: #8ed0ca;
-  font: 400 18px / 35px 'Open Sans Condensed';
+  font: 400 18px / 35px 'Open Sans';
   border-radius: 15px;
   color: #fff;
   border-bottom: 5px solid #f3faf9;
@@ -425,7 +425,7 @@ main {
 }
 .about-doctor .img-overlay span {
   color: #fff;
-  font: 400 18px / 35px 'Open Sans Condensed';
+  font: 400 18px / 35px 'Open Sans';
   text-align: center;
   margin: 0;
 }
@@ -464,16 +464,16 @@ main {
 .about-doctor h4 {
   margin: 5px auto 5px;
   color: #434343;
-  font: 400 28px / 48px 'Open Sans Condensed';
+  font: 400 28px / 48px 'Open Sans';
 }
 .about-doctor p {
   color: #434343;
-  font: 400 15px / 20px 'Open Sans Condensed';
+  font: 400 15px / 20px 'Open Sans';
 }
 .about-doctor span {
   text-align: right;
   color: #434343;
-  font: 400 12px / 15px 'Open Sans Condensed';
+  font: 400 12px / 15px 'Open Sans';
   display: block;
   margin: 5px auto 5px;
 }
@@ -586,11 +586,11 @@ main {
   text-align: center;
   background-color: #58bab1;
   margin: 0;
-  font: 400 15px/50px 'Open Sans Condensed';
+  font: 400 15px/50px 'Open Sans';
   color: #fff;
 }
 .section-calendar td {
-  font: 400 15px/50px 'Open Sans Condensed';
+  font: 400 15px/50px 'Open Sans';
   width: 12.5%;
   padding: 5px;
   color: #434343;
@@ -628,11 +628,11 @@ main {
 .section-calendar tr:nth-child(odd) td {
   text-align: center;
   background-color: #d6eeec;
-  font: 400 18px 'Open Sans Condensed';
+  font: 400 18px 'Open Sans';
   color: #434343;
  }
 .section-calendar h3 {
-  font: 700 30px 'Open Sans Condensed';
+  font: 700 30px 'Open Sans';
   color: #fff;
   margin-left: 40px;
   text-align: left;
@@ -646,13 +646,13 @@ main {
   background-color: #e8f5f4;
 }
 .section-calendar nav .month {
-  font: 400 35px/77px 'Open Sans Condensed';
+  font: 400 35px/77px 'Open Sans';
   color: #434343;
 }
 .section-calendar nav a,
 .section-calendar nav .select-doctor {
   height: auto;
-  font: 900 20px/37px 'Open Sans Condensed';
+  font: 900 20px/37px 'Open Sans';
   color: #434343;
   text-align: center;
   -webkit-transition: all 0.3s linear;
@@ -675,7 +675,7 @@ main {
 
 .section-calendar nav .select-doctor .dd-select {
   height: 80px;
-  font: 900 20px/37px 'Open Sans Condensed';
+  font: 900 20px/37px 'Open Sans';
   color: #434343;
   text-align: center;
   border-radius: 15px;
@@ -761,7 +761,7 @@ main {
   height: 60px;
   background-color: #f6fbfb;
   text-align: center;
-  font: 900 25px 'Open Sans Condensed';
+  font: 900 25px 'Open Sans';
   color: #434343;
 }
 .wr-services #overrlay-open1:hover,
@@ -789,7 +789,7 @@ main {
   border-radius: 15px;
 }
 .wr-services .info-service div {
-  font: 500 20px 'Open Sans Condensed';
+  font: 500 20px 'Open Sans';
   color: #434343;
   overflow: hidden;
 }
@@ -821,7 +821,7 @@ main {
 .close-animatedModal {
   margin-left: 20px;
   color: #fff;
-  font: 900 25px 'Open Sans Condensed';
+  font: 900 25px 'Open Sans';
   line-height: 50px;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -855,7 +855,7 @@ main {
   height: 40px;
   display: table-cell;
   background-color: #fff;
-  font: 900 16px 'Open Sans Condensed';
+  font: 900 16px 'Open Sans';
   color: #434343;
   border: 3px solid #d6eeec;
   text-align: center;
@@ -916,10 +916,10 @@ main {
   border-bottom: 5px solid #b6b6b6;
   width: 45%;
   border-radius: 30px;
-  font: 900 16px 'Open Sans Condensed';
+  font: 900 16px 'Open Sans';
 }
 .modal-content .choose-log-reg {
-  font: 900 18px 'Open Sans Condensed';
+  font: 900 18px 'Open Sans';
   height: 30px;
   display: inline-block;
   background-color: #b2dfdb;
@@ -940,7 +940,7 @@ main {
   padding: 0 20%;
 }
 .modal-content form .form-group {
-  font: 400 14px 'Open Sans Condensed';
+  font: 400 14px 'Open Sans';
   width: 100%;
   margin: 12px auto;
 }
@@ -954,23 +954,23 @@ main {
 }
 .modal-content form .form-group .form-control::-webkit-input-placeholder {
   color: #a1a09e;
-  font: 400 14px 'Open Sans Condensed';
+  font: 400 14px 'Open Sans';
 }
 .modal-content form .form-group .form-control:-moz-placeholder {
   color: #a1a09e;
-  font: 400 14px 'Open Sans Condensed';
+  font: 400 14px 'Open Sans';
 }
 .modal-content form .form-group .form-control::-moz-placeholder {
   color: #a1a09e;
-  font: 400 14px 'Open Sans Condensed';
+  font: 400 14px 'Open Sans';
 }
 .modal-content form .form-group .form-control:-ms-input-placeholder {
   color: #a1a09e;
-  font: 400 14px 'Open Sans Condensed';
+  font: 400 14px 'Open Sans';
 }
 .modal-content form button,
 .modal-content form .btn-log-reg {
-  font: 900 16px 'Open Sans Condensed';
+  font: 900 16px 'Open Sans';
   height: 30px;
   border-radius: 15px;
   background-color: #b2dfdb;
@@ -1052,7 +1052,7 @@ main {
 }
 .add-meeting-container a {
   height: 30px;
-  font: 900 16px/30px 'Open Sans Condensed';
+  font: 900 16px/30px 'Open Sans';
   display: block;
   text-align: center;
   position: absolute;
@@ -1069,7 +1069,7 @@ main {
 }
 #btnAddMeeting{
   display: none;
-  font: 900 16px/30px 'Open Sans Condensed';
+  font: 900 16px/30px 'Open Sans';
   height: 30px;
   border-radius: 15px;
   background-color: #dff0d8;
@@ -1087,7 +1087,7 @@ main {
 }
 .confirm-block h1{
   text-align: center;
-  font: 900 25px / 30px 'Open Sans Condensed';
+  font: 900 25px / 30px 'Open Sans';
   color: #434343;
   text-transform: uppercase;
 }
@@ -1238,7 +1238,7 @@ left: -200% !important;
   -ms-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  font: 400 15px 'Open Sans Condensed';
+  font: 400 15px 'Open Sans';
 }
 
 .btn-register{
@@ -1247,7 +1247,7 @@ left: -200% !important;
   height: 40px;
   border: none;
   background-color: #8ed0ca;
-  font: 400 18px / 35px 'Open Sans Condensed';
+  font: 400 18px / 35px 'Open Sans';
   border-radius: 15px;
   color: #fff;
   border-bottom: 5px solid #b2dfdb;
@@ -1264,7 +1264,7 @@ left: -200% !important;
   height: 40px;
   border: none;
   background-color: rgba(0, 121, 107, 0.52);;
-  font: 400 18px / 35px 'Open Sans Condensed';
+  font: 400 18px / 35px 'Open Sans';
   border-radius: 15px;
   color: #000;
   border-bottom: 5px solid #b2dfdb;
