@@ -38,13 +38,13 @@ public class DoctorController {
     private Path path;
 
     @Autowired
-        private DoctorService doctorService;
+    private DoctorService doctorService;
 
-        @Autowired
-        private UsersService usersService;
+    @Autowired
+    private UsersService usersService;
 
-        @RequestMapping("/registerD")
-        public String registerDoctor(Model model) {
+    @RequestMapping("/registerD")
+    public String registerDoctor(Model model) {
 
             Doctor doctor = new Doctor();
             Users users = new Users();
@@ -93,8 +93,8 @@ public class DoctorController {
 
             MultipartFile doctorImage = doctor.getDoctorImage();
             String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-//            path = Paths.get(rootDirectory + "WEB-INF/resources/images/"+ doctor.getDoctorId() +".png");
-            path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ doctor.getDoctorId() + ".png");
+            path = Paths.get(rootDirectory + "WEB-INF/resources/images/"+ doctor.getDoctorId() +".png");
+//            path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ doctor.getDoctorId() + ".png");
 
 
             if (doctorImage != null && !doctorImage.isEmpty()) {

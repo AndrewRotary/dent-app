@@ -53,10 +53,14 @@
                 </div>
                 <div class="nav-log-reg">
                     <!-- Modal Login and Modal Register -->
+                    <c:choose>
+                        <c:when test="${pageContext.request.userPrincipal.name != null}"><a href="<c:url value="/j_spring_security_logout"/>" class="reg col-xs-6 choose-register">Ieșire</a> </c:when>
+                        <c:otherwise>
+                            <button type="button" class="log col-xs-6 choose-login" id="login">Autentificare <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                            <a href="<c:url value="/register"/>" class="reg col-xs-6 choose-register">Înregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                            </c:otherwise>
+                    </c:choose>
 
-                    <button type="button" class="log col-xs-6 choose-login" id="login">Logare <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-                    <%--<button type="button" id="register" class="reg col-xs-6 choose-register">Inregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></button>--%>
-                    <a href="<c:url value="/register"/>" class="reg col-xs-6 choose-register">Înregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></a>
                 </div>
             </div>
             <!-- The Modal REgister -->

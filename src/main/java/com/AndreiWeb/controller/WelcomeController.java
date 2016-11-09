@@ -26,6 +26,10 @@ public class  WelcomeController {
         return "home";
     }
 
+    @RequestMapping("/soon")
+    public String underConstruction(){
+        return "underConstruction";
+    }
 
     //login controller
 //    public String login(@RequestParam(value = "error", required = false) String error,

@@ -111,7 +111,7 @@ public class CalendarController {
 
     }
 
-    @RequestMapping("/CalendarExtended")
+    @RequestMapping("doctor/CalendarExtended")
     public String EventCalendar(Model model, @AuthenticationPrincipal User activeUser) {
 
             Users user = usersService.getUsersByUsername(activeUser.getUsername());
