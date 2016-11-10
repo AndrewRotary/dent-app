@@ -7,14 +7,16 @@
 <head>
     <title>Calendar</title>
 
-    <%--<%@include file="/WEB-INF/views/template/headering.jsp"%>--%>
-    <%--<%@include file="/WEB-INF/views/template/footer.jsp"%>--%>
+    <%@include file="/WEB-INF/views/template/headering.jsp"%>
+    <%@include file="/WEB-INF/views/template/footer.jsp"%>
 </head>
 
 <body id="regular_page">
 <!-- navigation links end -->
+<div class="container-fluid">
+    <%@include file="/WEB-INF/views/template/nav.jsp"%>
+</div>
 
-<div class="row">
     <div class="wr-paralax">
         <div class="parallax">
             <div class="parallax-inner">
@@ -23,16 +25,15 @@
                         <a class="col-xs-2" href="">
                             <form method="post" class="">
                                 <label>
-                                    <i class="fa fa-chevron-left"> </i>
+                                    <i class="fa fa-chevron-left"></i>
                                     <input type="submit" name="PREV" value="" class="input-prev-next">
                                 </label>
                                 <input type="hidden" name="month" value="<%=prevMonth%>">
                                 <input type="hidden" name="year" value="<%=prevYear%>">
                             </form>
                         </a>
-
                         <span class="month col-xs-4"> <%=monthName%>, <%=intYear%></span>
-                        <a class="col-xs-2" href="">
+                        <a class="col-xs-2" href="" id="nextMonthAjax">
                             <form method="post" class="">
                                 <label>
                                     <i class="fa fa-chevron-right"> </i>
@@ -53,14 +54,12 @@
                     </nav>
                     <table class="container">
                         <tr>
-
                             <th class="th_day_cell day">Luni</th>
                             <th class="th_day_cell day">Marti</th>
                             <th class="th_day_cell day">Miercuri</th>
                             <th class="th_day_cell day">Joi</th>
                             <th class="th_day_cell day">Vineri</th>
                             <th class="th_day_cell day">Simbata</th>
-
                         </tr>
                         <%
                             {
@@ -81,25 +80,14 @@
                         if( currentDayInt == days[i][j] && currentMonthInt == aMonth.getMonth() && currentYearInt == aMonth.getYear() )
                         {
                     %><td class="today_cell">
-                        <c:if test="${pageContext.request.userPrincipal.name == null}" >
-                            <a href="<c:url value="/login"/> "><%=days[i][j]%></a>
-                        </c:if>
-                        <c:if test="${pageContext.request.userPrincipal.name != null}" >
                             <a class="demo01" data-day="<%=days[i][j] %>" data-month="<%=nextMonth%>" data-year="<%=intYear%>" value="<%=intYear%>-<%=nextMonth%>-<%=days[i][j] %>" href="#animatedModal"><%=days[i][j]%> </a>
-                        </c:if>
-
                     </td><%
                     }
                     else
                     {
                     %>
                         <td>
-                            <c:if test="${pageContext.request.userPrincipal.name == null}" >
-                                <a href="<c:url value="/login"/> "><%=days[i][j]%></a>
-                            </c:if>
-                            <c:if test="${pageContext.request.userPrincipal.name != null}" >
-                                <a class="demo01" data-day="<%=days[i][j] %>" data-month="<%=nextMonth%>" data-year="<%=intYear%>" value="<%=intYear%>-<%=nextMonth%>-<%=days[i][j] %>" href="#animatedModal"><%=days[i][j]%> </a>
-                            </c:if>
+                            <a class="demo01" data-day="<%=days[i][j] %>" data-month="<%=nextMonth%>" data-year="<%=intYear%>" value="<%=intYear%>-<%=nextMonth%>-<%=days[i][j] %>" href="#animatedModal"><%=days[i][j]%> </a>
                         </td>
                         <%
                                     }
@@ -115,7 +103,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 <!--DEMO01-->
 <div id="animatedModal">
@@ -156,6 +144,7 @@
 <%--<script src="<c:url value="/resources/js/animatedModal.min.js" />" ></script>--%>
 <script>
     $( document ).ready(function() {
+        //ajax no refresh page after change month
         //Modal
         $(".demo01").animatedModal({
             animatedIn: 'zoomIn',
@@ -206,6 +195,7 @@
             });
 
         });
+
     });
 
 </script>

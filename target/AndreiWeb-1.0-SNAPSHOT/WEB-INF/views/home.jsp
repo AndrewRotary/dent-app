@@ -54,7 +54,7 @@
                 <div class="nav-log-reg">
                     <!-- Modal Login and Modal Register -->
                     <c:choose>
-                        <c:when test="${pageContext.request.userPrincipal.name != null}"><a href="<c:url value="/j_spring_security_logout"/>" class="reg col-xs-6 choose-register">Ieșire</a> </c:when>
+                        <c:when test="${pageContext.request.userPrincipal.name != null}"><a href="<c:url value="/j_spring_security_logout"/>" class="reg col-xs-6 choose-register">Ieșire <i class="fa fa-sign-out" aria-hidden="true"></i></a> </c:when>
                         <c:otherwise>
                             <button type="button" class="log col-xs-6 choose-login" id="login">Autentificare <i class="fa fa-sign-in" aria-hidden="true"></i></button>
                             <a href="<c:url value="/register"/>" class="reg col-xs-6 choose-register">Înregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></a>
@@ -110,7 +110,7 @@
     </section>
     <section class="row wr-make-appointment">
         <div class="container">
-            <h2 class="h1-main">Programeazăte</h2>
+            <h2 class="h1-main">Programează-te</h2>
             <form>
                 <div class="col-lg-3 col-xs-6 clinick-news">
                     <h3>Informații</h3>
@@ -187,9 +187,8 @@
     </div>
 
 </div>
-<div class="container-fluid" id="getCalendar">
-Se Incarca
-</div>
+<%--<div class="container-fluid" id="getCalendar">--%>
+<%--</div>--%>
 
 <div id="map"></div>
 <div class="wr-header-detail">
@@ -204,19 +203,20 @@ Se Incarca
     //alert( "Load was performed. 1" );
     $( document ).ready(function() {
         //alert( "Load was performed. 2" );
-        $.get( "/userList", function( data ) {
+        $.get( "/DentalApointment/userList", function( data ) {
             $( "#userList" ).html( data );
             //alert( "Load was performed." );
         });
-        $.get( "/calendar", function( data ) {
-            $( "#getCalendar" ).html( data );
-            //alert( "Load was performed." );
-        });
+//        $.get( "/DentalApointment/calendar", function( data ) {
+//            $( "#getCalendar" ).html( data );
+//            //alert( "Load was performed." );
+//        });
         $.get( "/register", function( data ) {
             $( "#register-client" ).html( data );
             //alert( "Load was performed." );
         });
     });
 </script>
+
 </body>
 </html>

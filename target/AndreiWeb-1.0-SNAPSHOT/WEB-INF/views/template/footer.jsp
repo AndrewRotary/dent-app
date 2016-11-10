@@ -20,7 +20,5 @@
 <script src="<f:url value="/resources/js/fullcalendar.min.js" />" ></script>
 <script src="<f:url value="/resources/js/ro.js" />" ></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
-
-
 <script src="<f:url value="/resources/js/my-js.js" />" ></script>
 

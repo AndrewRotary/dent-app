@@ -8,7 +8,14 @@
     <div class="confirm-info-txt" id="choosedDoc" data-info="${choosedDoc.doctorId}"><span>Medic:</span> <c:out value="${choosedDoc.doctorName} ${choosedDoc.doctorSurname}" /> </div>
     <div class="confirm-info-txt" id="choosedDate" data-info="${choosedDate.toString()}"><span>Data:</span> ${choosedDate.toString()}</div>
     <div class="confirm-info-txt" ><span>Ora: </span> <div id="ModalHour">Alege Ora</div></div>
-    <div id="addMeet">Se Incarca...</div>
+    <div id="addMeet">
+        <div class="txt-need-login">Pentru a vă programa trebue sa vă logați sau să vă creați cont</div>
+        <div>
+            <a href="<c:url value="/login"/>" class="">Autentificare</a>
+            <a href="<c:url value="/register"/>" class="">Înregistrare</a>
+            <a href="<c:url value="/calendar"/>" class="">Înapoi</a>
+        </div>
+    </div>
 </div>
 
 

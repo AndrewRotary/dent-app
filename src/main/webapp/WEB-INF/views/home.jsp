@@ -110,7 +110,7 @@
     </section>
     <section class="row wr-make-appointment">
         <div class="container">
-            <h2 class="h1-main">Programeazăte</h2>
+            <h2 class="h1-main">Programează-te</h2>
             <form>
                 <div class="col-lg-3 col-xs-6 clinick-news">
                     <h3>Informații</h3>
@@ -187,9 +187,8 @@
     </div>
 
 </div>
-<div class="container-fluid" id="getCalendar">
-Se Incarca
-</div>
+<%--<div class="container-fluid" id="getCalendar">--%>
+<%--</div>--%>
 
 <div id="map"></div>
 <div class="wr-header-detail">
@@ -208,15 +207,16 @@ Se Incarca
             $( "#userList" ).html( data );
             //alert( "Load was performed." );
         });
-        $.get( "/calendar", function( data ) {
-            $( "#getCalendar" ).html( data );
-            //alert( "Load was performed." );
-        });
+//        $.get( "/calendar", function( data ) {
+//            $( "#getCalendar" ).html( data );
+//            //alert( "Load was performed." );
+//        });
         $.get( "/register", function( data ) {
             $( "#register-client" ).html( data );
             //alert( "Load was performed." );
         });
     });
 </script>
+
 </body>
 </html>
