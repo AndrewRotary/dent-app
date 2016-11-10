@@ -16,8 +16,8 @@
         <a href="<c:url value="/"/>"  class="col-xs-3"><i class="fa fa-home fa-fw"></i> Acasa</a>
         <c:choose>
             <c:when test="${pageContext.request.isUserInRole('ROLE_DOCTOR')}"> <a href="<c:url value="/doctor/CalendarExtended"/>" class="col-xs-3"><i class="fa fa-calendar fa-fw"></i> Orar</a></c:when>
-            <c:when test="${pageContext.request.isUserInRole('ROLE_USER')}"><a href="<c:url value="/calendar"/>" class="col-xs-3"><i class="fa fa-calendar fa-fw"></i>Programare</a></c:when>
-            <c:otherwise><a disabled href="<c:url value="/"/>" class="col-xs-3"><i class="fa fa-calendar fa-fw"></i> Orar</a></c:otherwise>
+            <%--<c:when test="${pageContext.request.isUserInRole('ROLE_USER')}"><a href="<c:url value="/calendar"/>" class="col-xs-3"><i class="fa fa-calendar fa-fw"></i>Programare</a></c:when>--%>
+            <c:otherwise><a href="<c:url value="/calendar"/>" class="col-xs-3"><i class="fa fa-calendar fa-fw"></i> Programare</a></c:otherwise>
         </c:choose>
         <a href="<c:url value="/soon"/>" class="col-xs-3"><i class="fa fa-user-md" aria-hidden="true"></i> Medici</a>
         <c:choose>
