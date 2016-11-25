@@ -17,7 +17,7 @@
 <header class="container-fluid">
     <%@include file="/WEB-INF/views/template/nav.jsp"%>
 </header>
-<main class="container">
+<main class="container mt-10">
     <div id='calendar'></div>
     <button class="run-manager-pacient" hidden id="register">demo01</button>
 
@@ -25,7 +25,7 @@
     <div id="register-modal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
-            <a class="close" href="<c:url value="/CalendarExtended"/>"><i class="fa fa-times fa-fw"></i> Inchide</a>
+            <a class="close" href="<c:url value="doctor/CalendarExtended"/>"><i class="fa fa-times fa-fw"></i> Inchide</a>
             <div id="get-managePacient">
                 Se Incarca
             </div>

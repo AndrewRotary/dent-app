@@ -54,10 +54,10 @@
                 <div class="nav-log-reg">
                     <!-- Modal Login and Modal Register -->
                     <c:choose>
-                        <c:when test="${pageContext.request.userPrincipal.name != null}"><a href="<c:url value="/j_spring_security_logout"/>" class="reg col-xs-6 choose-register">Ieșire <i class="fa fa-sign-out" aria-hidden="true"></i></a> </c:when>
+                        <c:when test="${pageContext.request.userPrincipal.name != null}"><a href="<c:url value="/j_spring_security_logout"/>" class="reg col-lg-6 col-xs-12 choose-register">Ieșire <i class="fa fa-sign-out" aria-hidden="true"></i></a> </c:when>
                         <c:otherwise>
-                            <button type="button" class="log col-xs-6 choose-login" id="login">Autentificare <i class="fa fa-sign-in" aria-hidden="true"></i></button>
-                            <a href="<c:url value="/register"/>" class="reg col-xs-6 choose-register">Înregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                            <button type="button" class="log col-lg-6 col-xs-12 choose-login" id="login">Autentificare <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                            <a href="<c:url value="/register"/>" class="reg col-lg-6 col-xs-12 choose-register">Înregistrare <i class="fa fa-user-plus" aria-hidden="true"></i></a>
                             </c:otherwise>
                     </c:choose>
 
@@ -108,15 +108,15 @@
         <h1 class="h1-main"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></h1>
 
     </section>
-    <section class="row wr-make-appointment">
+    <section class="wr-make-appointment">
         <div class="container">
             <h2 class="h1-main">Programează-te</h2>
             <form>
-                <div class="col-lg-3 col-xs-6 clinick-news">
+                <div class="col-lg-3 col-xs-6 col-tn-12 clinick-news">
                     <h3>Informații</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sunt et, reprehenderit asperiores!</p>
                 </div>
-                <div class="col-lg-3 col-xs-6 opening-hours">
+                <div class="col-lg-3 col-xs-6 col-tn-12 opening-hours">
                     <h3>Orele de lucru</h3>
                     <table>
                         <tr>
@@ -133,17 +133,17 @@
                         </tr>
                     </table>
                 </div>
-                <div class="form-group col-lg-2 col-xs-4">
+                <div class="form-group col-lg-2 col-xs-4 col-tn-12">
                     <input type="text" placeholder="Numele"/>
                     <input type="date">
                 </div>
-                <div class="form-group col-lg-2 col-xs-4">
+                <div class="form-group col-lg-2 col-xs-4 col-tn-12">
                     <input type="text" placeholder="Email"/>
                     <select>
                         <option>Medic</option>
                     </select>
                 </div>
-                <div class="form-group col-lg-2 col-xs-4">
+                <div class="form-group col-lg-2 col-xs-4 col-tn-12">
                     <input type="text" placeholder="Nr Tel"/>
                     <button type="submit">Trimite</button>
                 </div>
@@ -192,9 +192,9 @@
 
 <div id="map"></div>
 <div class="wr-header-detail">
-    <span class="col-xs-4"><i class="fa fa-map-marker fa-fw"></i> Puskina 44 / 22</span>
-    <span class="col-xs-4"><i class="fa fa-phone fa-fw"></i> (323) 7 22 33 </span>
-    <span class="col-xs-4"><i class="fa fa-envelope fa-fw"></i> Medical@gmail.com</span>
+    <span class="col-xs-4 col-tn-12"><i class="fa fa-map-marker fa-fw"></i> Puskina 44 / 22</span>
+    <span class="col-xs-4 col-tn-12"><i class="fa fa-phone fa-fw"></i> (323) 7 22 33 </span>
+    <span class="col-xs-4 col-tn-12"><i class="fa fa-envelope fa-fw"></i> Medical@gmail.com</span>
 </div>
 <meta name="author" content="Andrei Rotari">
 
@@ -203,11 +203,11 @@
     //alert( "Load was performed. 1" );
     $( document ).ready(function() {
         //alert( "Load was performed. 2" );
-        $.get( "/DentalApointment/userList", function( data ) {
+        $.get( "/userList", function( data ) {
             $( "#userList" ).html( data );
             //alert( "Load was performed." );
         });
-//        $.get( "/DentalApointment/calendar", function( data ) {
+//        $.get( "/calendar", function( data ) {
 //            $( "#getCalendar" ).html( data );
 //            //alert( "Load was performed." );
 //        });

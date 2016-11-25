@@ -252,7 +252,6 @@ main {
   font: 700 30px / 48px 'Open Sans';
 }
 .wr-make-appointment {
-  padding: 40px;
   text-align: center;
   overflow: hidden;
 }
@@ -639,7 +638,7 @@ main {
   margin-bottom: 15px;
 }
 .section-calendar nav {
-  max-height: 200px;
+
   font-size: 0;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -786,7 +785,7 @@ main {
   margin-bottom: 40px;
   background-color: #b2dfdb;
   border: 1px solid #b2dfdb;
-  height: 324px;
+  height: auto;
   border-radius: 15px;
 }
 .wr-services .info-service div {
@@ -1147,20 +1146,19 @@ main {
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
   display: inline-block;
-  width: 40px;
-  height: 40px;
   border-radius: 30px;
-  color: #31708f;
-  background-color: #d9edf7;
-  border:1px solid  #31708f;
-
+  color: #b2dfdb;
+  background-color: #fff;
+  border:1px solid  #b2dfdb;
   margin:auto;
   font-size: 23px;
-  padding:8px;
-  vertical-align: middle;
+   vertical-align: middle;
+}
+.btn-for-pacient i {
+  padding: 8px;
 }
 .btn-for-pacient:hover{
-  color: #fff;
+
   border-style: dashed;
   border-width: 1px;
 }
@@ -1172,8 +1170,7 @@ main {
   transition: all 0.3s linear;
   position: relative;
   overflow: hidden;
-  width: 50px;
-  height: 50px;
+
   MArgin:auto;
 
 }
@@ -1276,3 +1273,211 @@ display: block;
   border-bottom: 2px solid #b2dfdb;
   color: #000;
 }
+/*Responsive*/
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+  .wr-slider .nav-log-reg{
+    width: 35%;
+  }
+  .wr-services .one-service {
+    margin: 5px 30px 20px 0;
+    width: 40%;
+    display: inline-block;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .wr-slider .content span {
+    font: 500 22px / 29px 'Open Sans';
+    color: #434343;
+    padding: 20px;
+  }
+  .outside .bx-next, .outside .bx-prev{
+    width: 100px;
+  }
+  .outside .bx-prev{
+    text-align: left;
+  }
+  .outside .bx-prev i{
+    display: inline;
+  }
+  .wr-services #overrlay-open1, .wr-services #overrlay-open2, .wr-services #overrlay-open3, .wr-services #overrlay-open4{
+    font-size:20px;
+  }
+  .menu-header a{
+    font-size: 16px;
+  }
+  .modal-content{
+    width: 95%;
+  }
+}
+/** Small devices (tablets, 768px and up) *!*/
+@media (max-width: 768px) {
+  .menu-header a{
+    font-size: 0;
+  }
+  .menu-header a i {
+    font-size: 20px;
+  }
+  .wr-slider .content{
+    top: 5%;
+  }
+  .wr-slider .content.x2-width{
+    right: 15%;
+    left: 15%;
+  }
+  .wr-slider .content span{
+    font-size: 18px;
+  }
+  .wr-services .one-service {
+    margin: 0px 20px 20px 0;
+    width: 100%;
+   }
+  .wr-services #overrlay-open1, .wr-services #overrlay-open2, .wr-services #overrlay-open3, .wr-services #overrlay-open4{
+    height: 34px;
+    font-size: 18px;
+  }
+  .wr-header-detail span .fa{
+    display: block;
+    margin: 10px auto ;
+  }
+  .wr-slider .content .frame-white{
+    padding: 20px;
+  }
+  .modal-content{
+    width: 85%;
+  }
+  .form-log, .form-reg{
+    padding:0 5%;
+  }
+  .wr-slider .content{
+    left: 10%;
+    right: 10%;
+  }
+  .wr-slider .content h1, .wr-slider .content p{
+    font-size: 30px;
+  }
+  .form-register{
+    width: 95%;
+  }
+  .section-calendar{
+    margin-top: 40px;
+  }
+  .section-calendar nav .month{
+    font: 400 36px/42px 'Open Sans';
+  }
+  #myDropdown{
+    margin-top: 20px;
+  }
+  .section-calendar nav a .fa, .section-calendar nav .select-doctor .fa{
+    padding:20px 0;
+  }
+  .section-calendar nav .month {
+    font: 400 30px/37px 'Open Sans';
+  }
+  .th_day_cell{
+    font: 400 12px 'Open Sans';
+  }
+  .confirm-block{
+    width: 90%;
+  }
+
+  .btn-for-pacient i{
+    padding: 5px ;
+  }
+  .table-doctor-meetings td{
+    padding: 10px;
+  }
+}
+/*small devices max 480*/
+@media (max-width: 480px) {
+  .menu-header a{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .outside{
+    display: none;
+  }
+  .wr-slider .content.x2-width{
+    right: 5%;
+    left: 5%;
+  }
+  .wr-slider .content .frame-white.small-pading{
+    padding: 20px;
+  }
+  .wr-slider .content{
+    right: 5%;
+    left: 5%;
+  }
+  .wr-slider .content h1, .wr-slider .content p{
+    font-size: 20px;
+  }
+  .wr-slider .nav-log-reg{
+    margin-right: 15px;
+    width: calc(100% - 30px);
+    border-bottom-left-radius:0;
+    border-left:0;
+    border-top-left-radius:0;
+
+  }
+  .wr-slider a, .wr-slider button .fa{
+    margin-left: 0;
+  }
+  .wr-slider a, .wr-slider button{
+    border-bottom: 1px solid #000;
+  }
+  .wr-make-appointment .form-group{
+    margin-top: 0;
+  }
+  .wr-make-appointment .opening-hours{
+    margin-bottom: 20px;
+  }
+  .h1-main{
+    font-size: 24px;
+  }
+  .wr-services .one-service{
+    margin: 3px auto;
+  }
+  .wr-services .info-service{
+    margin: 20px auto;
+    padding: 15px;
+  }
+  .wr-services .info-service div{
+    font-size: 17px;
+  }
+  .wr-header-detail span .fa{
+    display: inline-block;
+  }
+  .wr-header-detail span{
+    padding: 0;
+  }
+  .modal-content{
+    width: 100%;
+  }
+  .confirm-info-txt{
+    padding:0 10%;
+  }
+  #btnAddMeeting{
+    width: 80%;
+  }
+  .add-meeting-container a{
+    width: 80%;
+  }
+  .fc th{
+    font-size: 11px;
+  }
+  .fc-toolbar{
+    padding: 10px;
+  }
+  .table-doctor-meetings td{
+    padding: 0px 3px;
+    max-width: 90px;
+  }
+  .btn-for-pacient{
+    margin: 5px auto;
+  }
+}
+.mt-10{
+  margin-top: 10px !important;
+}
+

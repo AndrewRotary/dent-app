@@ -10,7 +10,6 @@
 
 <script src="<f:url value="/resources/js/jquery-1.7.2.min.js" />" ></script>
 <script src="<f:url value="/resources/js/jquery-ui.min.js" />" ></script>
-<script src="<f:url value="/resources/js/jquery.ui.touch-punch.min.js" />" ></script>
 <script src="<f:url value="/resources/js/headhesive.min.js" />" ></script>
 <script src="<f:url value="/resources/js/animatedModal.min.js" />" ></script>
 <script src="<f:url value="/resources/js/jquery.bxslider.min.js" />" ></script>

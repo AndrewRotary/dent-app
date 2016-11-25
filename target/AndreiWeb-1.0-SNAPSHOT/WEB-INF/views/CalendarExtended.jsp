@@ -17,7 +17,7 @@
 <header class="container-fluid">
     <%@include file="/WEB-INF/views/template/nav.jsp"%>
 </header>
-<main class="container">
+<main class="container mt-10">
     <div id='calendar'></div>
     <button class="run-manager-pacient" hidden id="register">demo01</button>
 

@@ -9,7 +9,7 @@
 <div class="row">
     <div id="ex1" class="wr-header-detail col-xs-12">
         <c:if test="${pageContext.request.userPrincipal.name == 'admin'}" >
-            <span class="col-xs-3"><a href="<c:url value="/admin"/> ">Admin</a> </span>
+            <span class="col-sm-3 col-xs-6"><a href="<c:url value="/admin"/> ">Admin</a> </span>
         </c:if>
     </div>
     <nav class="menu-header">
@@ -21,7 +21,7 @@
         </c:choose>
         <a href="<c:url value="/soon"/>" class="col-xs-3"><i class="fa fa-user-md" aria-hidden="true"></i> Medici</a>
         <c:choose>
-            <c:when test="${pageContext.request.userPrincipal.name != null}"> <a href="<c:url value="/soon"/>" class="col-xs-3"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Bun venit: ${pageContext.request.userPrincipal.name} </a></c:when>
+            <c:when test="${pageContext.request.userPrincipal.name != null}"> <a href="<c:url value="/soon"/>" class="col-xs-3"><i class="fa fa-user fa-fw" aria-hidden="true"></i> ${pageContext.request.userPrincipal.name} </a></c:when>
             <c:otherwise> <a href="<c:url value="/soon"/>" class="col-xs-3"><i class="fa fa-user fa-fw" aria-hidden="true"></i> </a></c:otherwise>
         </c:choose>
     </nav>

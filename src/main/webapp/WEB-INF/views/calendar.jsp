@@ -22,7 +22,7 @@
             <div class="parallax-inner">
                 <div id="ex2" class="section-calendar">
                     <nav class="container">
-                        <a class="col-xs-2" href="">
+                        <a class="col-md-2 col-xs-3 col-tn-2" href="">
                             <form method="post" class="">
                                 <label>
                                     <i class="fa fa-chevron-left"></i>
@@ -32,8 +32,8 @@
                                 <input type="hidden" name="year" value="<%=prevYear%>">
                             </form>
                         </a>
-                        <span class="month col-xs-4"> <%=monthName%>, <%=intYear%></span>
-                        <a class="col-xs-2" href="" id="nextMonthAjax">
+                        <span class="month col-md-4 col-xs-6 col-tn-8"> <%=monthName%>, <%=intYear%></span>
+                        <a class="col-md-2 col-xs-3 col-tn-2" href="" id="nextMonthAjax">
                             <form method="post" class="">
                                 <label>
                                     <i class="fa fa-chevron-right"> </i>
@@ -44,7 +44,7 @@
                                 <input type="hidden" name="year" value="<%=nextYear%>">
                             </form>
                         </a>
-                        <div class="col-xs-4 select-doctor">
+                        <div class="col-md-4  col-xs-12 select-doctor">
                             <select id="myDropdown">
                                 <c:forEach items="${doctorTop}" var="doctorTop">
                                     <option value="${doctorTop.doctorId}" data-imagesrc="<c:url value="/resources/images/${doctorTop.doctorId}.png" /> " data-description="${doctorTop.doctorDegree}">${doctorTop.doctorName} ${doctorTop.doctorSurname}</option>

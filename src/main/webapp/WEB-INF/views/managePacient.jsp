@@ -29,11 +29,9 @@
                    </td>
                    <td>
                        <div class="wr-functions-pacients">
-                           <div class="wr-ovverlay">
-                               <a class="btn-for-pacient btn-view-card-pacient" href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-                               <a class="btn-for-pacient btn-delete-meeting-pacient" href="<spring:url value="/client/MeetingCalendar/deleteMeeting/${meeting.meetingId}"/> "><i class="fa fa-trash" aria-hidden="true"></i></a>
-                           </div>
-                           <a href="client/MeetingCalendar/editMeeting/${meeting.meetingId}" class="btn-edti-meeting btn-for-pacient"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                               <a class="btn-for-pacient" href=""><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                               <a class="btn-for-pacient" href="<spring:url value="/client/MeetingCalendar/deleteMeeting/${meeting.meetingId}"/> "><i class="fa fa-trash" aria-hidden="true"></i></a>
+                           <a href="client/MeetingCalendar/editMeeting/${meeting.meetingId}" class="btn-for-pacient"><i class="fa fa-pencil" aria-hidden="true"></i></a>
 
                        </div>
                    </td>

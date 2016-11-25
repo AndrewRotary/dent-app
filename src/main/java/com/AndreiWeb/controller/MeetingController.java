@@ -96,7 +96,7 @@ public class MeetingController {
 
         return "hourVerify";
     }
-    @RequestMapping("/managePacient/{date}")
+    @RequestMapping("doctor/managePacient/{date}")
     public String managePacient(@PathVariable Date date, Model model, @AuthenticationPrincipal User activeUser){
         Users user = usersService.getUsersByUsername(activeUser.getUsername());
         Doctor myDoc = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
@@ -179,7 +179,7 @@ public class MeetingController {
         return "redirect:/client/MeetingCalendar";
     }
 
-    @RequestMapping("/client/MeetingCalendar/editMeeting/{meetingId}")
+    @RequestMapping("/doctor/editMeeting/{meetingId}")
     public String editMeeting(@PathVariable Integer meetingId, Model model){
         Meeting meeting = meetingDao.getMeetingById(meetingId);
         List<Doctor> doctors = doctorDao.getAllDoctors();
@@ -192,7 +192,7 @@ public class MeetingController {
     }
 
 
-    @RequestMapping(value="/client/MeetingCalendar/editMeeting", method = RequestMethod.POST)
+    @RequestMapping(value="/doctor/editMeeting", method = RequestMethod.POST)
     public String editMeetingPost(@Valid @ModelAttribute("meeting") Meeting meeting, BindingResult result,
                                   HttpServletRequest request) {
         if(result.hasErrors()) {
