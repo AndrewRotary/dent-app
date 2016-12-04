@@ -25,7 +25,7 @@
     <div id="register-modal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
-            <a class="close" href="<c:url value="/CalendarExtended"/>"><i class="fa fa-times fa-fw"></i> Inchide</a>
+            <a class="close" href="<c:url value="doctor/CalendarExtended"/>"><i class="fa fa-times fa-fw"></i> Inchide</a>
             <div id="get-managePacient">
                 Se Incarca
             </div>

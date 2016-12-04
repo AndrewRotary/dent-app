@@ -108,48 +108,48 @@
         <h1 class="h1-main"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></h1>
 
     </section>
-    <section class="wr-make-appointment">
-        <div class="container">
-            <h2 class="h1-main">Programează-te</h2>
-            <form>
-                <div class="col-lg-3 col-xs-6 col-tn-12 clinick-news">
-                    <h3>Informații</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sunt et, reprehenderit asperiores!</p>
-                </div>
-                <div class="col-lg-3 col-xs-6 col-tn-12 opening-hours">
-                    <h3>Orele de lucru</h3>
-                    <table>
-                        <tr>
-                            <td>Luni - Vineri</td>
-                            <td>8.00 - 17.00</td>
-                        </tr>
-                        <tr>
-                            <td>Simbată</td>
-                            <td>9.30 - 17.30</td>
-                        </tr>
-                        <tr>
-                            <td>Duminică</td>
-                            <td>9.30 - 15.00</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="form-group col-lg-2 col-xs-4 col-tn-12">
-                    <input type="text" placeholder="Numele"/>
-                    <input type="date">
-                </div>
-                <div class="form-group col-lg-2 col-xs-4 col-tn-12">
-                    <input type="text" placeholder="Email"/>
-                    <select>
-                        <option>Medic</option>
-                    </select>
-                </div>
-                <div class="form-group col-lg-2 col-xs-4 col-tn-12">
-                    <input type="text" placeholder="Nr Tel"/>
-                    <button type="submit">Trimite</button>
-                </div>
-            </form>
-        </div>
-    </section>
+    <%--<section class="wr-make-appointment">--%>
+        <%--<div class="container">--%>
+            <%--<h2 class="h1-main">Programează-te</h2>--%>
+            <%--<form>--%>
+                <%--<div class="col-lg-3 col-xs-6 col-tn-12 clinick-news">--%>
+                    <%--<h3>Informații</h3>--%>
+                    <%--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sunt et, reprehenderit asperiores!</p>--%>
+                <%--</div>--%>
+                <%--<div class="col-lg-3 col-xs-6 col-tn-12 opening-hours">--%>
+                    <%--<h3>Orele de lucru</h3>--%>
+                    <%--<table>--%>
+                        <%--<tr>--%>
+                            <%--<td>Luni - Vineri</td>--%>
+                            <%--<td>8.00 - 17.00</td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td>Simbată</td>--%>
+                            <%--<td>9.30 - 17.30</td>--%>
+                        <%--</tr>--%>
+                        <%--<tr>--%>
+                            <%--<td>Duminică</td>--%>
+                            <%--<td>9.30 - 15.00</td>--%>
+                        <%--</tr>--%>
+                    <%--</table>--%>
+                <%--</div>--%>
+                <%--<div class="form-group col-lg-2 col-xs-4 col-tn-12">--%>
+                    <%--<input type="text" placeholder="Numele"/>--%>
+                    <%--<input type="date">--%>
+                <%--</div>--%>
+                <%--<div class="form-group col-lg-2 col-xs-4 col-tn-12">--%>
+                    <%--<input type="text" placeholder="Email"/>--%>
+                    <%--<select>--%>
+                        <%--<option>Medic</option>--%>
+                    <%--</select>--%>
+                <%--</div>--%>
+                <%--<div class="form-group col-lg-2 col-xs-4 col-tn-12">--%>
+                    <%--<input type="text" placeholder="Nr Tel"/>--%>
+                    <%--<button type="submit">Trimite</button>--%>
+                <%--</div>--%>
+            <%--</form>--%>
+        <%--</div>--%>
+    <%--</section>--%>
     <div class="container">
         <div class="row">
             <section class="wr-services">
@@ -211,10 +211,10 @@
 //            $( "#getCalendar" ).html( data );
 //            //alert( "Load was performed." );
 //        });
-        $.get( "/register", function( data ) {
-            $( "#register-client" ).html( data );
-            //alert( "Load was performed." );
-        });
+//        $.get( "/register", function( data ) {
+//            $( "#register-client" ).html( data );
+//            //alert( "Load was performed." );
+//        });
     });
 </script>
 

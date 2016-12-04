@@ -1476,8 +1476,22 @@ display: block;
   .btn-for-pacient{
     margin: 5px auto;
   }
+
 }
 .mt-10{
   margin-top: 10px !important;
 }
 
+.table-striped tr:nth-of-type(odd) {
+    background-color: #d6eeec;
+}
+.table-striped tr:nth-of-type(even) {
+    background-color: #a0d8d3;
+}
+.table-striped td,
+.table-striped th{
+
+    padding: 5px 10px;
+    border: 1px solid #000;
+    text-align: center;
+}

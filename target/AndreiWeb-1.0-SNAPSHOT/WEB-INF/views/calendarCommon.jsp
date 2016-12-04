@@ -55,7 +55,7 @@
         prevYear--;
     }
     int nextMonth = intMonth+1;
-    if ( nextMonth==12 )
+    if ( nextMonth > 12 )
     {
         nextMonth = 0;
         nextYear++;

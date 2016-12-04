@@ -183,7 +183,7 @@
             var dataMonth = $(this).data('month');
             var dataDay = $(this).data('day');
             var dataYear = $(this).data('year');
-            if (dataMonth < 10) {
+            if (dataMonth < 12) {
                 dataMonth = '0' + dataMonth;
             }
             $('.inputDate').val(dateValue);

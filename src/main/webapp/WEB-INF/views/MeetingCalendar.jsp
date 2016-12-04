@@ -17,22 +17,18 @@
 <div class="container-fluid">
     <%@include file="/WEB-INF/views/template/nav.jsp"%>
 </div>
-<p>Hire you can change Apointment Table</p>
+
 <div class="container">
-
-
-    <h1>Calendar</h1>
+    <div class="margin-auto">
+    <h1 class="text-center mt-40">Aici poți anula și viziona istoria programărilor.</h1>
     <!-- Table -->
-    <table class="table">
-
+    <table class="table-striped">
         <tr>
-            <th>ID---------</th>
-            <th>doctor-------</th>
-            <th>dateTime--------</th>
-            <th>time----------</th>
-            <th>client---------</th>
-
-
+            <th>ID</th>
+            <th>Medic</th>
+            <th>Data</th>
+            <th>Ora</th>
+            <th>Funcții</th>
         </tr>
         <c:forEach items="${meetings}" var="meeting">
             <tr>
@@ -40,17 +36,13 @@
                 <td> ${meeting.doctor.doctorName} </td>
                 <td> ${meeting.dateTime}</td>
                 <td> ${meeting.hourTime}</td>
-                <td> ${meeting.client.clientName}</td>
-
-                <td> <a href="<spring:url value="/client/MeetingCalendar/deleteMeeting/${meeting.meetingId}"/> ">Delete <i class="fa fa-trash" aria-hidden="true"></i></a></td>
-                <%--<td> <a href="<spring:url value="/client/MeetingCalendar/editMeeting/${meeting.meetingId}"/> "> <i class="fa fa-pencil" aria-hidden="true"></i></a></td>--%>
-
+                <td> <a href="<spring:url value="/client/MeetingCalendar/deleteMeeting/${meeting.meetingId}"/> "> Anulează programarea <i class="fa fa-trash" aria-hidden="true"></i></a></td>
             </tr>
         </c:forEach>
     </table>
-
 </div>
-<a href="<spring:url value="/client/MeetingCalendar/addMeeting"/>"> Add Apointment</a>
+</div>
+<a href="<spring:url value="/calendar"/>"> Adaugă programare</a>
 
 </body>
 </html>
