@@ -80,14 +80,14 @@
                         if( currentDayInt == days[i][j] && currentMonthInt == aMonth.getMonth() && currentYearInt == aMonth.getYear() )
                         {
                     %><td class="today_cell">
-                            <a class="demo01" data-day="<%=days[i][j] %>" data-month="<%=nextMonth%>" data-year="<%=intYear%>" value="<%=intYear%>-<%=nextMonth%>-<%=days[i][j] %>" href="#animatedModal"><%=days[i][j]%> </a>
+                            <a class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" href="#animatedModal"><%=days[i][j]%> </a>
                     </td><%
                     }
                     else
                     {
                     %>
                         <td>
-                            <a class="demo01" data-day="<%=days[i][j] %>" data-month="<%=nextMonth%>" data-year="<%=intYear%>" value="<%=intYear%>-<%=nextMonth%>-<%=days[i][j] %>" href="#animatedModal"><%=days[i][j]%> </a>
+                            <a class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" href="#animatedModal"><%=days[i][j]%> </a>
                         </td>
                         <%
                                     }
