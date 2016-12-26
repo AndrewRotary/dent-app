@@ -9,46 +9,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<html>
-<head>
-    <title>Login page</title>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
-</head>
-
-<body>
-<header>
-    <div class="container-fluid">
-<%@include file="/WEB-INF/views/template/nav.jsp"%>
-      </div>
-    </header>
-<div class="container center-text">
-    <h2>Login with username and password</h2>
-
     <c:if test="${not empty msg}">
         <div class="msg"></div>
     </c:if>
-
-
     <form name="loginForm" action="<c:url value="/j_spring_security_check"/>" method="post" >
           <c:if test="${not empty error}">
               <div class="error" style="collor: #ff0766">${error}</div>
           </c:if>
-          <div class="col-xs-3">
-              <p>User:</p>
-              <input type="text" name="username" class="form-control">
+          <div class="form-group">
+              <label for="user">Nume Utilizator:</label>
+              <input type="text" name="username" class="form-control" id="user">
           </div>
-        <div class="col-xs-3">
-            <p>Password:</p>
-            <input type="password" name="password" class="form-control">
+        <div class="form-group">
+            <label for="pwd">Parola de autentificare:</label>
+            <input type="password" name="password" class="form-control" id="pwd">
         </div>
-        <div class="col-xs-3">
-
-            <input type="submit" value="Submit" class="btn-default">
-
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn btn-primary">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </div>
     </form>
-</div>
-
-</body>
-</html>

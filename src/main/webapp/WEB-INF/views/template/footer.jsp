@@ -8,16 +8,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<script src="<f:url value="/resources/js/jquery-1.7.2.min.js" />" ></script>
+<script src="<f:url value="/resources/js/jquery-3.1.1.min.js" />" ></script>
 <script src="<f:url value="/resources/js/jquery-ui.min.js" />" ></script>
-<script src="<f:url value="/resources/js/headhesive.min.js" />" ></script>
-<script src="<f:url value="/resources/js/animatedModal.min.js" />" ></script>
-<script src="<f:url value="/resources/js/jquery.bxslider.min.js" />" ></script>
+<script src="<f:url value="/resources/js/bootstrap.min.js" />" ></script>
 <script src="<f:url value="/resources/js/ddslick.js" />" ></script>
-<script src="<f:url value="/resources/js/animatedModal.min.js" />" ></script>
 <script src="<f:url value="/resources/js/moment.min.js" />" ></script>
 <script src="<f:url value="/resources/js/fullcalendar.min.js" />" ></script>
 <script src="<f:url value="/resources/js/ro.js" />" ></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
+
 <script src="<f:url value="/resources/js/my-js.js" />" ></script>
 
