@@ -44,6 +44,11 @@ public class Client implements Serializable {
         @LazyCollection(LazyCollectionOption.FALSE)
         public List<Meeting> meetings;
 
+
+        @OneToOne
+        @JoinColumn(name = "fisaID")
+        private Fisa fisa;
+
 //        @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 //        @JsonIgnore
 //        private ArrayList<Meeting> meeting;
@@ -102,5 +107,13 @@ public class Client implements Serializable {
 
     public void setMeetings(List<Meeting> meetings) {
         this.meetings = meetings;
+    }
+
+    public Fisa getFisa() {
+        return fisa;
+    }
+
+    public void setFisa(Fisa fisa) {
+        this.fisa = fisa;
     }
 }

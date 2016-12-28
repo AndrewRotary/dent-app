@@ -68,12 +68,12 @@
     <c:choose>
         <c:when test="${contor == true}">
                 <td>
-                    <button class="make-apoint disabled" id="" value="${hour}"  data-toggle="tooltip" title="Alege Ora Libera" disabled><i class="fa fa-hand-rock-o" aria-hidden="true"></i></button>
+                    <button class="make-apoint disabled" id="" value="${hour}"  data-toggle="tooltip" title="Alege Ora Libera" disabled><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button>
                 </td>
         </c:when>
         <c:otherwise>
                 <td>
-                    <button class="make-apoint"  id="SetModalHour" value="${hour}" data-toggle="tooltip" title="${hour}"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i></button>
+                    <button class="make-apoint"  id="SetModalHour" value="${hour}" data-toggle="tooltip" title="${hour}"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span></button>
                 </td>
         </c:otherwise>
     </c:choose>

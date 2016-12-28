@@ -19,30 +19,29 @@
 </div>
 
 <div class="container">
-    <div class="margin-auto">
-    <h1 class="text-center mt-40">Aici poți anula și viziona istoria programărilor.</h1>
+    <h1 class="text-center mt-40 text-meeting-top">Istoria programărilor.</h1>
+    <div class="table-responsive">
     <!-- Table -->
-    <table class="table-striped">
+    <table class="table table-hover table-stripped">
         <tr>
-            <th>ID</th>
             <th>Medic</th>
             <th>Data</th>
             <th>Ora</th>
-            <th>Funcții</th>
+            <th>Modifică</th>
         </tr>
         <c:forEach items="${meetings}" var="meeting">
             <tr>
-                <td> ${meeting.meetingId}</td>
                 <td> ${meeting.doctor.doctorName} </td>
                 <td> ${meeting.dateTime}</td>
                 <td> ${meeting.hourTime}</td>
-                <td> <a href="<spring:url value="/client/MeetingCalendar/deleteMeeting/${meeting.meetingId}"/> "> Anulează programarea <i class="fa fa-trash" aria-hidden="true"></i></a></td>
+                <td> <a href="<spring:url value="/client/MeetingCalendar/deleteMeeting/${meeting.meetingId}"/> " class="btn btn-danger"> Anulează programarea </a></td>
             </tr>
         </c:forEach>
     </table>
+        <a href="<spring:url value="/calendar"/>" class="btn btn-warning"> Adaugă programare</a>
 </div>
 </div>
-<a href="<spring:url value="/calendar"/>"> Adaugă programare</a>
+<%@include file="/WEB-INF/views/template/footer.jsp"%>
 
 </body>
 </html>

@@ -20,7 +20,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"> <a href="<c:url value="/"/>"  class="">Acasa</a></li>
+                    <li> <a href="<c:url value="/"/>"  class="">Acasa</a></li>
                     <li>
                         <c:choose>
                             <c:when test="${pageContext.request.isUserInRole('ROLE_DOCTOR')}"><a href="<c:url value="/doctor/CalendarExtended"/>" class="">Orar</a></c:when>
@@ -29,29 +29,32 @@
                         </c:choose>
                     </li>
                     <li><a href="<c:url value="/soon"/>" class=""> Medici</a></li>
-                    <li>
-                        <c:choose>
-                            <c:when test="${pageContext.request.userPrincipal.name != null}"> <a href="<c:url value="/soon"/>" class=""> ${pageContext.request.userPrincipal.name} </a></c:when>
-                            <c:otherwise> <a href="<c:url value="/soon"/>" class=""> </a></c:otherwise>
-                        </c:choose>
-                    </li>
                     <c:if test="${pageContext.request.userPrincipal.name == 'admin'}" >
-                        <span class="col-sm-3 col-xs-6"><a href="<c:url value="/admin"/> ">Admin</a> </span>
+                       <li> <a href="<c:url value="/admin"/> ">Admin Panel</a></li>
                     </c:if>
                     <li><a href="#contact">Contact</a></li>
-                    <c:choose>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <c:choose>
+                            <c:when test="${pageContext.request.userPrincipal.name != null}"> <a href="<c:url value="/soon"/>" class=""><span class="glyphicon glyphicon-user"></span> ${pageContext.request.userPrincipal.name} </a></c:when>
+                            <c:otherwise> <a href="<c:url value="/soon"/>" class=""> </a></c:otherwise>
+                        </c:choose>
+                      </li>
+                    <li>
+                        <c:choose>
                         <c:when test="${pageContext.request.userPrincipal.name != null}">
-                            <li><a href="<c:url value="/j_spring_security_logout"/>" class="">Ieșire <i class="fa fa-sign-out" aria-hidden="true"></i></a></li> </c:when>
-                        <c:otherwise>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Utilizator<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><button type="button" class="" data-toggle="modal" data-target="#ModalAutentificare">Autentificare</button>
-                                    </li>
-                                    <li> <a href="<c:url value="/register"/>" class="">Înregistrare </a></li>
-                                </ul>
-                            </li>
-                        </c:otherwise>
+                    <li><a href="<c:url value="/j_spring_security_logout"/>" class="">Ieșire <i class="fa fa-sign-out" aria-hidden="true"></i></a></li> </c:when>
+                    <c:otherwise>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Utilizator<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><button type="button" class="" data-toggle="modal" data-target="#ModalAutentificare">Autentificare</button>
+                                </li>
+                                <li> <a href="<c:url value="/register"/>" class="">Înregistrare </a></li>
+                            </ul>
+                        </li>
+                    </c:otherwise>
                     </c:choose>
                 </ul>
             </div><!--/.nav-collapse -->

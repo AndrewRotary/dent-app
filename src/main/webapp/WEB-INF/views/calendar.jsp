@@ -2,13 +2,14 @@
 <%-- TODO: CLEAN UP THE PAGE TAG ABOVE --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="calendarCommon.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
 <head>
     <title>Calendar</title>
 
     <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/footer.jsp"%>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
 </head>
 
 <body id="regular_page">
@@ -16,7 +17,6 @@
 <div class="container-fluid">
     <%@include file="/WEB-INF/views/template/nav.jsp"%>
 </div>
-
     <div class="wr-paralax">
         <div class="parallax">
             <div class="parallax-inner">
@@ -80,14 +80,14 @@
                         if( currentDayInt == days[i][j] && currentMonthInt == aMonth.getMonth() && currentYearInt == aMonth.getYear() )
                         {
                     %><td class="today_cell">
-                            <a class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" href="#animatedModal"><%=days[i][j]%> </a>
+                            <button  type="button" data-toggle="modal" data-target="#modalAfisareOre" class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" ><%=days[i][j]%> </button>
                     </td><%
                     }
                     else
                     {
                     %>
                         <td>
-                            <a class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" href="#animatedModal"><%=days[i][j]%> </a>
+                            <button type="button" data-toggle="modal" data-target="#modalAfisareOre" class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" ><%=days[i][j]%> </button>
                         </td>
                         <%
                                     }
@@ -104,67 +104,29 @@
         </div>
     </div>
 
-
-<!--DEMO01-->
-<div id="animatedModal">
-    <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
-    <a class="close-animatedModal" href="<c:url value="/"/>"><i class="fa fa-times fa-fw"></i> CLOSE</a>
-    <div class="modal-content">
-        <!--Your modal content goes here-->
-        <div id="trol">
-            <span class="h1-main">Ora curenta</span>
-            <section class="row wr-make-appointment in-table">
-                <div class="col-xs-4 col-xs-offset-8">
-                    <h2 class="h1-main">Inregistreazate</h2>
-                    <form>
-                        <div class="form-group col-xs-2">
-                            <input type="text" placeholder="Numele"/>
-                        </div>
-                        <div class="form-group col-xs-2">
-                            <input type="text" placeholder="Email"/>
-                        </div>
-                        <meta name="author" content="Andrei Rotari"/>
-                        <div class="form-group col-xs-2">
-                            <input type="text" placeholder="Numarul de contact"/>
-                            <button type="submit">Send</button>
-                        </div>
-                    </form>
+<%--Modal Afiseaza orele--%>
+<div class="modal fade" id="modalAfisareOre" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Programare</h4>
+            </div>
+            <div class="modal-body" id="getListaOre">
+                <div class="wr-loader">
+                    <div class="loader"></div>
                 </div>
-            </section>
-
-            <table class="table-day">
-
-
-            </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
+            </div>
         </div>
     </div>
 </div>
-
-
-<%--<script src="<c:url value="/resources/js/animatedModal.min.js" />" ></script>--%>
+<%@include file="/WEB-INF/views/template/footer.jsp"%>
 <script>
     $( document ).ready(function() {
-        //ajax no refresh page after change month
-        //Modal
-        $(".demo01").animatedModal({
-            animatedIn: 'zoomIn',
-            animatedOut: 'bounceOut',
-
-            color: 'rgba(178, 223, 219, 0.92)',
-            // Callbacks
-            beforeOpen: function () {
-                console.log("The animation was called");
-            },
-            afterOpen: function () {
-                console.log("The animation is completed");
-            },
-            beforeClose: function () {
-                console.log("The animation was called");
-            },
-            afterClose: function () {
-                console.log("The animation is completed");
-            }
-        });
         //DropdownJs
         $('#myDropdown').ddslick({
             width: ' 100%',
@@ -172,12 +134,10 @@
             onSelected: function(selectedData){
                 var value = selectedData.selectedData.value;
                 DoctorId = value;
-                //$("#selectDoc").val(value);
             }
         });
 
         var DoctorId, Date;
-
         $('.demo01').on('click', function () {
             var dateValue = $(this).attr('value');
             var dataMonth = $(this).data('month');
@@ -191,7 +151,7 @@
             Date = dataYear + '-' + dataMonth + '-' + dataDay;
 
             $.get("calendar/hourVerify/" + DoctorId + "/" + dateValue + "", function (data) {
-                $("#trol").html(data);
+                $("#getListaOre").html(data);
             });
 
         });

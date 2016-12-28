@@ -53,13 +53,13 @@ textarea:active {
 .wr-header-detail span {
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #434343;
-  font: 400 16px 'Open Sans';
+  color: #fff;
+  font: 400 12px 'Open Sans';
   text-align: center;
 }
 .wr-header-detail span .fa {
-  font-size: 20px;
-  color: #00796b;
+  font-size: 15px;
+  color: #fff;
   margin-right: 15px;
   vertical-align: middle;
 }
@@ -621,7 +621,7 @@ main {
   background-color: #009688;
 }
 .section-calendar .today_cell a,
-.today_cell button{
+.section-calendar .today_cell button{
   background-color: #68c36a;
 }
 .section-calendar tr:nth-child(odd) td {
@@ -865,15 +865,14 @@ main {
   width: 35px;
   height: 30px;
   border-radius: 15px;
-  color: #31708f;
-  background-color: #d9edf7;
-
-  border: 1px dashed #bce8f1;
+  color: #337ab7;
+  font-size: 23px;
+  background-color: transparent;
+  border: none;
   margin: auto;
 }
 .modal-content td .disabled{
-  color: #8a6d3b;
-  background-color: #fcf8e3;
+  color: #d9534f;
 }
 .modal-content .time {
   width: 160px;
@@ -882,7 +881,7 @@ main {
   width: 18%;
 }
 #map {
-  height: 600px;
+  height: 240px;
   width: 100%;
   display: block;
   border-top: 10px solid #434343;
@@ -1482,20 +1481,6 @@ display: block;
   margin-top: 10px !important;
 }
 
-.table-striped tr:nth-of-type(odd) {
-    background-color: #d6eeec;
-}
-.table-striped tr:nth-of-type(even) {
-    background-color: #a0d8d3;
-}
-.table-striped td,
-.table-striped th{
-
-    padding: 5px 10px;
-    border: 1px solid #000;
-    text-align: center;
-}
-
 /*bootsrap*/
 .navbar-inverse .navbar-nav>li>a{
   font-size: 18px;
@@ -1515,7 +1500,15 @@ display: block;
   line-height: 1.42857143;
   color: #333;
   white-space: nowrap;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
 }
+.dropdown-menu>li>button:hover{
+  background-color: #e8e8e8;
+}
+
 .mb-nav{
   margin-bottom: 50px;
 }
@@ -1545,4 +1538,37 @@ display: block;
 .carousel-inner .item img{
   height: 100%;
   width: 100%;
+}
+.carousel-inner{
+  height: 550px;
+}
+.carousel-caption{
+  top: 18%;
+}
+#modalAfisareOre{
+  padding-top: 50px;
+}
+#modalAfisareOre .modal-dialog{
+  width: 80%;
+}
+#modalAfisareOre .modal-content{
+  width: 100%;
+}
+
+.th_day_cell{
+  text-align: center;
+}
+.text-meeting-top{
+  font-size:38px;
+  padding: 40px 0;
+  text-align: center;
+}
+.bg-4{
+  background-color: #2f2f2f;
+  color: #ffffff;
+  padding-bottom: 20px;
+  margin-top: 40px;
+}
+.bg-4 a{
+  color: #fff;
 }

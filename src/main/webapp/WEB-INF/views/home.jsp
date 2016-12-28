@@ -18,7 +18,7 @@
 
 <head>
     <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/footer.jsp"%>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
     <title>In curs de dezvoltare</title>
 </head>
 
@@ -120,7 +120,7 @@
             </div>
             <div id="menu3" class="tab-pane fade">
                 <h3>PROTETICĂ DENTARĂ</h3>
-                <p>     Protetica este o ramură a stomatologiei care oferă soluții de înlocuire (protezare) a substanței dentare pierdute parțial (prin carii avansate, fracturi etc) sau chiar total (prin extracții). Lucrările protetice pot fi fixe, atunci când mai există dinți “de legătură”, astfel încât să se poată realiza lucrări ce vor fi cimentate pe dinții vecini spațiului edentat, sau mobile, respectiv protezele dentare. Aceste lucrări sunt realizate în laboratorul de tehnică dentară și necesită mai multe etape până la finalizarea lor. Materialele utilizate sunt diverse, în funcție de indicația terapeutică, dar și de dorințele pacientului (vorbim de lucrări de metal, metalo-compozite, metalo- ceramice, ceramică pe zirconiu sau chiar integral ceramice).
+                <p> Protetica este o ramură a stomatologiei care oferă soluții de înlocuire (protezare) a substanței dentare pierdute parțial (prin carii avansate, fracturi etc) sau chiar total (prin extracții). Lucrările protetice pot fi fixe, atunci când mai există dinți “de legătură”, astfel încât să se poată realiza lucrări ce vor fi cimentate pe dinții vecini spațiului edentat, sau mobile, respectiv protezele dentare. Aceste lucrări sunt realizate în laboratorul de tehnică dentară și necesită mai multe etape până la finalizarea lor. Materialele utilizate sunt diverse, în funcție de indicația terapeutică, dar și de dorințele pacientului (vorbim de lucrări de metal, metalo-compozite, metalo- ceramice, ceramică pe zirconiu sau chiar integral ceramice).
                 </p>
             </div>
         </div>
@@ -128,34 +128,21 @@
 
     </div>
 
-<%--<div class="container-fluid" id="getCalendar">--%>
-<%--</div>--%>
-
-<div id="map"></div>
-<div class="wr-header-detail">
-    <span class="col-xs-4 col-tn-12"><i class="fa fa-map-marker fa-fw"></i> Puskina 44 / 22</span>
-    <span class="col-xs-4 col-tn-12"><i class="fa fa-phone fa-fw"></i> (323) 7 22 33 </span>
-    <span class="col-xs-4 col-tn-12"><i class="fa fa-envelope fa-fw"></i> Medical@gmail.com</span>
-</div>
 
 
+<%@include file="/WEB-INF/views/template/footer.jsp"%>
 
 <script>
-    //alert( "Load was performed. 1" );
     $( document ).ready(function() {
         //alert( "Load was performed. 2" );
         $.get( "/userList", function( data ) {
             $( "#userList" ).html( data );
-            //alert( "Load was performed." );
         });
 //        $.get( "/calendar", function( data ) {
 //            $( "#getCalendar" ).html( data );
 //            //alert( "Load was performed." );
 //        });
-//        $.get( "/register", function( data ) {
-//            $( "#register-client" ).html( data );
-//            //alert( "Load was performed." );
-//        });
+
     });
 </script>
 

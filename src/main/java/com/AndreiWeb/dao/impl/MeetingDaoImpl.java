@@ -26,8 +26,8 @@ import java.util.List;
 @Transactional
 public class MeetingDaoImpl implements MeetingDao{
 
-        @Autowired
-        private SessionFactory sessionFactory;
+    @Autowired
+    private SessionFactory sessionFactory;
 
     @Autowired
     private DoctorDao doctorDao;

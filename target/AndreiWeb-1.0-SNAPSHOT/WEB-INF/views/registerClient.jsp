@@ -16,7 +16,7 @@
 
 <head>
     <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/footer.jsp"%>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
     <title>In curs de dezvoltare</title>
 </head>
 
