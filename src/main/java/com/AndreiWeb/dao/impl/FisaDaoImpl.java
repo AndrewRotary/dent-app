@@ -4,6 +4,7 @@ package com.AndreiWeb.dao.impl;
 import com.AndreiWeb.dao.ClientDao;
 import com.AndreiWeb.dao.FisaDao;
 import com.AndreiWeb.model.Client;
+import com.AndreiWeb.model.Dintii;
 import com.AndreiWeb.model.Doctor;
 import com.AndreiWeb.model.Fisa;
 import org.hibernate.Session;
@@ -30,22 +31,27 @@ public class FisaDaoImpl implements FisaDao {
 
     public void addFisa(Fisa fisa) {
         Session session = sessionFactory.getCurrentSession();
-        //din jsp ieu Id Client si il pastrez in Meeting.clientId
-
         session.saveOrUpdate(fisa);
         Client client = clientDao.getClientById(fisa.getClient().getClientId());
+        Dintii dintii = fisa.getDintii();
+        dintii.setFisa(fisa);
+        session.saveOrUpdate(dintii);
         client.setFisa(fisa);
-        System.out.println("----------------------------------------------" + fisa.getAcuze() + client.getClientName());
         session.saveOrUpdate(client);
         session.flush();
     }
 
     public void editFisa(Fisa fisa) {
-
+        Session session = sessionFactory.getCurrentSession();
+        session.saveOrUpdate(fisa);
+        session.flush();
     }
 
     public Fisa getFisaById(int fisaId) {
-        return null;
+        Session session = sessionFactory.getCurrentSession();
+        Fisa fisa = (Fisa) session.get(Fisa.class, fisaId);
+        session.flush();
+        return fisa;
     }
 
     public List<Fisa> getAllFisas() {

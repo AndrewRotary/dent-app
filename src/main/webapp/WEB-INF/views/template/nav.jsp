@@ -16,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Teză de Licență</a>
+                <a class="navbar-brand" href="<c:url value="/"/>">Teză de Licență</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -32,7 +32,13 @@
                     <c:if test="${pageContext.request.userPrincipal.name == 'admin'}" >
                        <li> <a href="<c:url value="/admin"/> ">Admin Panel</a></li>
                     </c:if>
-                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <c:choose>
+                            <c:when test="${pageContext.request.isUserInRole('ROLE_DOCTOR')}"><a href="<c:url value="/doctor"/>" class="">Pacienți</a></c:when>
+                            <c:otherwise><a href="/soon">Contact</a></c:otherwise>
+                        </c:choose>
+
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>

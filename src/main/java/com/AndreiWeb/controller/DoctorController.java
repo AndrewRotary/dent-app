@@ -1,6 +1,7 @@
 package com.AndreiWeb.controller;
 
 import com.AndreiWeb.dao.DoctorDao;
+import com.AndreiWeb.dao.StareaDintiDao;
 import com.AndreiWeb.model.Doctor;
 import com.AndreiWeb.model.Users;
 import com.AndreiWeb.service.DoctorService;

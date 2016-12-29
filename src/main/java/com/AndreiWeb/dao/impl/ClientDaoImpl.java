@@ -23,42 +23,42 @@ public class ClientDaoImpl  implements ClientDao {
         @Autowired
         private SessionFactory sessionFactory;
 
-        public void addClient(Client client) {
-            Session session = sessionFactory.getCurrentSession();
-            //scoatem din jsp datele la username si parola si le setam prin usersid lauser in db
-            client.getUsers().setClient(client);
-            client.getUsers().setEnabled(true);
-            session.saveOrUpdate(client);
-            session.saveOrUpdate(client.getUsers());
+    public void addClient(Client client) {
+        Session session = sessionFactory.getCurrentSession();
+        //scoatem din jsp datele la username si parola si le setam prin usersid lauser in db
+        client.getUsers().setClient(client);
+        client.getUsers().setEnabled(true);
+        session.saveOrUpdate(client);
+        session.saveOrUpdate(client.getUsers());
 
-            //la useru dat setem Rolu de User
-            Authorities newAuthority = new Authorities();
-            newAuthority.setUsername(client.getUsers().getUsername());
-            newAuthority.setAuthority("ROLE_USER");
-            session.saveOrUpdate(client.getUsers());
-            session.saveOrUpdate(newAuthority);
+        //la useru dat setem Rolu de User
+        Authorities newAuthority = new Authorities();
+        newAuthority.setUsername(client.getUsers().getUsername());
+        newAuthority.setAuthority("ROLE_USER");
+        session.saveOrUpdate(client.getUsers());
+        session.saveOrUpdate(newAuthority);
 
-            session.saveOrUpdate(client);
+        session.saveOrUpdate(client);
 
 
-            session.flush();
-        }
+        session.flush();
+    }
 
-        public Client getClientById (int clientId) {
-            Session session = sessionFactory.getCurrentSession();
-            return (Client) session.get(Client.class, clientId);
-        }
+    public Client getClientById (int clientId) {
+        Session session = sessionFactory.getCurrentSession();
+        return (Client) session.get(Client.class, clientId);
+    }
 
-        public List<Client> getAllClients() {
-            Session session = sessionFactory.getCurrentSession();
-            Query query = session.createQuery("from Client");
-            List<Client> clientList = query.list();
+    public List<Client> getAllClients() {
+        Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery("from Client");
+        List<Client> clientList = query.list();
 
-            return clientList;
-        }
+        return clientList;
+    }
 
-        public Client getClientByUsers (Integer usersId) {
-            Session session = sessionFactory.getCurrentSession();
-            return (Client) session.get(Client.class, usersId);
-        }
+    public Client getClientByUsers (Integer usersId) {
+        Session session = sessionFactory.getCurrentSession();
+        return (Client) session.get(Client.class, usersId);
+    }
 }

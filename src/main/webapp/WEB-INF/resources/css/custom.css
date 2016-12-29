@@ -1011,16 +1011,7 @@ main {
 .ds-none {
   display: none;
 }
-.rotate-cookie {
-  transform: rotate(10deg);
-  background-image: url(../images/mouth.png) !important;
-}
-.hover-cookie {
-  background-image: url(../images/mouth-3.png) !important;
-}
-.wr-teeth .mouth-open {
-  background-image: url(../images/mouth-2.png);
-}
+
 #draggable {
   width: 100px;
   height: 100px;
