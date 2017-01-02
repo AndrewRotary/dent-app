@@ -73,6 +73,7 @@ public class FisaController {
     @RequestMapping(value="/editFisa", method = RequestMethod.POST)
     public String editMeetingPost(@Valid @ModelAttribute("fisa") Fisa fisa, BindingResult result,
                                   HttpServletRequest request) {
+        
 
         fisaDao.editFisa(fisa);
         return "redirect:/doctor";

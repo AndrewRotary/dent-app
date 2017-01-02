@@ -55,7 +55,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-log-in"></span> Utilizator<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><button type="button" class="" data-toggle="modal" data-target="#ModalAutentificare">Autentificare</button>
+                                <li><a href="<c:url value="/login"/>">Autentificare</a>
                                 </li>
                                 <li> <a href="<c:url value="/register"/>" class="">Înregistrare </a></li>
                             </ul>
@@ -66,30 +66,4 @@
             </div><!--/.nav-collapse -->
         </div>
     </nav>
-
-<div class="modal fade" id="ModalAutentificare" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Autentificare</h4>
-            </div>
-            <div class="modal-body" id="getAutentificare">
-                <p>Some text in the modal.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-//Cheama in modal pagina login
-    $( document ).ready(function() {
-        $.get( "/DentalApointment/login", function( data ) {
-            $( "#getAutentificare" ).html( data );
-        });
-    });
-</script>
 <div class="mb-nav"></div>

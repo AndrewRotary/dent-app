@@ -62,7 +62,7 @@
         <%--<div class="form-group">--%>
             <%--<label>Dinte 2</label>--%>
             <%--<form:input path="dintii.ul2" value="${fisa.dintii.ul2}" class="form-control"/>--%>
-        <%--</div>--%>
+        </div>
 
         <button type="submit" class="btn btn-default">Submit</button>
 
