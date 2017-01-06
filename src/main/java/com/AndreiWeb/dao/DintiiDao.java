@@ -18,4 +18,5 @@ public interface DintiiDao {
     List<Dintii> getAllDintiis();
 
     void deleteDintii(int dintiiId);
+
 }

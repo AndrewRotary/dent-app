@@ -327,4 +327,43 @@ public class Dintii implements Serializable {
     public void setFisa(Fisa fisa) {
         this.fisa = fisa;
     }
+
+    public void ClearDinti(ArrayList<String> ur1, ArrayList<String> ur2, ArrayList<String> ur3, ArrayList<String> ur4, ArrayList<String> ur5, ArrayList<String> ur6, ArrayList<String> ur7, ArrayList<String> ur8,
+                           ArrayList<String> ul1, ArrayList<String> ul2, ArrayList<String> ul3, ArrayList<String> ul4, ArrayList<String> ul5, ArrayList<String> ul6, ArrayList<String> ul7, ArrayList<String> ul8,
+                           ArrayList<String> dr1, ArrayList<String> dr2, ArrayList<String> dr3, ArrayList<String> dr4, ArrayList<String> dr5, ArrayList<String> dr6, ArrayList<String> dr7, ArrayList<String> dr8,
+                           ArrayList<String> dl1, ArrayList<String> dl2, ArrayList<String> dl3, ArrayList<String> dl4, ArrayList<String> dl5, ArrayList<String> dl6, ArrayList<String> dl7, ArrayList<String> dl8){
+        this.ur1 = null;
+        this.ur2 = null;
+        this.ur3 = null;
+        this.ur4 = null;
+        this.ur8 = null;
+        this.ur5 = null;
+        this.ur6 = null;
+        this.ur7 = null;
+        this.ul1 = null;
+        this.ul2 = null;
+        this.ul3 = null;
+        this.ul4 = null;
+        this.ul8 = null;
+        this.ul5 = null;
+        this.ul6 = null;
+        this.ul7 = null;
+        this.dr1 = null;
+        this.dr2 = null;
+        this.dr3 = null;
+        this.dr4 = null;
+        this.dr8 = null;
+        this.dr5 = null;
+        this.dr6 = null;
+        this.dr7 = null;
+        this.dl1 = null;
+        this.dl2 = null;
+        this.dl3 = null;
+        this.dl4 = null;
+        this.dl8 = null;
+        this.dl5 = null;
+        this.dl6 = null;
+        this.dl7 = null;
+
+    }
 }

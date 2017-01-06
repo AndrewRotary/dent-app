@@ -1,14 +1,9 @@
 package com.AndreiWeb.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
-
-import static java.awt.font.TransformAttribute.IDENTITY;
+import java.time.LocalDate;
 
 /**
  * Created by Root on 27.12.2016.
@@ -32,6 +27,9 @@ public class Fisa implements Serializable {
 
     @Column(name = "dataCreat")
     private Date date;
+
+    @Column(name = "dataEditat")
+    private Date dateEdited;
 
     private String diagnosticul;
 
@@ -133,5 +131,13 @@ public class Fisa implements Serializable {
 
     public void setStareaMucoaseiEtc(String stareaMucoaseiEtc) {
         this.stareaMucoaseiEtc = stareaMucoaseiEtc;
+    }
+
+    public Date getDateEdited() {
+        return dateEdited;
+    }
+
+    public void setDateEdited(Date dateEdited) {
+        this.dateEdited = dateEdited;
     }
 }

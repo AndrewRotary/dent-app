@@ -1,6 +1,7 @@
 package com.AndreiWeb.controller;
 
 import com.AndreiWeb.dao.ClientDao;
+import com.AndreiWeb.dao.DintiiDao;
 import com.AndreiWeb.dao.FisaDao;
 import com.AndreiWeb.dao.StareaDintiDao;
 import com.AndreiWeb.model.*;
@@ -37,14 +38,14 @@ public class FisaController {
     @Autowired
     private StareaDintiDao stareaDintiDao;
 
+    @Autowired
+    private DintiiDao dintiiDao;
+
     @RequestMapping("/doctor/addFisa/{clientId}")
     public String addFisaGet(@PathVariable Integer clientId, Model model){
         Fisa fisa = new Fisa();
         Dintii dintii = new Dintii();
         Client client = clientDao.getClientById(clientId);
-        long millis=System.currentTimeMillis();
-        java.sql.Date date=new java.sql.Date(millis);
-        fisa.setDate(date);
         fisa.setClient(client);
         fisa.setDintii(dintii);
         List<StareaDinti> starea = stareaDintiDao.getAllStareaDinti();
@@ -60,21 +61,23 @@ public class FisaController {
                               @ModelAttribute("fisa") Fisa fisa, @ModelAttribute("client") Client client, @ModelAttribute("dintii") Dintii dintii){
         Client client1 = clientDao.getClientById(fisa.getClient().getClientId());
         fisaDao.addFisa(fisa);
+
         return "redirect:/doctor";
     }
 
     @RequestMapping("/editFisa/{fisaId}")
     public String editMeeting(@PathVariable Integer fisaId, Model model){
         Fisa fisa = fisaDao.getFisaById(fisaId);
+        List<StareaDinti> starea = stareaDintiDao.getAllStareaDinti();
         model.addAttribute("fisa" , fisa);
+        model.addAttribute("starea", starea);
         return "editFisa";
     }
 
     @RequestMapping(value="/editFisa", method = RequestMethod.POST)
     public String editMeetingPost(@Valid @ModelAttribute("fisa") Fisa fisa, BindingResult result,
                                   HttpServletRequest request) {
-        
-
+//        dintiiDao.editDintii(fisa.getDintii());
         fisaDao.editFisa(fisa);
         return "redirect:/doctor";
     }

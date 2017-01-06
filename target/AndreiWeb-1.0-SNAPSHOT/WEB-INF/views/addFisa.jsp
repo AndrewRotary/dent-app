@@ -89,14 +89,14 @@
                     <th> <form:checkbox path="dintii.ul3" value="${StareaDinti.numeStare}" /></th>
                     <th> <form:checkbox path="dintii.ul2" value="${StareaDinti.numeStare}" /></th>
                     <th> <form:checkbox path="dintii.ul1" value="${StareaDinti.numeStare}" /></th>
-                    <th> <form:checkbox path="dintii.ul1" value="${StareaDinti.numeStare}" /></th>
-                    <th> <form:checkbox path="dintii.ul2" value="${StareaDinti.numeStare}" /></th>
-                    <th> <form:checkbox path="dintii.ul3" value="${StareaDinti.numeStare}" /></th>
-                    <th> <form:checkbox path="dintii.ul4" value="${StareaDinti.numeStare}" /></th>
-                    <th> <form:checkbox path="dintii.ul5" value="${StareaDinti.numeStare}" /></th>
-                    <th> <form:checkbox path="dintii.ul6" value="${StareaDinti.numeStare}" /></th>
-                    <th> <form:checkbox path="dintii.ul7" value="${StareaDinti.numeStare}" /></th>
-                    <th> <form:checkbox path="dintii.ul8" value="${StareaDinti.numeStare}" /></th>
+                    <th> <form:checkbox path="dintii.ur1" value="${StareaDinti.numeStare}" /></th>
+                    <th> <form:checkbox path="dintii.ur2" value="${StareaDinti.numeStare}" /></th>
+                    <th> <form:checkbox path="dintii.ur3" value="${StareaDinti.numeStare}" /></th>
+                    <th> <form:checkbox path="dintii.ur4" value="${StareaDinti.numeStare}" /></th>
+                    <th> <form:checkbox path="dintii.ur5" value="${StareaDinti.numeStare}" /></th>
+                    <th> <form:checkbox path="dintii.ur6" value="${StareaDinti.numeStare}" /></th>
+                    <th> <form:checkbox path="dintii.ur7" value="${StareaDinti.numeStare}" /></th>
+                    <th> <form:checkbox path="dintii.ur8" value="${StareaDinti.numeStare}" /></th>
                 </tr>
                 </c:forEach>
                     </tbody>
@@ -137,14 +137,14 @@
                         <th> <form:checkbox path="dintii.dl3" value="${StareaDinti.numeStare}" /></th>
                         <th> <form:checkbox path="dintii.dl2" value="${StareaDinti.numeStare}" /></th>
                         <th> <form:checkbox path="dintii.dl1" value="${StareaDinti.numeStare}" /></th>
-                        <th> <form:checkbox path="dintii.dl1" value="${StareaDinti.numeStare}" /></th>
-                        <th> <form:checkbox path="dintii.dl2" value="${StareaDinti.numeStare}" /></th>
-                        <th> <form:checkbox path="dintii.dl3" value="${StareaDinti.numeStare}" /></th>
-                        <th> <form:checkbox path="dintii.dl4" value="${StareaDinti.numeStare}" /></th>
-                        <th> <form:checkbox path="dintii.dl5" value="${StareaDinti.numeStare}" /></th>
-                        <th> <form:checkbox path="dintii.dl6" value="${StareaDinti.numeStare}" /></th>
-                        <th> <form:checkbox path="dintii.dl7" value="${StareaDinti.numeStare}" /></th>
-                        <th> <form:checkbox path="dintii.dl8" value="${StareaDinti.numeStare}" /></th>
+                        <th> <form:checkbox path="dintii.dr1" value="${StareaDinti.numeStare}" /></th>
+                        <th> <form:checkbox path="dintii.dr2" value="${StareaDinti.numeStare}" /></th>
+                        <th> <form:checkbox path="dintii.dr3" value="${StareaDinti.numeStare}" /></th>
+                        <th> <form:checkbox path="dintii.dr4" value="${StareaDinti.numeStare}" /></th>
+                        <th> <form:checkbox path="dintii.dr5" value="${StareaDinti.numeStare}" /></th>
+                        <th> <form:checkbox path="dintii.dr6" value="${StareaDinti.numeStare}" /></th>
+                        <th> <form:checkbox path="dintii.dr7" value="${StareaDinti.numeStare}" /></th>
+                        <th> <form:checkbox path="dintii.dr8" value="${StareaDinti.numeStare}" /></th>
                     </tr>
                 </c:forEach>
 
