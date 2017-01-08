@@ -14,9 +14,9 @@
 
 <body id="regular_page">
 <!-- navigation links end -->
-<div class="container-fluid">
+
     <%@include file="/WEB-INF/views/template/nav.jsp"%>
-</div>
+
     <div class="wr-paralax">
         <div class="parallax">
             <div class="parallax-inner">
@@ -77,17 +77,18 @@
                     else
                     {
                         // this is "today"
-                        if( currentDayInt == days[i][j] && currentMonthInt == aMonth.getMonth() && currentYearInt == aMonth.getYear() )
+                        if( currentDayInt <= days[i][j] && currentMonthInt == aMonth.getMonth() && currentYearInt == aMonth.getYear() )
                         {
                     %><td class="today_cell">
-                            <button  type="button" data-toggle="modal" data-target="#modalAfisareOre" class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" ><%=days[i][j]%> </button>
+                        <button type="button" data-toggle="modal" data-target="#modalAfisareOre" class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" ><%=days[i][j]%> </button>
                     </td><%
                     }
                     else
                     {
                     %>
                         <td>
-                            <button type="button" data-toggle="modal" data-target="#modalAfisareOre" class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" ><%=days[i][j]%> </button>
+                            <button disabled type="button" title="Nedisponibil" class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" ><%=days[i][j]%> </button>
+
                         </td>
                         <%
                                     }
@@ -124,7 +125,10 @@
         </div>
     </div>
 </div>
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
+
+    <%@include file="/WEB-INF/views/template/footer.jsp"%>
+
+
 <script>
     $( document ).ready(function() {
         //DropdownJs
@@ -155,6 +159,7 @@
             });
 
         });
+
 
     });
 

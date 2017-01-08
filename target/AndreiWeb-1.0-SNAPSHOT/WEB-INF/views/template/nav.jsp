@@ -7,16 +7,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+<header class="container inner-wr">
+    <h1 class="text-center col-xs-12">Dinți sănătoși SRL</h1>
+</header>
+<div class="bg-white container">
+    <nav class="my-nav navbar navbar-inverse row">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<c:url value="/"/>">Teză de Licență</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -64,6 +66,6 @@
                     </c:choose>
                 </ul>
             </div><!--/.nav-collapse -->
-        </div>
+
     </nav>
-<div class="mb-nav"></div>
+</div>

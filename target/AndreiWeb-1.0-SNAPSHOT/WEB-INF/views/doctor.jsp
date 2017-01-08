@@ -24,7 +24,7 @@
 </head>
 <body>
 <%@include file="/WEB-INF/views/template/nav.jsp"%>
-<div class="container">
+<div class="container inner-wr">
     <h1 class="text-center mt-40 text-meeting-top">Lista Pacienților.</h1>
     <div class="table-responsive">
         <!-- Table -->
@@ -53,6 +53,29 @@
             </c:forEach>
         </table>
 
+    </div>
+    <h1 class="text-center mt-40 text-meeting-top">Lista Serviciilor.</h1>
+    <div class="table-responsive">
+        <!-- Table -->
+        <table class="table table-hover table-stripped">
+            <tr>
+                <th>Nume</th>
+                <th>Despre</th>
+                <th>Preț</th>
+                <th>Modifică</th>
+            </tr>
+            <c:forEach items="${servicii}" var="serviciu">
+                <tr>
+                    <td> ${serviciu.name}</td>
+                    <td> ${serviciu.about}</td>
+                    <td> ${serviciu.price} MDL</td>
+                    <td>
+                          <a href="<spring:url value="/editServiciu/${client.fisa.fisaId}"/> " class="btn btn-warning"> Editează Serviciul </a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+        <a href="<spring:url value="doctor/addServiciu"/>" class="btn btn-info">Adaugă Serviciu</a>
     </div>
 </div>
 

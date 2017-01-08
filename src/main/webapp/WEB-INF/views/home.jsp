@@ -23,67 +23,22 @@
 </head>
 
 <body>
-<header>
 
-        <%@include file="/WEB-INF/views/template/nav.jsp"%>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <div class="item">
-                    <img class="first-slide" src="<c:url value="/resources/images/slide-1.jpg" />" alt="First slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Example headline.</h1>
-                            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img class="second-slide" src="<c:url value="/resources/images/paralax.jpg" />" alt="Second slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item active">
-                    <img class="third-slide" src="<c:url value="/resources/images/paralax-3.jpg" />" alt="Third slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>One more for good measure.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-
+<%@include file="/WEB-INF/views/template/nav.jsp"%>
+<div class="inner-wr container">
+    <div class="col-xs-10 col-lg-offset-1">
+        <div class="owl-carousel">
+            <div> <img src="<c:url value="/resources/images/slide-2.png" />"/></div>
+            <div> <img src="<c:url value="/resources/images/slide-3.jpg" />"/> </div>
+            <div> Your Content </div>
         </div>
-
-</header>
-<div class="main container-fluid">
+    </div>
     <section class="text-center row" id="userList">
       <div class="wr-loader">
           <div class="loader"></div>
       </div>
     </section>
-    <div class="container">
+    <div class="">
         <h2>Serviciile prestate de "Dinți sănătoși SRL"</h2>
         <p>To make the tabs toggleable, add the data-toggle="pill" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
         <ul class="nav nav-tabs">
@@ -125,17 +80,14 @@
             </div>
         </div>
     </div>
-
     </div>
 
-
-
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
+    <%@include file="/WEB-INF/views/template/footer.jsp"%>
 
 <script>
     $( document ).ready(function() {
         //alert( "Load was performed. 2" );
-        $.get( "/userList", function( data ) {
+        $.get( "/DentalApointment/userList", function( data ) {
             $( "#userList" ).html( data );
         });
 //        $.get( "/calendar", function( data ) {

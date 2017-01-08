@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<div class="inner-wr container">
 <footer class="bg-4 text-center">
     <div id="map"></div>
     <div class="wr-header-detail">
@@ -16,3 +16,4 @@
     </div>
     <p>Lucrare pentru Teză de Licență autor <a href="https://www.facebook.com/rotari.andrey">Andrei Rotari</a></p>
 </footer>
+</div>

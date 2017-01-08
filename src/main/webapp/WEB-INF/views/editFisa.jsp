@@ -575,9 +575,9 @@
          </div>
 
     </form:form>
-    <%--<c:if test="${fisa.dateEdited != null}">--%>
-        <%--<p>Ultima oară a fost editat pe data de: ${fisa.dateEdited}</p>--%>
-    <%--</c:if>--%>
+    <c:if test="${fisa.dateEdited != null}">
+        <p>Ultima oară a fost editat pe data de: ${fisa.dateEdited}</p>
+    </c:if>
 </div>
 <%@include file="/WEB-INF/views/template/footer.jsp"%>
 </body>

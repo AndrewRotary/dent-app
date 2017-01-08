@@ -53,7 +53,7 @@ textarea:active {
 .wr-header-detail span {
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #fff;
+  color: #434343;
   font: 400 12px 'Open Sans';
   text-align: center;
 }
@@ -606,8 +606,10 @@ main {
   margin: auto;
   text-align: center;
   border-radius: 50%;
-  background-color: #58bab1;
-  color: #fff;
+  background-color: #fff;
+  color: #333;
+  font-size: 18px;
+  font-weight: 300;
   line-height: 40px;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -622,7 +624,8 @@ main {
 }
 .section-calendar .today_cell a,
 .section-calendar .today_cell button{
-  background-color: #68c36a;
+  background-color: #58bab1;
+  color: #fff;
 }
 .section-calendar tr:nth-child(odd) td {
   text-align: center;
@@ -726,7 +729,7 @@ main {
   visibility: visible;
 }
 .parallax {
-  border-top: 10px solid #b2dfdb;
+  border-top: 1px solid #b2dfdb;
   background: url(../images/paralax-3.jpg) fixed 100%;
   background-size: cover;
 }
@@ -884,7 +887,7 @@ main {
   height: 240px;
   width: 100%;
   display: block;
-  border-top: 10px solid #434343;
+  border-top: 10px solid #a0d8d3;
 }
 .modal {
   display: none;
@@ -1473,8 +1476,16 @@ display: block;
 }
 
 /*bootsrap*/
-.navbar-inverse .navbar-nav>li>a{
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-brand{
   font-size: 18px;
+  color: #434343;
+  font-weight: 300;
+}
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-brand:hover{
+  font-size: 18px;
+  color: #aaa;
 }
 .modal-open .modal{
   z-index: 2;
@@ -1555,10 +1566,36 @@ display: block;
   text-align: center;
 }
 .bg-4{
-  background-color: #2f2f2f;
-  color: #ffffff;
+  background-color: #e8f5f4;
+  color: #434343;
   padding-bottom: 20px;
 }
 .bg-4 a{
-  color: #fff;
+  color: #434343;
+}
+.my-nav{
+  background-image:none;
+  background-color: #fff;
+  border: 15px solid #f5fcff;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  margin-top: 0;
+  margin-bottom:0;
+}
+.inner-wr{
+  padding: 75px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+}
+.inner-wr-nav{
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+}
+.bg-white{
+  background-color: #fff;
+}
+body{
+  background-color: #f5fcff;
+
 }

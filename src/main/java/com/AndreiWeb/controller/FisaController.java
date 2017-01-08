@@ -1,9 +1,6 @@
 package com.AndreiWeb.controller;
 
-import com.AndreiWeb.dao.ClientDao;
-import com.AndreiWeb.dao.DintiiDao;
-import com.AndreiWeb.dao.FisaDao;
-import com.AndreiWeb.dao.StareaDintiDao;
+import com.AndreiWeb.dao.*;
 import com.AndreiWeb.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -40,6 +37,9 @@ public class FisaController {
 
     @Autowired
     private DintiiDao dintiiDao;
+
+    @Autowired
+    private ServiciuDao serviciuDao;
 
     @RequestMapping("/doctor/addFisa/{clientId}")
     public String addFisaGet(@PathVariable Integer clientId, Model model){
@@ -93,7 +93,9 @@ public class FisaController {
     @RequestMapping("/doctor")
     public String MeetingCalendar(Model model){
         List<Client> clients = clientDao.getAllClients();
+        List<Serviciu> servicii = serviciuDao.getAllServices();
         model.addAttribute("clients", clients );
+        model.addAttribute("servicii", servicii );
         return "doctor";
     }
 
