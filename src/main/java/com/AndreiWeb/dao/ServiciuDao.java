@@ -13,7 +13,7 @@ public interface ServiciuDao {
 
     void editServiciu(Serviciu serviciu);
 
-    ServiciuDao getServiciuById(int serviciuId);
+    Serviciu getServiciuById(int serviciuId);
 
     List<Serviciu> getAllServices();
 

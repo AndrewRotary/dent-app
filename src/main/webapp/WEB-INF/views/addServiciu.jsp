@@ -26,7 +26,6 @@
 <%@include file="/WEB-INF/views/template/nav.jsp"%>
 <div class="container inner-wr">
     <h1 class="text-center mt-40 text-meeting-top">Adaugă Serviciu.</h1>
-
     <form:form action="${pageContext.request.contextPath}/addServiciu" method="post" id="serviciu" commandName="serviciu">
         <div class="form-group">
             <label>Denumire</label>

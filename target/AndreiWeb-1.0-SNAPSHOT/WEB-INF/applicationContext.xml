@@ -8,7 +8,7 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://eu-cdbr-west-01.cleardb.com/heroku_3fad8f5892347e6?reconnect=true?useUnicode=yes" />
+        <property name="url" value="jdbc:mysql://eu-cdbr-west-01.cleardb.com/heroku_3fad8f5892347e6?reconnect=true&amp;Unicode=true&amp;characterEncoding=UTF-8" />
         <property name="username" value="b2711df57570a4" />
         <property name="password" value="95f10753" />
     </bean>

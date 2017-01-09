@@ -37,7 +37,7 @@
                     <li>
                         <c:choose>
                             <c:when test="${pageContext.request.isUserInRole('ROLE_DOCTOR')}"><a href="<c:url value="/doctor"/>" class="">Pacienți</a></c:when>
-                            <c:otherwise><a href="/soon">Contact</a></c:otherwise>
+                            <c:otherwise><a href="<c:url value="/soon"/>">Contact</a></c:otherwise>
                         </c:choose>
 
                     </li>

@@ -4,6 +4,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.sql.Date;
 
 /**
  * Created by Root on 08.01.2017.
@@ -22,6 +23,12 @@ public class Serviciu implements Serializable{
     private String about;
 
     private double price;
+
+    @Column(name = "dataCreat")
+    private Date date;
+
+    @Column(name = "dataEditat")
+    private Date dateEdited;
 
     @Transient
     private MultipartFile serviceImage;
@@ -64,5 +71,21 @@ public class Serviciu implements Serializable{
 
     public void setServiceImage(MultipartFile serviceImage) {
         this.serviceImage = serviceImage;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Date getDateEdited() {
+        return dateEdited;
+    }
+
+    public void setDateEdited(Date dateEdited) {
+        this.dateEdited = dateEdited;
     }
 }

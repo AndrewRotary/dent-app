@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -30,11 +32,19 @@ public class ServiciuDaoImpl implements ServiciuDao{
     }
 
     public void editServiciu(Serviciu serviciu) {
-
+        Session session = sessionFactory.getCurrentSession();
+        LocalDate today = LocalDate.now();
+        Date date = java.sql.Date.valueOf(today);
+        serviciu.setDateEdited(date);
+        session.saveOrUpdate(serviciu);
+        session.flush();
     }
 
-    public ServiciuDao getServiciuById(int serviciuId) {
-        return null;
+    public Serviciu getServiciuById(int serviciuId) {
+        Session session = sessionFactory.getCurrentSession();
+        Serviciu serviciu = (Serviciu) session.get(Serviciu.class, serviciuId);
+        session.flush();
+        return serviciu;
     }
 
     public List<Serviciu> getAllServices() {

@@ -25,25 +25,26 @@
 <body>
 <%@include file="/WEB-INF/views/template/nav.jsp"%>
 <div class="container inner-wr">
-    <h1 class="text-center mt-40 text-meeting-top">Adaugă Serviciu.</h1>
-    <form:form action="${pageContext.request.contextPath}/addServiciu" method="post" id="serviciu" commandName="serviciu">
+    <h1 class="text-center mt-40 text-meeting-top">Editare Serviciu.</h1>
+      <form:form action="${pageContext.request.contextPath}/addServiciu" method="post" id="serviciu" commandName="serviciu">
+          <form:hidden path="serviciuId" value="${serviciu.serviciuId}"/>
         <div class="form-group">
             <label>Denumire</label>
-            <form:input path="name" cols="5" class="form-control"/>
+            <form:input path="name"  value="${serviciu.name}" class="form-control"/>
         </div>
         <div class="form-group">
             <label>Detalii</label>
-            <form:textarea path="about" cols="5" class="form-control"/>
+            <form:textarea path="about" cols="8" value="${serviciu.about}" class="form-control"/>
         </div>
         <div class="form-group">
             <label>Preț</label>
-            <form:input path="price" cols="5" class="form-control"/>
+            <form:input path="price" value="${serviciu.price}" class="form-control"/>
         </div>
-        <div class="form-group">
-            <label class="control-label" for="serviceImage">Imaginea serviciului</label>
-            <form:input id="serviceImage" path="serviceImage" type="file" class="btn btn-info" lang="ro" />
-        </div>
-           <button type="submit" class="btn btn-default">Submit</button>
+        <%--<div class="form-group">--%>
+            <%--<label class="control-label" for="serviceImage">Imaginea serviciului</label>--%>
+            <%--<form:input id="serviceImage" path="serviceImage" type="file" class="btn btn-info" lang="ro" />--%>
+        <%--</div>--%>
+        <button type="submit" class="btn btn-default">Submit</button>
 
 
     </form:form>

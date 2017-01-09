@@ -57,8 +57,6 @@ public class FisaDaoImpl implements FisaDao {
         fisa.setDateEdited(date);
         session.saveOrUpdate(fisa);
         dintiiDao.editDintii(fisa.getDintii());
-
-
         session.flush();
     }
 

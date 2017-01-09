@@ -87,7 +87,7 @@
 <script>
     $( document ).ready(function() {
         //alert( "Load was performed. 2" );
-        $.get( "/DentalApointment/userList", function( data ) {
+        $.get( "/userList", function( data ) {
             $( "#userList" ).html( data );
         });
 //        $.get( "/calendar", function( data ) {

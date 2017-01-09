@@ -59,6 +59,7 @@
         <!-- Table -->
         <table class="table table-hover table-stripped">
             <tr>
+                <%--<th>Imagine</th>--%>
                 <th>Nume</th>
                 <th>Despre</th>
                 <th>Preț</th>
@@ -66,11 +67,17 @@
             </tr>
             <c:forEach items="${servicii}" var="serviciu">
                 <tr>
+                    <%--<td>--%>
+                        <%--<c:choose>--%>
+                            <%--<c:when test="${serviciu.serviceImage == null}"> <img src="<c:url value="/resources/images/serviceImage/dentist.png" /> " class="img-service" alt="image"/></c:when>--%>
+                            <%--<c:otherwise><img src="<c:url value="/resources/images/serviceImage/${serviciu.serviciuId}.png" />" class="img-service" alt="image"/></c:otherwise>--%>
+                        <%--</c:choose>--%>
+                    <%--</td>--%>
                     <td> ${serviciu.name}</td>
                     <td> ${serviciu.about}</td>
                     <td> ${serviciu.price} MDL</td>
                     <td>
-                          <a href="<spring:url value="/editServiciu/${client.fisa.fisaId}"/> " class="btn btn-warning"> Editează Serviciul </a>
+                          <a href="<spring:url value="/editServiciu/${serviciu.serviciuId}"/> " class="btn btn-warning"> Editează Serviciul </a>
                     </td>
                 </tr>
             </c:forEach>
