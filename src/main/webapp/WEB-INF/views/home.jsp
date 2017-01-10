@@ -15,7 +15,7 @@
 <meta name="keywords" content="Dinti, programare, dental, stomatologie ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Andrei Rotari">
-
+<link rel="shortcut icon" href="<c:url value="/resources/images/favicon.ico" />" type="image/x-icon">
 <head>
     <%@include file="/WEB-INF/views/template/headering.jsp"%>
     <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
@@ -26,70 +26,78 @@
 
 <%@include file="/WEB-INF/views/template/nav.jsp"%>
 <div class="inner-wr container">
-    <div class="col-xs-10 col-lg-offset-1">
-        <div class="owl-carousel">
-            <div> <img src="<c:url value="/resources/images/slide-2.png" />"/></div>
-            <div> <img src="<c:url value="/resources/images/slide-3.jpg" />"/> </div>
-            <div> Your Content </div>
+    <section class="row">
+        <div class="col-xs-10 col-lg-offset-1">
+            <h3 class="section-title text-center">Ultimele Știri</h3>
+            <div class="owl-carousels owl-carousel">
+                <div> <img src="<c:url value="/resources/images/slide-2.png" />"/></div>
+                <div> <img src="<c:url value="/resources/images/slide-3.jpg" />"/> </div>
+                <div>
+                    <h1>Ultimele noutăți</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper sit amet urna ut posuere.
+                    Phasellus in risus varius, consequat felis at, luctus turpis. Curabitur aliquet nec ante vel volutpat.
+                    Nunc venenatis aliquam varius. Quisque egestas purus libero, a sollicitudin neque tincidunt vel.
+                    Fusce viverra gravida ligula vel finibus. Aliquam ut euismod orci, ac dapibus urna. Proin mollis est ante.
+                    Donec blandit, justo et tempus interdum, risus tortor pulvinar leo, quis ultricies diam sapien iaculis ante.
+                    Donec ac ultricies urna. Integer tempus ligula orci, quis tincidunt ligula vestibulum quis.
+                    Vestibulum ac velit dapibus augue vulputate vulputate ut ac arcu. Morbi mi justo, pharetra vel vulputate nec,
+                    dignissim scelerisque dui. Aliquam feugiat tellus a velit porta volutpat. Mauris pellentesque accumsan sapien non pharetra.
+                    Proin vulputate dapibus ligula sagittis aliquet. Ut congue lorem malesuada, suscipit magna ac, placerat magna.
+                    Pellentesque non pellentesque eros. Pellentesque interdum erat sed tortor congue aliquet.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Vivamus dictum dolor non dapibus vehicula. Sed volutpat tortor eget enim ornare, nec vestibulum lacus finibus.
+                    Integer ultricies malesuada eros ac suscipit. Duis et tempus sapien. Etiam ullamcorper egestas mi nec dictum.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Proin id turpis in felis hendrerit cursus. Suspendisse dapibus est a ultricies rhoncus.
+                    Suspendisse vitae nulla nec nisi gravida sagittis. Donec eget commodo dui.
+                    Maecenas sagittis metus sapien, quis volutpat mauris convallis ac.</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <section class="text-center row" id="userList">
-      <div class="wr-loader">
-          <div class="loader"></div>
-      </div>
     </section>
-    <div class="">
-        <h2>Serviciile prestate de "Dinți sănătoși SRL"</h2>
-        <p>To make the tabs toggleable, add the data-toggle="pill" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
-        <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="pill" href="#home"> Albirea a dinților</a></li>
-            <li><a data-toggle="pill" href="#menu1">Consultație</a></li>
-            <li><a data-toggle="pill" href="#menu2">ENDODONȚIE</a></li>
-            <li><a data-toggle="pill" href="#menu3">PROTETICĂ DENTARĂ</a></li>
-            <li><a data-toggle="pill" href="#menu1">Consultație</a></li>
-            <li><a data-toggle="pill" href="#menu2">ENDODONȚIE</a></li>
-            <li><a data-toggle="pill" href="#menu3">PROTETICĂ DENTARĂ</a></li>
-            <li><a data-toggle="pill" href="#menu1">Consultație</a></li>
-            <li><a data-toggle="pill" href="#menu2">ENDODONȚIE</a></li>
-            <li><a data-toggle="pill" href="#menu3">PROTETICĂ DENTARĂ</a></li>
-            <li><a data-toggle="pill" href="#menu1">Consultație</a></li>
-            <li><a data-toggle="pill" href="#menu2">ENDODONȚIE</a></li>
-            <li><a data-toggle="pill" href="#menu3">PROTETICĂ DENTARĂ</a></li>
-        </ul>
-
-        <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-                <h3>Albirea a dinților</h3>
-                <p>Prin albirea dinților se poate obține un zâmbet alb și strălucitor. Sunt mai multe metode de albire, însă tehnica cea mai recomandată de medicii stomatologi este albirea profesională. Fără îndoială, aceasta este cea mai rapidă și mai eficientă metodă.
-                </p>
-            </div>
-            <div id="menu1" class="tab-pane fade">
-                <h3>Consultație</h3>
-                <p>    Consultația reprezintă cel mai important aspect în medicina dentară, pe lângă tratamentele de specialitate. De aceea, fiecare consultație este realizată cu maximum de responsabilitate și respect de către membrii echipei medicale a cabinetului nostru. Fiecare pacient este diferit, la fel cum și tratamentele trebuie pliate pe nevoile individuale ale fiecărei persoane care ne calcă pragul. Tocmai din acest motiv, ascultăm și înțelegem nevoile pacienților și stabilim un plan de tratament corect după dorințele și nevoile acestora.
-                </p>
-            </div>
-            <div id="menu2" class="tab-pane fade">
-                <h3>ENDODONȚIE</h3>
-                <p>    Dacă o simplă carie dentară nu este tratată la timp, se ajunge ca aceasta să avanseze așa de mult încât să afecteze pulpa dentară (nervul). Acest fenomen are ca rezultat provocarea durerilor dentare de multe ori insuportabile. În urma acestora, deseori pacienții solicită extracția dintelui în cauză, fără a ține cont de consecințele pe care le implică pierderea chiar și doar a unui singur dinte. Printr-un tratament corespunzător al canalelor radiculare (tratament endodontic), dintele afectat poate fi salvat și apoi restaurat prin mai multe metode, în funcție de gradul de distrucție coronară provocat de procesul carios. În timpul efectuării tratamentelor endodontice, utilizarea sistemului de digă este esențială .
-                </p>
-            </div>
-            <div id="menu3" class="tab-pane fade">
-                <h3>PROTETICĂ DENTARĂ</h3>
-                <p> Protetica este o ramură a stomatologiei care oferă soluții de înlocuire (protezare) a substanței dentare pierdute parțial (prin carii avansate, fracturi etc) sau chiar total (prin extracții). Lucrările protetice pot fi fixe, atunci când mai există dinți “de legătură”, astfel încât să se poată realiza lucrări ce vor fi cimentate pe dinții vecini spațiului edentat, sau mobile, respectiv protezele dentare. Aceste lucrări sunt realizate în laboratorul de tehnică dentară și necesită mai multe etape până la finalizarea lor. Materialele utilizate sunt diverse, în funcție de indicația terapeutică, dar și de dorințele pacientului (vorbim de lucrări de metal, metalo-compozite, metalo- ceramice, ceramică pe zirconiu sau chiar integral ceramice).
-                </p>
-            </div>
+    <section class="text-center">
+        <h3 class="section-title text-center">Lista Medicilor</h3>
+        <div class="doctor-slider owl-carousel">
+            <c:forEach items="${doctors}" var="doctor">
+                <div class="about-doctor">
+                    <div class="wr-img">
+                        <img src="<c:url value="/resources/images/${doctor.doctorId}.png" /> " alt="image"/>
+                        <div class="img-overlay">
+                            <span class="phone">Tl: ${doctor.doctorPhone}</span>
+                            <span class="phone">Email: ${doctor.doctorEmail}</span>
+                            <a href="#"><i class="fa fa-facebook fa-fw"></i></a>
+                            <a href="#"><i class="fa fa-skype fa-fw"></i></a>
+                        </div>
+                    </div>
+                    <article>
+                        <h4>${doctor.doctorName} ${doctor.doctorSurname}</h4>
+                        <p>Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+                        <span>${doctor.doctorDegree}</span>
+                    </article>
+                </div>
+            </c:forEach>
         </div>
-    </div>
-    </div>
-
+    </section>
+</div>
+    <section class="wr-servicii container">
+        <h3 class="text-center section-title">Lista Serviciilor</h3>
+        <div class="service-slider owl-carousel">
+            <c:forEach items="${serviciuList}" var="serviciu">
+                <div class="wr-serviciu">
+                    <div class="serviciu-name">${serviciu.name}</div>
+                    <div class="serviciu-about">${serviciu.about}</div>
+                    <div class="serviciu-price">Preț: ${serviciu.price} lei.</div>
+                </div>
+            </c:forEach>
+        </div>
+    </section>
+<div class="bg-4 text-center container">
+    <div id="map"></div>
+</div>
     <%@include file="/WEB-INF/views/template/footer.jsp"%>
-
 <script>
     $( document ).ready(function() {
-        //alert( "Load was performed. 2" );
-        $.get( "/userList", function( data ) {
-            $( "#userList" ).html( data );
-        });
 //        $.get( "/calendar", function( data ) {
 //            $( "#getCalendar" ).html( data );
 //            //alert( "Load was performed." );

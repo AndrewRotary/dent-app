@@ -1,7 +1,11 @@
 $(document).ready(function () {
-    $(".owl-carousel").owlCarousel({
-        loop:true,
+    $(".owl-carousels").owlCarousel({
+		loop: true,
         margin:10,
+        autoplay: true,
+        autoPlaySpeed: 5000,
+        autoPlayTimeout: 5000,
+        autoplayHoverPause: true,
         responsiveClass:true,
         responsive:{
             0:{
@@ -15,11 +19,60 @@ $(document).ready(function () {
             1000:{
                 items:1,
                 nav:true,
-                loop:false
+                loop:true
             }
         }
-	});
-	$('.wr-img').hover(function () {
+    });
+    $(".doctor-slider").owlCarousel({
+    	loop: true,
+        margin:30,
+        autoplay: true,
+        autoPlaySpeed: 5000,
+        autoPlayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:2,
+                nav:false
+            },
+            1000:{
+                items:3,
+                nav:true,
+                loop:true
+            }
+        }
+    });
+    $(".service-slider").owlCarousel({
+        loop: true,
+        margin:10,
+        autoplay: true,
+        autoPlaySpeed: 5000,
+        autoPlayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:2,
+                nav:false
+            },
+            1000:{
+                items:4,
+                nav:true,
+                loop:true
+            }
+        }
+    });
+
+  	$('.wr-img').hover(function () {
 
 			$(this).find('.img-overlay').toggle(100);
 		})

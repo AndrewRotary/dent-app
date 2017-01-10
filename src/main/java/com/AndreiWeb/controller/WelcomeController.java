@@ -1,5 +1,9 @@
 package com.AndreiWeb.controller;
 
+import com.AndreiWeb.dao.DoctorDao;
+import com.AndreiWeb.dao.ServiciuDao;
+import com.AndreiWeb.model.Doctor;
+import com.AndreiWeb.model.Serviciu;
 import com.AndreiWeb.service.ClientService;
 import com.AndreiWeb.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +25,20 @@ public class  WelcomeController {
     @Autowired
     private UsersService usersService;
 
+    @Autowired
+    private ServiciuDao serviciuDao;
+
+    @Autowired
+    private DoctorDao doctorDao;
+
     @RequestMapping("/")
-    public String home(){
+    public String home(Model model){
+
+        List<Serviciu> serviciuList = serviciuDao.getAllServices();
+        List<Doctor> doctors = doctorDao.getAllDoctors();
+
+        model.addAttribute("doctors", doctors );
+        model.addAttribute("serviciuList", serviciuList);
         return "home";
     }
 
@@ -31,17 +47,4 @@ public class  WelcomeController {
         return "underConstruction";
     }
 
-    //login controller
-//    public String login(@RequestParam(value = "error", required = false) String error,
-//                        @RequestParam(value = "logout", required = false) String logout, Model model){
-//        if(error != null) {
-//            model.addAttribute("error", "Invalid username and password");
-//        }
-//        if(logout != null){
-//            model.addAttribute("msg", "You have logged out successfully");
-//        }
-//
-//        return "home";
-//    }
-
-}
+ }

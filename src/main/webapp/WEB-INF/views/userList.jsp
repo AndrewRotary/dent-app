@@ -13,6 +13,7 @@
         <div class="main container-fluid">
             <section class="text-center">
                 <h1 class="h1-main">Medicii Oficiului "Dinți Sănătoși SRL"</h1>
+                <div class="doctor-slider">
                 <c:forEach items="${doctors}" var="doctor">
                 <div class="about-doctor col-lg-3 col-sm-6 col-xs-12">
                     <div class="wr-img">
@@ -30,6 +31,7 @@
                         <span>${doctor.doctorDegree}</span>
                     </article>
                 </div>
-        </c:forEach>
+                </c:forEach>
+                </div>
     </section>
 </div>

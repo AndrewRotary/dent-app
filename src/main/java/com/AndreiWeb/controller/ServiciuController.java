@@ -16,6 +16,8 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Root on 08.01.2017.
@@ -68,5 +70,12 @@ public class ServiciuController {
                                   HttpServletRequest request) {
         serviciuDao.editServiciu(serviciu);
         return "redirect:/doctor";
+    }
+
+    @RequestMapping("/viewService")
+    public String viewService(Model model){
+        List<Serviciu> serviciuList = serviciuDao.getAllServices();
+        model.addAttribute("serviciuList", serviciuList);
+        return "viewFisa";
     }
 }

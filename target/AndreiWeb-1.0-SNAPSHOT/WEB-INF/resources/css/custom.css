@@ -887,7 +887,6 @@ main {
   height: 240px;
   width: 100%;
   display: block;
-  border-top: 10px solid #a0d8d3;
 }
 .modal {
   display: none;
@@ -1566,11 +1565,13 @@ display: block;
   text-align: center;
 }
 .bg-4{
-  background-color: #e8f5f4;
+  background-color: #f0ede5;
   color: #434343;
-  padding-bottom: 20px;
+  padding: 75px;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
 }
-.bg-4 a{
+.bg-4 a,
+bg-4 span{
   color: #434343;
 }
 .my-nav{
@@ -1602,4 +1603,56 @@ body{
 .img-service{
   width: 80px;
   height: 60px;
+}
+.wr-servicii{
+  background: rgba(243, 127, 129, 0.28);
+  padding: 75px;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+
+}
+.wr-serviciu{
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+  margin: 10px;
+}
+.serviciu-name{
+  margin-top: 30px;
+  font-size: 14px;
+  text-align: right;
+  color: #000;
+  padding-bottom: 30px;
+}
+.serviciu-about{
+  font-size:14px;
+  height: 120px;
+  overflow: hidden;
+  color: #757375;
+}
+.serviciu-price{
+  margin-top: 30px;
+  font-size: 12px;
+    text-align: right;
+  color: #537b47;
+  padding-bottom: 30px;
+  font-weight: 100;
+}
+.section-title{
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-size: 22px;
+  font-weight: 100;
+}
+.footer-info{
+  color: #000;
+}
+.footer-info a{
+  color: #000;
+}
+.info-licenta {
+  margin-top: 60px;
 }
