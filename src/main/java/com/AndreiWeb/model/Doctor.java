@@ -56,7 +56,9 @@ public class Doctor implements Serializable{
     @LazyCollection(LazyCollectionOption.FALSE)
     public List<Meeting> meetings;
 
-
+    @OneToMany(mappedBy = "doctor", orphanRemoval= true)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    public List<WorckTime> worckTimes ;
 
 
     public int getDoctorId() {
@@ -145,5 +147,13 @@ public class Doctor implements Serializable{
 
     public void setDoctorImage(MultipartFile doctorImage) {
         this.doctorImage = doctorImage;
+    }
+
+    public List<WorckTime> getWorckTimes() {
+        return worckTimes;
+    }
+
+    public void setWorckTimes(List<WorckTime> worckTimes) {
+        this.worckTimes = worckTimes;
     }
 }

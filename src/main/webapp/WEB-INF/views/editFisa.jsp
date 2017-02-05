@@ -24,7 +24,7 @@
 </head>
 <body>
 <%@include file="/WEB-INF/views/template/nav.jsp"%>
-<div class="container">
+<div class="container inner-wr">
     <h1 class="text-center mt-40 text-meeting-top">Fișa medicală a pacientului ${fisa.client.clientName}</h1>
     <p>Creată pe data de ${fisa.date}</p>
     <form:form action="${pageContext.request.contextPath}/editFisa" method="post" id="fisa" commandName="fisa">

@@ -9,7 +9,7 @@
     <div class="confirm-info-txt" id="choosedDate" data-info="${choosedDate.toString()}"><span>Data:</span> ${choosedDate.toString()}</div>
     <div class="confirm-info-txt" ><span>Ora: </span> <div id="ModalHour">Alege Ora</div></div>
     <div id="addMeet">
-        <div class="txt-need-login">Pentru a vă programa trebue sa vă logați sau să vă creați cont</div>
+        <div class="txt-need-login">Pentru a vă programa trebuie sa vă logați sau să vă creați cont</div>
         <div>
             <a href="<c:url value="/login"/>" class="">Autentificare</a>
             <a href="<c:url value="/register"/>" class="">Înregistrare</a>

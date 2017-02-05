@@ -61,8 +61,6 @@ public class MeetingDaoImpl implements MeetingDao{
 
         public void editMeeting(Meeting meeting){
             Session session = sessionFactory.getCurrentSession();
-//            Doctor doctor =  doctorDao.getDoctorById(meeting.getDoctor().getDoctorId());
-//            meeting.setDoctor(doctor);
             session.saveOrUpdate(meeting);
             session.flush();
         }

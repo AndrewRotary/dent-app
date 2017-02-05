@@ -111,18 +111,6 @@ public class CalendarController {
 
     }
 
-    @RequestMapping("doctor/CalendarExtended")
-    public String EventCalendar(Model model, @AuthenticationPrincipal User activeUser) {
 
-            Users user = usersService.getUsersByUsername(activeUser.getUsername());
-            Doctor doc = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
-            List<Meeting> meetings = doc.getMeetings();
-
-            model.addAttribute("meetings", meetings);
-
-            List<Doctor> doctors = doctorDao.getAllDoctors();
-            model.addAttribute("doctors", doctors );
-        return "/CalendarExtended";
-    }
 
 }

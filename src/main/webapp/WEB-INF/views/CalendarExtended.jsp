@@ -17,8 +17,9 @@
 <header class="container-fluid">
     <%@include file="/WEB-INF/views/template/nav.jsp"%>
 </header>
-<main class="container mt-10">
-    <div id='calendar'></div>
+
+    <div class="inner-wr container">
+    <div id='calendar' class=""></div>
     <button class="run-manager-pacient" hidden id="register">demo01</button>
 
     <!-- The Modal REgister -->
@@ -32,13 +33,14 @@
 
         </div>
     </div>
-
-</main>
+    </div>
+<div class="mt-10"></div>
+<%@include file="/WEB-INF/views/template/footer.jsp"%>
 <script>
 
     $(document).ready(function() {
 
-        $(".run-manager-pacient").animatedModal({
+      /*  $(".run-manager-pacient").animatedModal({
             animatedIn: 'zoomIn',
             animatedOut: 'bounceOut',
 
@@ -57,7 +59,7 @@
                 console.log("The animation is completed");
             }
         });
-
+*/
 
         $('#calendar').fullCalendar({
             header: {
@@ -74,15 +76,11 @@
             businessHours: {
                 // days of week. an array of zero-based day of week integers (0=Sunday)
                 dow: [ 1, 2, 3, 4,5 ] ,// Monday - Thursday
-
                 start: '9:00', // a start time (10am in this example)
                 end: '18:00', // an end time (6pm in this example)
             },
             dayClick: function(date, jsEvent, view) {
-
-
                 var dateValue = date.format();
-
                 $.get("managePacient/"  + dateValue + "", function (data) {
                     $("#get-managePacient").html(data);
                 });
