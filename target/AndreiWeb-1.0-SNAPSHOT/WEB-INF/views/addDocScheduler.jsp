@@ -11,84 +11,57 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ro">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="Serviciu pentru Programarea la medic">
 <meta name="keywords" content="Dinti, programare, dental, stomatologie ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Andrei Rotari">
 
 <head>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp" %>
     <title>In curs de dezvoltare</title>
 </head>
 
 <body>
 <header class="container-fluid">
-    <%@include file="/WEB-INF/views/template/nav.jsp"%>
+    <%@include file="/WEB-INF/views/template/nav.jsp" %>
 </header>
 
 <div class="inner-wr container">
-    <form:form action="${pageContext.request.contextPath}/doctor/addDocScheduler" method="post" id="worckTime" commandName="worckTime">
-        <form:hidden path="doctor.doctorId" name="doctor"  id="choose-time" value="${doctor.doctorId}"  ></form:hidden>
-            <div class="col-xs-3 form-group">Luni </div>
-            <form:hidden path="title" name="title"  value="luni"  ></form:hidden>
-            <form:hidden path="week" class="form-control"  value="1"/>
-            <div class="col-xs-3 form-group">
-                <label for="choose-time">time start</label>
-                <form:input path="start" class="form-control" value="10:10:00"  type="time"/>
+
+
+    <form:form action="${pageContext.request.contextPath}/doctor/addDocScheduler" method="post" id="worckTime"
+               commandName="worckTime">
+        <input hidden name="doctor"  id="choose-time" value="${doctor.doctorId}"  ></inputhidden>
+        <c:forEach items="${worckTimes}" var="day">
+            <div class="col-xs-6">
+                <div class=" form-group"><c:out value="${day.title}"></c:out></div>
+                <input hidden name="title[]" value="${day.title}"></inputhidden>
+
+                <div class=" form-group">
+                    <label for="choose-time">time start</label>
+                    <input class="form-control" name="start[]" value="10:10:00" type="time"/>
+                </div>
+                <div class=" form-group">
+                    <label for="choose-time">time start</label>
+                    <input name="end[]" class="form-control" value="17:10:00" type="time"/>
+                </div>
+                <div class=" form-group">
+                    <label>Zi liberă</label>
+                    <input type="checkbox" checked=""/>
+                </div>
             </div>
-            <div class="col-xs-3 form-group">
-                <label for="choose-time">time start</label>
-                <form:input path="end" class="form-control" value="17:10:00"  type="time"/>
-            </div>
-        <div class="col-xs-2 form-group">
-            <label>Zi liberă</label>
-            <form:checkbox path="dountWork" checked="${worckTime.dountWork}" />
-        </div>
+        </c:forEach>
         <input type="submit" id="btn btn-info" value="Confirma" class="col-xs-3">
         <%--<a href="<c:url value="/"/> "><i class="fa fa-times-circle" aria-hidden="true"></i> Inapoi</a>--%>
     </form:form>
+
 </div>
-<div class="inner-wr container">
-    <div id="marti"></div>
-</div>
-<div class="inner-wr container">
-    <div id="miercuri"></div>
-</div>
-<div class="inner-wr container">
-    <div id="joi"></div>
-</div>
-<div class="inner-wr container">
-    <div id="vineri"></div>
-</div>
-<div class="inner-wr container">
-    <div id="simbata"></div>
-</div>
+
 <div class="mt-10"></div>
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
-<script>
-    $( document ).ready(function() {
-    $.get( "addDocSchedulerMar", function( data ) {
-        $( "#marti" ).html( data );
-    });
-        $.get( "addDocSchedulerMar/marti", function( data ) {
-            $( "#marti" ).html( data );
-        });
-        $.get( "addDocSchedulerMar/miercuri", function( data ) {
-            $( "#miercuri" ).html( data );
-        });
-        $.get( "addDocSchedulerMar/joi", function( data ) {
-            $( "#joi" ).html( data );
-        });
-        $.get( "addDocSchedulerMar/vineri", function( data ) {
-            $( "#vineri" ).html( data );
-        });
-        $.get( "addDocSchedulerMar/simbata", function( data ) {
-            $( "#simbata" ).html( data );
-        });
-    });
-</script>
+<%@include file="/WEB-INF/views/template/footer.jsp" %>
+
 
 </body>
 </html>

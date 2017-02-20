@@ -6,6 +6,7 @@ import com.AndreiWeb.dao.WorckTimeDao;
 import com.AndreiWeb.model.*;
 import com.AndreiWeb.service.DoctorService;
 import com.AndreiWeb.service.UsersService;
+import org.hibernate.annotations.common.test.reflection.java.generics.deep.ANN612IssueTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.bind.annotation.AuthenticationPrincipal;
@@ -29,6 +30,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Date;
+import java.sql.Time;
+import java.util.ArrayList;
+
 import java.util.List;
 
 
@@ -152,72 +157,58 @@ public class DoctorController {
 
     @RequestMapping("/doctor/addDocScheduler")
     public String addWorkGet(Model model, @AuthenticationPrincipal User activeUser){
-        List<WorckTime> allWorkDays = worckTimeDao.getAllWorckTimes();
+
         //In caz ca Luni deja este setat va returna pagina de editare a zilelor
-        for (int i = 0; i < allWorkDays.size(); i++) {
-            if(allWorkDays.get(i).getTitle().equals("luni")){
-                WorckTime worckTime = worckTimeDao.getWorckTimeId(allWorkDays.get(i).getWorckTimeId());
-                Users user = usersService.getUsersByUsername(activeUser.getUsername());
-                Doctor doctor = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
-                model.addAttribute("worckTime", worckTime);
-                model.addAttribute("doctor", doctor);
-                return "/editDocSchedulerMon";
-            }
-        }
+
+        List<WorckTime> worckTimes = new ArrayList<WorckTime>();
         //In caz ca ziua de luni nu este programata va crea aceste setari
-        WorckTime worckTime = new WorckTime();
-        Users user = usersService.getUsersByUsername(activeUser.getUsername());
-        Doctor doctor = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
-        model.addAttribute("worckTime", worckTime);
-        model.addAttribute("doctor", doctor);
+        WorckTime Luni = new WorckTime();
+        Luni.setTitle("Luni");
+        WorckTime Marti = new WorckTime();
+        Marti.setTitle("Marți");
+        WorckTime Miercuri = new WorckTime();
+        Miercuri.setTitle("Miercuri");
+        WorckTime Joi = new WorckTime();
+        Joi.setTitle("Joi");
+        WorckTime Vineri = new WorckTime();
+        Vineri.setTitle("Vineri");
+        worckTimes.add(Luni);
+        worckTimes.add(Marti);
+        worckTimes.add(Miercuri);
+        worckTimes.add(Joi);
+        worckTimes.add(Vineri);
+
+
+        model.addAttribute("worckTimes", worckTimes);
+
         return "/addDocScheduler";
     }
 
-    @RequestMapping("/doctor/addDocSchedulerMar/{dayTitle}")
-    public String addWorkGetMarti(@PathVariable String dayTitle, Model model, @AuthenticationPrincipal User activeUser){
-        List<WorckTime> allWorkDays = worckTimeDao.getAllWorckTimes();
-        //In caz ca Marti deja este setat va returna pagina de editare a zilelor
-        for (int i = 0; i < allWorkDays.size(); i++) {
-            if(allWorkDays.get(i).getTitle().equals(dayTitle)){
-                WorckTime worckTime = worckTimeDao.getWorckTimeId(allWorkDays.get(i).getWorckTimeId());
-                Users user = usersService.getUsersByUsername(activeUser.getUsername());
-                Doctor doctor = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
-                model.addAttribute("worckTime", worckTime);
-                model.addAttribute("doctor", doctor);
-                return "/editDocSchedulerMar";
-            }
-        }
-        WorckTime worckTime = new WorckTime();
-        worckTime.setTitle(dayTitle);
-        System.out.println(worckTime.getStart());
-        Users user = usersService.getUsersByUsername(activeUser.getUsername());
-        Doctor doctor = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
-        model.addAttribute("worckTime", worckTime);
-        model.addAttribute("doctor", doctor);
-        return "/addDocSchedulerMar";
-    }
+
 
     @RequestMapping(value ="doctor/addDocScheduler", method = RequestMethod.POST)
-    public String addWorkPost(HttpServletRequest request, HttpServletResponse response,
-                              @ModelAttribute("worckTime") WorckTime worckTime, @ModelAttribute("doctor") Doctor doctor){
-        Doctor doctor1 = doctorDao.getDoctorById(worckTime.getDoctor().getDoctorId());
-        System.out.println(worckTime.getStart());
-        worckTimeDao.addWorckTime(worckTime);
-        return "redirect:/doctor/addDocScheduler";
+    public String addWorkPost(HttpServletRequest request, HttpServletResponse response,  @AuthenticationPrincipal User activeUser){
+        Users user = usersService.getUsersByUsername(activeUser.getUsername());
+        Doctor doctor = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
+        List<WorckTime> worckTimes = new ArrayList<WorckTime>(5);
+        String titles[] = request.getParameterValues("title[]");
+        String start[] = request.getParameterValues("start[]");;
+        String end[] = request.getParameterValues("end[]");
+        for (int i = 0; i < titles.length; i++) {
+            WorckTime day = new WorckTime();
+            day.setTitle(titles[i]);
+            day.setDoctor(doctor);
+            day.setStart(Time.valueOf(start[i]));
+            day.setEnd(Time.valueOf(end[i]));
+            worckTimeDao.addWorckTime(day);
+            System.out.println(day.getTitle());
+        }
+
+        return "redirect:/";
     }
 
-    @RequestMapping("/editDocSchedulerMon")
-    public String editDocSchedulerMonGet(@ModelAttribute("worckTime") WorckTime worckTime, Model model){
-        model.addAttribute("workTime", worckTime);
-        return "/editDocSchedulerMon";
-    }
 
-    @RequestMapping(value="doctor/editDocSchedulerMon", method = RequestMethod.POST)
-    public String editDocSchedulerMonPost(@Valid @ModelAttribute("worckTime") WorckTime worckTime, BindingResult result,
-                                  HttpServletRequest request) {
-        worckTimeDao.editWorckTime(worckTime);
-        return "redirect:/doctor";
-    }
+
 
 }
 

@@ -10,7 +10,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
     <form:form action="${pageContext.request.contextPath}/doctor/addDocScheduler" method="post" id="worckTime" commandName="worckTime">
-        <form:hidden path="doctor.doctorId" name="doctor"  id="choose-time" value="${doctor.doctorId}"  ></form:hidden>
+        <%--<form:hidden path="doctor.doctorId" name="doctor"  id="choose-time" value="${doctor.doctorId}"  ></form:hidden>--%>
         <div class="col-xs-3 form-group">${worckTime.title} </div>
                 <form:hidden path="title" name="title"  value="${worckTime.title}"  ></form:hidden>
                 <form:hidden path="week" class="form-control"  value="2"/>
