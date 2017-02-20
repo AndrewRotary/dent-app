@@ -159,29 +159,33 @@ public class DoctorController {
     public String addWorkGet(Model model, @AuthenticationPrincipal User activeUser){
 
         //In caz ca Luni deja este setat va returna pagina de editare a zilelor
-
+        Users user = usersService.getUsersByUsername(activeUser.getUsername());
+        Doctor doctor = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
         List<WorckTime> worckTimes = new ArrayList<WorckTime>();
-        //In caz ca ziua de luni nu este programata va crea aceste setari
-        WorckTime Luni = new WorckTime();
-        Luni.setTitle("Luni");
-        WorckTime Marti = new WorckTime();
-        Marti.setTitle("Marți");
-        WorckTime Miercuri = new WorckTime();
-        Miercuri.setTitle("Miercuri");
-        WorckTime Joi = new WorckTime();
-        Joi.setTitle("Joi");
-        WorckTime Vineri = new WorckTime();
-        Vineri.setTitle("Vineri");
-        worckTimes.add(Luni);
-        worckTimes.add(Marti);
-        worckTimes.add(Miercuri);
-        worckTimes.add(Joi);
-        worckTimes.add(Vineri);
-
-
-        model.addAttribute("worckTimes", worckTimes);
-
-        return "/addDocScheduler";
+        if(doctor.getWorckTimes() == null) {
+            //In caz ca ziua de luni nu este programata va crea aceste setari
+            WorckTime Luni = new WorckTime();
+            Luni.setTitle("Luni");
+            WorckTime Marti = new WorckTime();
+            Marti.setTitle("Marți");
+            WorckTime Miercuri = new WorckTime();
+            Miercuri.setTitle("Miercuri");
+            WorckTime Joi = new WorckTime();
+            Joi.setTitle("Joi");
+            WorckTime Vineri = new WorckTime();
+            Vineri.setTitle("Vineri");
+            worckTimes.add(Luni);
+            worckTimes.add(Marti);
+            worckTimes.add(Miercuri);
+            worckTimes.add(Joi);
+            worckTimes.add(Vineri);
+            model.addAttribute("worckTimes", worckTimes);
+            return "/addDocScheduler";
+        }else{
+            worckTimes = doctor.getWorckTimes();
+            model.addAttribute("worckTimes", worckTimes);
+            return "/editDocSchedulerMon";
+        }
     }
 
 
@@ -190,7 +194,7 @@ public class DoctorController {
     public String addWorkPost(HttpServletRequest request, HttpServletResponse response,  @AuthenticationPrincipal User activeUser){
         Users user = usersService.getUsersByUsername(activeUser.getUsername());
         Doctor doctor = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
-        List<WorckTime> worckTimes = new ArrayList<WorckTime>(5);
+        List<WorckTime> worckTimes = new ArrayList<WorckTime>();
         String titles[] = request.getParameterValues("title[]");
         String start[] = request.getParameterValues("start[]");;
         String end[] = request.getParameterValues("end[]");
@@ -206,6 +210,41 @@ public class DoctorController {
 
         return "redirect:/";
     }
+
+    @RequestMapping(value ="doctor/editDocSchedulerMon", method = RequestMethod.POST)
+    public String editWorkPost(HttpServletRequest request, HttpServletResponse response,  @AuthenticationPrincipal User activeUser){
+        Users user = usersService.getUsersByUsername(activeUser.getUsername());
+        Doctor doctor = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
+        List<WorckTime> worckTimes = new ArrayList<WorckTime>();
+        String titles[] = request.getParameterValues("title[]");
+        String start[] = request.getParameterValues("start[]");;
+        String end[] = request.getParameterValues("end[]");
+        String[] id = request.getParameterValues("id[]");
+        for (int i = 0; i < titles.length; i++) {
+            WorckTime day = new WorckTime();
+            day.setTitle(titles[i]);
+            day.setDoctor(doctor);
+            System.out.println(start[i].length());
+            day.setWorckTimeId(Integer.parseInt(id[i]));
+            String startt = start[i];
+            if(startt.length() < 6){
+                day.setStart(Time.valueOf(start[i] + ":00"));
+            }else {
+                day.setStart(Time.valueOf(start[i]));
+            }
+            String endd = end[i];
+            if(endd.length() < 6){
+                day.setEnd(Time.valueOf(end[i] + ":00"));
+            }else {
+                day.setEnd(Time.valueOf(end[i]));
+            }
+
+            worckTimeDao.editWorckTime(day);
+        }
+
+        return "redirect:/";
+    }
+
 
 
 

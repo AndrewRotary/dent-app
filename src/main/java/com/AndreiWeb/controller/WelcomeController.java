@@ -1,8 +1,10 @@
 package com.AndreiWeb.controller;
 
 import com.AndreiWeb.dao.DoctorDao;
+import com.AndreiWeb.dao.MeetingDao;
 import com.AndreiWeb.dao.ServiciuDao;
 import com.AndreiWeb.model.Doctor;
+import com.AndreiWeb.model.Meeting;
 import com.AndreiWeb.model.Serviciu;
 import com.AndreiWeb.service.ClientService;
 import com.AndreiWeb.service.UsersService;
@@ -31,11 +33,19 @@ public class  WelcomeController {
     @Autowired
     private DoctorDao doctorDao;
 
+    @Autowired
+    private MeetingDao meetingDao;
+
     @RequestMapping("/")
     public String home(Model model){
 
         List<Serviciu> serviciuList = serviciuDao.getAllServices();
         List<Doctor> doctors = doctorDao.getAllDoctors();
+
+        List<Meeting> meetings = meetingDao.getAllMeetings();
+        List<Doctor> doctorsCl = doctorDao.getAllDoctors();
+        model.addAttribute("doctorTop", doctorsCl );
+        model.addAttribute("meetingsDao", meetings );
 
         model.addAttribute("doctors", doctors );
         model.addAttribute("serviciuList", serviciuList);

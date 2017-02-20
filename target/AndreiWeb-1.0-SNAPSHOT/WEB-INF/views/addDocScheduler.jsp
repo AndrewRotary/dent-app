@@ -33,7 +33,7 @@
 
     <form:form action="${pageContext.request.contextPath}/doctor/addDocScheduler" method="post" id="worckTime"
                commandName="worckTime">
-        <input hidden name="doctor"  id="choose-time" value="${doctor.doctorId}"  ></inputhidden>
+
         <c:forEach items="${worckTimes}" var="day">
             <div class="col-xs-6">
                 <div class=" form-group"><c:out value="${day.title}"></c:out></div>
@@ -41,11 +41,11 @@
 
                 <div class=" form-group">
                     <label for="choose-time">time start</label>
-                    <input class="form-control" name="start[]" value="10:10:00" type="time"/>
+                    <input class="form-control" name="start[]" value="08:00:00" type="time"/>
                 </div>
                 <div class=" form-group">
                     <label for="choose-time">time start</label>
-                    <input name="end[]" class="form-control" value="17:10:00" type="time"/>
+                    <input name="end[]" class="form-control" value="18:00:00" type="time"/>
                 </div>
                 <div class=" form-group">
                     <label>Zi liberă</label>
