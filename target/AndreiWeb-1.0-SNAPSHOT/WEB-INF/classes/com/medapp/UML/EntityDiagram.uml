@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="131.5625" y="790.0">com.AndreiWeb.model.Client</node>
+    <node x="169.6875" y="0.0">com.AndreiWeb.model.Users</node>
+    <node x="-269.20668693009117" y="40.589665653495445">com.AndreiWeb.model.Authorities</node>
+    <node x="0.0" y="234.0">com.AndreiWeb.model.Doctor</node>
+    <node x="63.75" y="578.0">com.AndreiWeb.model.Meeting</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.AndreiWeb.model.Meeting" target="com.AndreiWeb.model.Client">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.AndreiWeb.model.Client" target="com.AndreiWeb.model.Users">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.AndreiWeb.model.Meeting" target="com.AndreiWeb.model.Doctor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.AndreiWeb.model.Client" target="com.AndreiWeb.model.Meeting">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.AndreiWeb.model.Users" target="com.AndreiWeb.model.Doctor">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.AndreiWeb.model.Doctor" target="com.AndreiWeb.model.Meeting">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.AndreiWeb.model.Doctor" target="com.AndreiWeb.model.Users">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.AndreiWeb.model.Users" target="com.AndreiWeb.model.Client">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6771653543307087" x="93.5" y="498.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

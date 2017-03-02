@@ -1587,6 +1587,7 @@ bg-4 span{
   padding: 75px;
   background-color: #fff;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  margin: 30px auto;
 }
 .inner-wr-nav{
   background-color: #fff;

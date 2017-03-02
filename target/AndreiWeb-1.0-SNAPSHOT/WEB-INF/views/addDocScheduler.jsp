@@ -48,8 +48,8 @@
                     <input name="end[]" class="form-control" value="18:00:00" type="time"/>
                 </div>
                 <div class=" form-group">
-                    <label>Zi liberă</label>
-                    <input type="checkbox" checked=""/>
+                    <label><input type="radio" value="true" name="<c:out value="${day.title}toWork" />"  <c:if test="${day.dountWork == 'true'}">checked="checked"</c:if>/>Zi de lucru</label>
+                    <label><input type="radio" value="false" name="<c:out value="${day.title}toWork" />"  <c:if test="${day.dountWork == 'false'}">checked="checked"</c:if>/>Zi de odihna</label>
                 </div>
             </div>
         </c:forEach>

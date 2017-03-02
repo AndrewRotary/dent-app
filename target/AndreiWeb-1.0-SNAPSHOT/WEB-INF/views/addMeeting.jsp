@@ -1,4 +1,4 @@
-<%@ page import="com.AndreiWeb.model.Doctor" %>
+<%@ page import="com.medapp.model.Doctor" %>
 <%@ page import="java.util.List" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

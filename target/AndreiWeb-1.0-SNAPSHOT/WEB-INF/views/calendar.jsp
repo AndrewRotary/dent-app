@@ -1,4 +1,4 @@
-<%@ page import="com.AndreiWeb.Calendar.Month,java.util.*,java.io.*,java.sql.*,com.AndreiWeb.*" errorPage="error.jsp" %>
+<%@ page import="com.medapp.Calendar.Month,java.util.*,java.io.*,java.sql.*,com.medapp.*" errorPage="error.jsp" %>
 <%-- TODO: CLEAN UP THE PAGE TAG ABOVE --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="calendarCommon.jsp" %>

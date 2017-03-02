@@ -36,21 +36,20 @@
                 <input hidden name="title[]" value="${day.title}">
                 <input hidden type="text" name="id[]" value="${day.worckTimeId}">
                 <div class=" form-group">
-                    <label for="choose-time">time start</label>
+                    <label for="choose-time">Inceput: </label>
                     <input class="form-control" name="start[]" value="${day.start}" type="time"/>
                 </div>
                 <div class=" form-group">
-                    <label for="choose-time">time start</label>
+                    <label for="choose-time">Sfirsit</label>
                     <input name="end[]" class="form-control" value="${day.end}" type="time"/>
                 </div>
                 <div class=" form-group">
-                    <label>Zi liberă</label>
-                    <input type="checkbox" checked=""/>
+                    <label><input type="radio" value="true" name="<c:out value="${day.title}toWork" />"  <c:if test="${day.dountWork == 'true'}">checked="checked"</c:if>/>Zi de lucru</label>
+                    <label><input type="radio" value="false" name="<c:out value="${day.title}toWork" />"  <c:if test="${day.dountWork == 'false'}">checked="checked"</c:if>/>Zi de odihna</label>
                 </div>
             </div>
         </c:forEach>
         <input type="submit" id="btn btn-info" value="Confirma" class="col-xs-3">
-        <%--<a href="<c:url value="/"/> "><i class="fa fa-times-circle" aria-hidden="true"></i> Inapoi</a>--%>
     </form:form>
 </div>
 
