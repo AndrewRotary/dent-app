@@ -18,7 +18,7 @@
     <%@include file="/WEB-INF/views/template/nav.jsp"%>
 </div>
 
-<div class="container">
+<div class="container inner-wr">
     <h1 class="text-center mt-40 text-meeting-top">Istoria programărilor.</h1>
     <div class="table-responsive">
     <!-- Table -->

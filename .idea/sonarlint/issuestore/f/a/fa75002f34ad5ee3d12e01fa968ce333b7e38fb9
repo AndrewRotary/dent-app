@@ -1,0 +1,19 @@
+
+esquid:S1192"KDefine a constant instead of duplicating this literal "worckTimes" 3 times.(¾àË§şÿÿÿÿ
+dsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀúÛ˜
+Rsquid:S1197"8Move the array designator from the variable to the type.(•Âª×ıÿÿÿÿ
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–üü„
+Msquid:S1197"8Move the array designator from the variable to the type.(¥ò‘Ë
+Rsquid:S1197"8Move the array designator from the variable to the type.(•Âª×ıÿÿÿÿ
+csquid:S1192"ODefine a constant instead of duplicating this literal "registerDoctor" 5 times.(Ñì%
+ksquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ßßG
+qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È›çıÿÿÿÿ
+Msquid:S1197"8Move the array designator from the variable to the type.(¥ò‘Ë
+qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÈ‡Åøÿÿÿÿ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(À°İÈ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(§Ğòüÿÿÿÿ
+msquid:S1450"SRemove the "path" field and declare it as a local variable in the relevant methods.(ŒàÛşÿÿÿÿ
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ü¥â
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Msquid:S1197"8Move the array designator from the variable to the type.(Î½®
+Msquid:S1197"8Move the array designator from the variable to the type.(Î½®

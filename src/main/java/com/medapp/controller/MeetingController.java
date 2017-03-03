@@ -1,13 +1,7 @@
 package com.medapp.controller;
 
-import com.medapp.dao.ClientDao;
-import com.medapp.dao.DoctorDao;
-import com.medapp.dao.MeetingDao;
-import com.medapp.dao.UsersDao;
-import com.medapp.model.Client;
-import com.medapp.model.Doctor;
-import com.medapp.model.Meeting;
-import com.medapp.model.Users;
+import com.medapp.dao.*;
+import com.medapp.model.*;
 import com.medapp.service.ClientService;
 import com.medapp.service.MeetingService;
 import com.medapp.service.UsersService;
@@ -26,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.sql.Date;
+import java.sql.Time;
 import java.util.Iterator;
 import java.util.List;
 
@@ -56,7 +51,6 @@ public class MeetingController {
   @Autowired
   private MeetingService meetingService;
 
-
   @RequestMapping("/client")
   public String clientPage() {
     return "client";
@@ -76,6 +70,26 @@ public class MeetingController {
   public String HourVerify(@PathVariable Integer doctorId, @PathVariable Date date, Model model) {
     Doctor myDoc = doctorDao.getDoctorById(doctorId);
     List<Meeting> SortedMitings = myDoc.getMeetings();
+    List<WorckTime> worckTimes = myDoc.getWorckTimes();
+    java.util.GregorianCalendar cal = new java.util.GregorianCalendar();
+    cal.setTime(date);
+    Integer thisDay = cal.get((java.util.Calendar.DAY_OF_WEEK))-2;
+    for (int i = 0; i < worckTimes.size(); i++) {
+      if (!worckTimes.get(i).isDountWork() && worckTimes.get(i).getWeek() == thisDay) {
+        return "busyDay";
+      }
+      if(worckTimes.get(i).getWeek() == thisDay){
+        Integer hourStart = worckTimes.get(i).getStart().getHours();
+        Integer hourEnd = worckTimes.get(i).getEnd().getHours();
+        for (int j = hourStart; j < hourEnd; j++) {
+          Meeting meeting = new Meeting();
+          meeting.setHourTime(Time.valueOf(j + ":00:00"));
+          meeting.setDateTime(date);
+          SortedMitings.add(meeting);
+        }
+      }
+
+    }
 
     Iterator<Meeting> iter = SortedMitings.iterator();
     while (iter.hasNext()) {
@@ -83,9 +97,10 @@ public class MeetingController {
       if (!s.getDateTime().equals(date)) {
         SortedMitings.size();
         iter.remove();
-        s.getDateTime();
+
       }
     }
+
     model.addAttribute("choosedDoc", myDoc);
     model.addAttribute("choosedDate", date);
     model.addAttribute("SortedMitings", SortedMitings);
@@ -133,7 +148,6 @@ public class MeetingController {
   }
 
   @RequestMapping("/client/MeetingCalendar/addMeeting")
-
   public String addMeeting(Model model, @AuthenticationPrincipal User activeUser) {
 
     Meeting meeting = new Meeting();

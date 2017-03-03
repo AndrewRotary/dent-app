@@ -153,14 +153,10 @@
             $('.inputDate').val(dateValue);
             $('.inputDate').text(dateValue);
             Date = dataYear + '-' + dataMonth + '-' + dataDay;
-
             $.get("calendar/hourVerify/" + DoctorId + "/" + dateValue + "", function (data) {
                 $("#getListaOre").html(data);
             });
-
         });
-
-
     });
 
 </script>

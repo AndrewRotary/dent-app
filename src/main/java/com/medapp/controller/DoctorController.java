@@ -155,7 +155,7 @@ public class DoctorController {
     Users user = usersService.getUsersByUsername(activeUser.getUsername());
     Doctor doctor = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
     List<WorckTime> worckTimes = new ArrayList<WorckTime>();
-    if (doctor.getWorckTimes() == null) {
+    if (doctor.getWorckTimes().isEmpty()) {
       //In caz ca ziua de luni nu este programata va crea aceste setari
       WorckTime Luni = new WorckTime();
       Luni.setTitle("Luni");
@@ -192,6 +192,7 @@ public class DoctorController {
     for (int i = 0; i < titles.length; i++) {
       String toWork = request.getParameter( titles[i]+"toWork");
       WorckTime day = new WorckTime();
+      day.setWeek(i);
       day.setTitle(titles[i]);
       day.setDoctor(doctor);
       day.setStart(Time.valueOf(start[i]));

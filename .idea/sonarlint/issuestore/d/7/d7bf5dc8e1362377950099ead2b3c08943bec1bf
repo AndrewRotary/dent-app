@@ -1,0 +1,11 @@
+
+isquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò±ö°úÿÿÿÿ
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù“ú´
+]squid:S1192"HDefine a constant instead of duplicating this literal "doctors" 3 times.(îà¤ƒ
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù“ú´
+bsquid:CallToDeprecatedMethod"0Remove this use of "getHours"; it is deprecated.(ÿ…Áðøÿÿÿÿ8ä¶‹š©+
+bsquid:CallToDeprecatedMethod"0Remove this use of "getHours"; it is deprecated.(Ô‹Ï±øÿÿÿÿ8ä¶‹š©+
+Tsquid:UselessParenthesesCheck"!Remove those useless parentheses.(Žò ªùÿÿÿÿ8›†ñ™©+
+esquid:UselessImportCheck"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë
+csquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é³˜
+dsquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…

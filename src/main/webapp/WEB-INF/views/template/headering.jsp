@@ -16,6 +16,8 @@
 <link href="<a:url value="/resources/css/bs-grid-tyny.css" />" rel="stylesheet" media="screen" />
 <link href="<a:url value="/resources/css/owl.carousel.min.css" />" rel="stylesheet" media="screen" />
 <link href="<a:url value="/resources/css/owl.theme.default.min.css" />" rel="stylesheet" media="screen" />
+<%--<link href="<a:url value="/resources/css/bootstrap-timepicker.min.css" />" rel="stylesheet" media="screen" />--%>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 <link href="<a:url value="/resources/css/custom.css" />" rel="stylesheet" media="screen" />
 
 <%--<link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">--%>

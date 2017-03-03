@@ -847,11 +847,12 @@ main {
   text-align: center;
 }
 .modal-content .table-day {
-  margin-top: 10%;
-  margin: 50px auto 50px;
-  border: 3px solid #00796b;
-  border-radius: 15px;
-  overflow: hidden;
+    width: 80%;
+    margin: 20px auto 50px;
+    padding: 2% 0%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 19px;
 }
 .modal-content td {
   height: 40px;
@@ -911,11 +912,9 @@ main {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
-  border: 1px solid #b6b6b6;
-  border-bottom: 5px solid #b6b6b6;
+  border-top: 15px solid #b6b6b6;
   width: 45%;
-  border-radius: 30px;
+  border-radius: 0;
   font: 900 16px 'Open Sans';
 }
 .modal-content .choose-log-reg {
@@ -1553,6 +1552,7 @@ display: block;
 }
 #modalAfisareOre .modal-content{
   width: 100%;
+    background-color: #fff;
 }
 
 .th_day_cell{
@@ -1655,4 +1655,46 @@ body{
 }
 .info-licenta {
   margin-top: 60px;
+}
+#SetModalHour{
+    display: inline-block;
+    width: 100px;
+    color: #4870ff;
+    border: none;
+    background-color: transparent;
+
+}
+.time{
+  display: inline-block;
+  width: 10%;
+  font-size: 20px;
+  color: black;
+}
+.time-chose{
+    width: 11%;
+    display: inline-block;
+    font-size: 20px;
+    min-height: 61px;
+    border-radius: 50px;
+    margin: 5px 10px;
+    background-color: #e8f5f4;
+    border-left: 7px solid #d6eeec;
+    border-right: 7px solid #d6eeec;
+    padding: 3px 5px;
+
+}
+.time-chose label{
+  display: block;
+}
+.time-chose button{
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  color: #bb3535;
+  border: none;
+  font-size: 30px;
+}
+.ui-timepicker-standard a{
+  padding: 10px;
+  font-size: 20px;
 }

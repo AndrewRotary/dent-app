@@ -38,14 +38,16 @@
             <div class="col-xs-6">
                 <div class=" form-group"><c:out value="${day.title}"></c:out></div>
                 <input hidden name="title[]" value="${day.title}"></inputhidden>
+                <div class="form-group">
+                    <label> <span class="glyphicon glyphicon-time"></span> Inceput: </label>
+                        <input type='text' class="form-control timepicker" name="start[]" />
 
-                <div class=" form-group">
-                    <label for="choose-time">time start</label>
-                    <input class="form-control" name="start[]" value="08:00:00" type="time"/>
+                    </span>
+
                 </div>
                 <div class=" form-group">
-                    <label for="choose-time">time start</label>
-                    <input name="end[]" class="form-control" value="18:00:00" type="time"/>
+                    <label> <span class="glyphicon glyphicon-time"></span> Sfirsit: </label>
+                    <input name="end[]" class="form-control timepicker2" type="text"/>
                 </div>
                 <div class=" form-group">
                     <label><input type="radio" value="true" name="<c:out value="${day.title}toWork" />"  <c:if test="${day.dountWork == 'true'}">checked="checked"</c:if>/>Zi de lucru</label>
@@ -61,6 +63,32 @@
 
 <div class="mt-10"></div>
 <%@include file="/WEB-INF/views/template/footer.jsp" %>
+<script>
+    $(document).ready(function(){
+        $('input.timepicker').timepicker({
+            timeFormat: 'HH:mm:ss',
+            minTime: '08:00:00',
+            // 11:45:00 AM,
+            maxHour: 20,
+            maxMinutes: 30,
+            startTime: new Date(0,0,0,8,0,0),
+            // 3:00:00 PM - noon
+            interval: 60
+            // 15 minutes
+        });
+        $('input.timepicker2').timepicker({
+            timeFormat: 'HH:mm:ss',
+            minTime: '08:00:00',
+            // 11:45:00 AM,
+            maxHour: 20,
+            maxMinutes: 30,
+            startTime: new Date(0,0,0,18,0,0),
+            // 3:00:00 PM - noon
+            interval: 60
+            // 15 minutes
+        });
+    });
+</script>
 
 
 </body>
