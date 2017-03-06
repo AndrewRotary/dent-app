@@ -2,9 +2,11 @@ package com.medapp.controller;
 
 import com.medapp.dao.DoctorDao;
 import com.medapp.dao.MeetingDao;
+import com.medapp.dao.NewsDao;
 import com.medapp.dao.ServiciuDao;
 import com.medapp.model.Doctor;
 import com.medapp.model.Meeting;
+import com.medapp.model.News;
 import com.medapp.model.Serviciu;
 import com.medapp.service.ClientService;
 import com.medapp.service.UsersService;
@@ -36,12 +38,17 @@ public class WelcomeController {
   @Autowired
   private MeetingDao meetingDao;
 
+  @Autowired
+  private NewsDao newsDao;
+
   @RequestMapping("/")
   public String home(Model model) {
     List<Serviciu> serviciuList = serviciuDao.getAllServices();
     List<Doctor> doctors = doctorDao.getAllDoctors();
     List<Meeting> meetings = meetingDao.getAllMeetings();
     List<Doctor> doctorsCl = doctorDao.getAllDoctors();
+    List<News> newsList = newsDao.getAllNews();
+    model.addAttribute("news", newsList);
     model.addAttribute("doctorTop", doctorsCl);
     model.addAttribute("meetingsDao", meetings);
     model.addAttribute("doctors", doctors);

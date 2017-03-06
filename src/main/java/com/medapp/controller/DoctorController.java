@@ -1,11 +1,9 @@
 package com.medapp.controller;
 
 import com.medapp.dao.DoctorDao;
+import com.medapp.dao.NewsDao;
 import com.medapp.dao.WorckTimeDao;
-import com.medapp.model.Doctor;
-import com.medapp.model.Meeting;
-import com.medapp.model.Users;
-import com.medapp.model.WorckTime;
+import com.medapp.model.*;
 import com.medapp.service.DoctorService;
 import com.medapp.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,6 +47,9 @@ public class DoctorController {
 
   @Autowired
   private WorckTimeDao worckTimeDao;
+
+  @Autowired
+  private NewsDao newsDao;
 
   @RequestMapping("/registerD")
   public String registerDoctor(Model model) {
@@ -239,6 +240,30 @@ public class DoctorController {
     return "redirect:/doctor";
   }
 
+  @RequestMapping("/doctor/addNews")
+  public String addNews(Model model){
+    News news = new News();
+    model.addAttribute("news", news);
+    return "addNews";
+  }
+
+  @RequestMapping(value = "/doctor/addNews", method = RequestMethod.POST)
+  public String addNewsPost(@Valid @ModelAttribute("news") News news, Model model, HttpServletRequest request){
+    MultipartFile newsImage = news.getNewsImage();
+    newsDao.addNews(news);
+    String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+    path = Paths.get(rootDirectory + "WEB-INF/resources/images/news/" + news.getId() + ".jpg");
+    if (newsImage != null && !newsImage.isEmpty()) {
+      try {
+        newsImage.transferTo(new File(path.toString()));
+      } catch (Exception e) {
+        e.printStackTrace();
+        throw new RuntimeException("Product image saving failed.", e);
+      }
+    }
+
+    return "redirect:/";
+  }
 
 }
 

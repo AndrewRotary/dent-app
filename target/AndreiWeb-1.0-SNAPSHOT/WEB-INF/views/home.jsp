@@ -33,32 +33,49 @@
         <div class="col-xs-10 col-lg-offset-1">
             <h3 class="section-title text-center">Ultimele Știri</h3>
             <div class="owl-carousels owl-carousel">
-                <div> <img src="<c:url value="/resources/images/slide-2.png" />"/></div>
-                <div> <img src="<c:url value="/resources/images/slide-3.jpg" />"/> </div>
-                <div>
-                    <h1>Ultimele noutăți</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper sit amet urna ut posuere.
-                    Phasellus in risus varius, consequat felis at, luctus turpis. Curabitur aliquet nec ante vel volutpat.
-                    Nunc venenatis aliquam varius. Quisque egestas purus libero, a sollicitudin neque tincidunt vel.
-                    Fusce viverra gravida ligula vel finibus. Aliquam ut euismod orci, ac dapibus urna. Proin mollis est ante.
-                    Donec blandit, justo et tempus interdum, risus tortor pulvinar leo, quis ultricies diam sapien iaculis ante.
-                    Donec ac ultricies urna. Integer tempus ligula orci, quis tincidunt ligula vestibulum quis.
-                    Vestibulum ac velit dapibus augue vulputate vulputate ut ac arcu. Morbi mi justo, pharetra vel vulputate nec,
-                    dignissim scelerisque dui. Aliquam feugiat tellus a velit porta volutpat. Mauris pellentesque accumsan sapien non pharetra.
-                    Proin vulputate dapibus ligula sagittis aliquet. Ut congue lorem malesuada, suscipit magna ac, placerat magna.
-                    Pellentesque non pellentesque eros. Pellentesque interdum erat sed tortor congue aliquet.
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    Vivamus dictum dolor non dapibus vehicula. Sed volutpat tortor eget enim ornare, nec vestibulum lacus finibus.
-                    Integer ultricies malesuada eros ac suscipit. Duis et tempus sapien. Etiam ullamcorper egestas mi nec dictum.
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    Proin id turpis in felis hendrerit cursus. Suspendisse dapibus est a ultricies rhoncus.
-                    Suspendisse vitae nulla nec nisi gravida sagittis. Donec eget commodo dui.
-                    Maecenas sagittis metus sapien, quis volutpat mauris convallis ac.</p>
-                </div>
-            </div>
+                <c:forEach items="${news}" var="n">
+                    <div>
+                        <h1><c:out value="${n.title}"></c:out></h1>
+                        <div><c:out value="${n.info}"></c:out>
+                            <div><c:out value="${n.dateCreated}"></c:out></div>
+                        </div>
+                        <div><img src="<c:url value="/resources/images/news/${n.id}.jpg" />" alt=""></div>
+
+                    </div>
+                </c:forEach>
+             </div>
         </div>
     </section>
+    <%--<section class="row">--%>
+        <%--<div class="col-xs-10 col-lg-offset-1">--%>
+            <%--<h3 class="section-title text-center">Ultimele Știri</h3>--%>
+            <%--<div class="owl-carousels owl-carousel">--%>
+                <%--<div> <img src="<c:url value="/resources/images/slide-2.png" />"/></div>--%>
+                <%--<div> <img src="<c:url value="/resources/images/slide-3.jpg" />"/> </div>--%>
+                <%--<div>--%>
+                    <%--<h1>Ultimele noutăți</h1>--%>
+                <%--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper sit amet urna ut posuere.--%>
+                    <%--Phasellus in risus varius, consequat felis at, luctus turpis. Curabitur aliquet nec ante vel volutpat.--%>
+                    <%--Nunc venenatis aliquam varius. Quisque egestas purus libero, a sollicitudin neque tincidunt vel.--%>
+                    <%--Fusce viverra gravida ligula vel finibus. Aliquam ut euismod orci, ac dapibus urna. Proin mollis est ante.--%>
+                    <%--Donec blandit, justo et tempus interdum, risus tortor pulvinar leo, quis ultricies diam sapien iaculis ante.--%>
+                    <%--Donec ac ultricies urna. Integer tempus ligula orci, quis tincidunt ligula vestibulum quis.--%>
+                    <%--Vestibulum ac velit dapibus augue vulputate vulputate ut ac arcu. Morbi mi justo, pharetra vel vulputate nec,--%>
+                    <%--dignissim scelerisque dui. Aliquam feugiat tellus a velit porta volutpat. Mauris pellentesque accumsan sapien non pharetra.--%>
+                    <%--Proin vulputate dapibus ligula sagittis aliquet. Ut congue lorem malesuada, suscipit magna ac, placerat magna.--%>
+                    <%--Pellentesque non pellentesque eros. Pellentesque interdum erat sed tortor congue aliquet.--%>
+                    <%--Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.--%>
+                    <%--Vivamus dictum dolor non dapibus vehicula. Sed volutpat tortor eget enim ornare, nec vestibulum lacus finibus.--%>
+                    <%--Integer ultricies malesuada eros ac suscipit. Duis et tempus sapien. Etiam ullamcorper egestas mi nec dictum.--%>
+                    <%--Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.--%>
+                    <%--Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.--%>
+                    <%--Proin id turpis in felis hendrerit cursus. Suspendisse dapibus est a ultricies rhoncus.--%>
+                    <%--Suspendisse vitae nulla nec nisi gravida sagittis. Donec eget commodo dui.--%>
+                    <%--Maecenas sagittis metus sapien, quis volutpat mauris convallis ac.</p>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+    <%--</section>--%>
     <section class="text-center">
         <h3 class="section-title text-center">Lista Medicilor</h3>
         <div class="doctor-slider owl-carousel">
