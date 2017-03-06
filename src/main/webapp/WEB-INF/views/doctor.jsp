@@ -46,7 +46,7 @@
                     <td> ${client.clientPhone}</td>
                     <td>
                         <c:choose>
-                            <c:when test="${client.fisa != null}">  <a href="<spring:url value="/editFisa/${client.fisa.fisaId}"/> " class="btn btn-warning"> Editează fișă medicală </a> </a></c:when>
+                            <c:when test="${client.fisa != null}">  <a href="<spring:url value="/editFisa/${client.fisa.fisaId}"/> " class="btn btn-warning"> Editează fișă medicală </a> </c:when>
                             <c:otherwise>  <a href="<spring:url value="/doctor/addFisa/${client.clientId}"/> " class="btn btn-info"> Adaugă Fișă Medicală </a></c:otherwise>
                         </c:choose>
 

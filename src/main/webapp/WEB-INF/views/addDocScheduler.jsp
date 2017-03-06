@@ -37,13 +37,10 @@
         <c:forEach items="${worckTimes}" var="day">
             <div class="col-xs-6">
                 <div class=" form-group"><c:out value="${day.title}"></c:out></div>
-                <input hidden name="title[]" value="${day.title}"></inputhidden>
+                <input hidden name="title[]" value="${day.title}"/>
                 <div class="form-group">
                     <label> <span class="glyphicon glyphicon-time"></span> Inceput: </label>
                         <input type='text' class="form-control timepicker" name="start[]" />
-
-                    </span>
-
                 </div>
                 <div class=" form-group">
                     <label> <span class="glyphicon glyphicon-time"></span> Sfirsit: </label>

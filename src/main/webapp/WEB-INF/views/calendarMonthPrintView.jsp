@@ -1,4 +1,4 @@
-<%@ page import="com.medapp.Calendar.Month,java.util.*,java.io.*,java.sql.*,com.medapp.*" errorPage="error.jsp" %>
+<%@ page import="com.medapp.Calendar.Month" errorPage="error.jsp" %>
 
 
 

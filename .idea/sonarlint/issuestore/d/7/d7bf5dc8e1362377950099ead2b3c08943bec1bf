@@ -1,11 +1,9 @@
 
-[squid:CallToDeprecatedMethod"0Remove this use of "getHours"; it is deprecated.(ÿ…Áðøÿÿÿÿ
-csquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é³˜
-[squid:CallToDeprecatedMethod"0Remove this use of "getHours"; it is deprecated.(Ô‹Ï±øÿÿÿÿ
-dsquid:UselessImportCheck"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…
-]squid:S1192"HDefine a constant instead of duplicating this literal "doctors" 3 times.(îà¤ƒ
-lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù“ú´
-lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù“ú´
 Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(Žò ªùÿÿÿÿ
+]squid:S1192"HDefine a constant instead of duplicating this literal "doctors" 3 times.(îà¤ƒ
+[squid:CallToDeprecatedMethod"0Remove this use of "getHours"; it is deprecated.(ÿ…Áðøÿÿÿÿ
+[squid:CallToDeprecatedMethod"0Remove this use of "getHours"; it is deprecated.(Ô‹Ï±øÿÿÿÿ
+csquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é³˜
 isquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò±ö°úÿÿÿÿ
-esquid:UselessImportCheck"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù“ú´
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù“ú´

@@ -221,10 +221,10 @@ textarea:active {
 .wr-slider input::-webkit-input-placeholder {
   color: #ffffff;
 }
+
 .wr-slider a,
 .wr-slider button {
-  color: #ffffff;
-  display: inline-block;
+    display: inline-block;
   text-align: center;
   height: 35px;
   color: #434343;
@@ -747,6 +747,7 @@ main {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin: 20px auto;
 }
 .wr-services .one-service {
   margin: 0 auto 28px;

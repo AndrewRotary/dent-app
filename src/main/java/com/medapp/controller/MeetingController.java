@@ -1,6 +1,9 @@
 package com.medapp.controller;
 
-import com.medapp.dao.*;
+import com.medapp.dao.ClientDao;
+import com.medapp.dao.DoctorDao;
+import com.medapp.dao.MeetingDao;
+import com.medapp.dao.UsersDao;
 import com.medapp.model.*;
 import com.medapp.service.ClientService;
 import com.medapp.service.MeetingService;
@@ -16,8 +19,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.sql.Date;
 import java.sql.Time;

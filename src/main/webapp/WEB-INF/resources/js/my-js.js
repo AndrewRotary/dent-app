@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $(".owl-carousels").owlCarousel({
-		loop: true,
+		loop: false,
         margin:10,
         autoplay: true,
         autoPlaySpeed: 5000,
@@ -75,11 +75,11 @@ $(document).ready(function () {
   	$('.wr-img').hover(function () {
 
 			$(this).find('.img-overlay').toggle(100);
-		})
+		});
 		//Eakori
 	var options = {
 		offset: 90
-	}
+	};
 
 	//gmaps-end----------
 		function initialize() {
