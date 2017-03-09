@@ -64,4 +64,10 @@ public class DoctorDaoImpl implements DoctorDao {
 
     return (Doctor) query.uniqueResult();
   }
+
+  public void editDoctor(Doctor doctor) {
+      Session session = sessionFactory.getCurrentSession();
+      session.saveOrUpdate(doctor);
+      session.flush();
+  }
 }

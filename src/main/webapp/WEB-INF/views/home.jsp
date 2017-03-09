@@ -11,6 +11,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ro">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -39,8 +40,9 @@
                         <div><c:out value="${n.info}"></c:out>
                             <div><c:out value="${n.dateCreated}"></c:out></div>
                         </div>
-                        <div><img src="<c:url value="/resources/images/news/${n.id}.jpg" />" alt=""></div>
-
+                        <div>
+                            <img src="<c:url value="/resources/images/news/${n.id}.jpg" />" alt="">
+                        </div>
                     </div>
                 </c:forEach>
              </div>
@@ -217,7 +219,7 @@
                 <div class="wr-serviciu">
                     <div class="serviciu-name">${serviciu.name}</div>
                     <div class="serviciu-about">${serviciu.about}</div>
-                    <div class="serviciu-price">Preț: ${serviciu.price} lei.</div>
+                    <div class="serviciu-price"><a href="<spring:url value="editNews/${serviciu.serviciuId}"/>" >Detalii</a></div>
                 </div>
             </c:forEach>
         </div>

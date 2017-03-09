@@ -17,4 +17,6 @@ public interface DoctorDao {
 
   Doctor getDoctorByUsername(String username);
 
+  void editDoctor(Doctor doctor);
+
 }

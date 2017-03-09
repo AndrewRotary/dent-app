@@ -27,6 +27,7 @@
 <div class="container inner-wr">
     <a href="<spring:url value="doctor/CalendarExtended"/>" class="btn btn-info">Calendar Pacienti</a>
     <a href="<spring:url value="doctor/addDocScheduler"/>" class="btn btn-info">Editează calendar evenimente</a>
+    <a href="<spring:url value="doctor/newsManager"/>" class="btn btn-info">Editează noutatile</a>
     <h1 class="text-center mt-40 text-meeting-top">Lista Pacienților.</h1>
     <div class="table-responsive">
         <!-- Table -->

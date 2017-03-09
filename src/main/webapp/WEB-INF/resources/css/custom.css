@@ -1609,7 +1609,7 @@ body{
   background: rgba(243, 127, 129, 0.28);
   padding: 75px;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
-
+  margin-top: 20px;
 }
 .wr-serviciu{
   background-color: #fff;

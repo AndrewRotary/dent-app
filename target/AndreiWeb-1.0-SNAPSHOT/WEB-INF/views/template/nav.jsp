@@ -23,23 +23,14 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li> <a href="<c:url value="/"/>"  class="">Acasa</a></li>
-                    <li>
-                        <c:choose>
-                            <c:when test="${pageContext.request.isUserInRole('ROLE_DOCTOR')}"><a href="<c:url value="/doctor/CalendarExtended"/>" class="">Orar</a></c:when>
-                            <c:when test="${pageContext.request.isUserInRole('ROLE_USER')}"><a href="<c:url value="/calendar"/>" class="">Programare</a></c:when>
-                            <c:otherwise><a href="<c:url value="/calendar"/>" class="">Programare</a></c:otherwise>
-                        </c:choose>
-                    </li>
-                    <li><a href="<c:url value="/soon"/>" class=""> Medici</a></li>
                     <c:if test="${pageContext.request.userPrincipal.name == 'admin'}" >
                        <li> <a href="<c:url value="/admin"/> ">Admin Panel</a></li>
                     </c:if>
                     <li>
                         <c:choose>
-                            <c:when test="${pageContext.request.isUserInRole('ROLE_DOCTOR')}"><a href="<c:url value="/doctor"/>" class="">Pacienți</a></c:when>
+                            <c:when test="${pageContext.request.isUserInRole('ROLE_DOCTOR')}"><a href="<c:url value="/doctor"/>" class="">Administrare</a></c:when>
                             <c:otherwise><a href="<c:url value="/soon"/>">Contact</a></c:otherwise>
                         </c:choose>
-
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

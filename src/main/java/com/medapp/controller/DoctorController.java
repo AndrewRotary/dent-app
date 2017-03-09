@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
@@ -265,5 +266,81 @@ public class DoctorController {
     return "redirect:/";
   }
 
+  @RequestMapping("/doctor/editNews/{Id}")
+  public String editNews(@PathVariable Long Id, Model model){
+    model.addAttribute("news", newsDao.getNewsById(Id));
+    return "editNews";
+  }
+
+  @RequestMapping(value = "/doctor/editNews", method = RequestMethod.POST)
+  public String editNewsPost(@Valid @ModelAttribute("news") News news, Model model, HttpServletRequest request){
+    MultipartFile newsImage = news.getNewsImage();
+    newsDao.editNews(news);
+    String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+    path = Paths.get(rootDirectory + "WEB-INF/resources/images/news/" + news.getId() + ".jpg");
+    if (newsImage != null && !newsImage.isEmpty()) {
+      try {
+        newsImage.transferTo(new File(path.toString()));
+      } catch (Exception e) {
+        e.printStackTrace();
+        throw new RuntimeException("Product image saving failed.", e);
+      }
+    }
+
+    return "redirect:/doctor/newsManager";
+  }
+
+  @RequestMapping("/doctor/newsManager")
+  public String showNews( Model model){
+    model.addAttribute("news", newsDao.getAllNews());
+    return "newsManager";
+  }
+
+  @RequestMapping(value = "/doctor/deleteNews/{Id}")
+  public String deleteNews(@PathVariable Long Id){
+      newsDao.deleteNews(Id);
+    return "redirect:/doctor/newsManager";
+  }
+
+  @RequestMapping("/doctor/editDoctor")
+  public String editDoctor(Model model,@AuthenticationPrincipal User activeUser){
+    Users user = usersService.getUsersByUsername(activeUser.getUsername());
+    Doctor myDoc = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
+    model.addAttribute("doctor", doctorDao.getDoctorById(Id));
+    return "editDoctor";
+  }
+
+  @RequestMapping(value = "/editDoctor", method = RequestMethod.POST)
+  public String editDoctorPost(@Valid @ModelAttribute("doctor") Doctor doctor, BindingResult result,
+                                   Model model, HttpServletRequest request) {
+
+    if (result.hasErrors()) {
+      return "registerDoctor";
+    }
+
+    List<Doctor> doctorList = doctorService.getAllDoctors();
+    List<Users> usersList = usersService.getAllUsers();
+
+    for (int i = 0; i < doctorList.size(); i++) {
+      if (doctor.getDoctorEmail().equals(doctorList.get(i).getDoctorEmail())) {
+        model.addAttribute("emailMsgg", "Email already exists");
+        return "registerDoctor";
+      }
+    }
+    doctor.setEnabled(true);
+    doctorDao.editDoctor(doctor);
+    MultipartFile doctorImage = doctor.getDoctorImage();
+    String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+    path = Paths.get(rootDirectory + "WEB-INF/resources/images/" + doctor.getDoctorId() + ".png");
+    if (doctorImage != null && !doctorImage.isEmpty()) {
+      try {
+        doctorImage.transferTo(new File(path.toString()));
+      } catch (Exception e) {
+        e.printStackTrace();
+        throw new RuntimeException("Product image saving failed.", e);
+      }
+    }
+    return "redirect:/";
+  }
 }
 

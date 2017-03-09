@@ -34,11 +34,17 @@ public class NewsDaoImpl implements NewsDao{
   }
 
   public void editNews(News news) {
-
+    Session session = sessionFactory.getCurrentSession();
+    session.saveOrUpdate(news);
+    session.flush();
   }
 
-  public News getNewsById(int newsId) {
-    return null;
+  public News getNewsById(Long Id) {
+    Session session = sessionFactory.getCurrentSession();
+    News news = (News) session.get(News.class, Id);
+    session.flush();
+    return news;
+
   }
 
   public List<News> getAllNews() {
@@ -48,7 +54,9 @@ public class NewsDaoImpl implements NewsDao{
     return newsList;
   }
 
-  public void deleteNews(int newsId) {
-
+  public void deleteNews(Long newsId) {
+    Session session = sessionFactory.getCurrentSession();
+    session.delete(getNewsById(newsId));
+    session.flush();
   }
 }

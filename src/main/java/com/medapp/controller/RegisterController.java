@@ -73,7 +73,7 @@ public class RegisterController {
     }
     client.setEnabled(true);
     clientService.addClient(client);
-    return "calendar";
+    return "redirect:/";
 
   }
 
