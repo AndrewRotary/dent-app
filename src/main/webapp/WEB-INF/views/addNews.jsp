@@ -19,7 +19,7 @@
 <header class="container-fluid">
     <%@include file="/WEB-INF/views/template/nav.jsp" %>
 </header>
-<div class="inner-wr">
+<div class="inner-wr container">
     <form:form action="${pageContext.request.contextPath}/doctor/addNews" method="post" id="addNews"
                commandName="news" enctype="multipart/form-data">
         <div class="form-group">

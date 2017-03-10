@@ -1,0 +1,28 @@
+
+Msquid:S1197"8Move the array designator from the variable to the type.(¥ò‘Ë
+Rsquid:S1197"8Move the array designator from the variable to the type.(•Âª×ıÿÿÿÿ
+Msquid:S1197"8Move the array designator from the variable to the type.(Î½®
+Msquid:S1197"8Move the array designator from the variable to the type.(¥ò‘Ë
+Rsquid:S1197"8Move the array designator from the variable to the type.(•Âª×ıÿÿÿÿ
+Msquid:S1197"8Move the array designator from the variable to the type.(Î½®
+esquid:S1192"KDefine a constant instead of duplicating this literal "worckTimes" 3 times.(¾àË§şÿÿÿÿ
+esquid:S1192"QDefine a constant instead of duplicating this literal "redirect:/doctor" 3 times.(âèÿ
+rsquid:S1192"]Define a constant instead of duplicating this literal "Product image saving failed." 4 times.(À°İÈ
+csquid:S1192"ODefine a constant instead of duplicating this literal "registerDoctor" 6 times.(Ñì%
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(§Ğòüÿÿÿÿ
+dsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀúÛ˜
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(À°İÈ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(À°İÈ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(À°İÈ
+\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(À°İÈ
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–üü„
+qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÈ‡Åøÿÿÿÿ
+ksquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ßßG
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ü¥â
+qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È›çıÿÿÿÿ
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğĞÚ–
+lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿±ªü
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ

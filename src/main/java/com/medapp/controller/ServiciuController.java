@@ -76,4 +76,10 @@ public class ServiciuController {
     model.addAttribute("serviciuList", serviciuList);
     return "viewFisa";
   }
+  @RequestMapping("/viewService/{serviciuId}")
+  public String viewService(@PathVariable Integer serviciuId, Model model) {
+    Serviciu serviciu = serviciuDao.getServiciuById(serviciuId);
+    model.addAttribute("serviciu", serviciu);
+    return "viewService";
+  }
 }

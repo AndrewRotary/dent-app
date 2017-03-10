@@ -31,6 +31,9 @@
     <section class="row">
         <div class="col-xs-10 col-lg-offset-1">
             <h3 class="section-title text-center">Ultimele Știri</h3>
+            <div>
+                <a href="<spring:url value="addNews"/>" class="btn btn-info">Adauga noutati</a>
+            </div>
             <div class="owl-carousels owl-carousel">
                 <c:forEach items="${news}" var="n">
                     <div>

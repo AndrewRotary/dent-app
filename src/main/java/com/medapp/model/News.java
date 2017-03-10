@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Transient;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -18,6 +19,7 @@ public class News implements Serializable {
   @GeneratedValue
   private Long Id;
   private String title;
+  @Size(max = 9999)
   private String info;
   private String linkVideoPath;
   @Transient
