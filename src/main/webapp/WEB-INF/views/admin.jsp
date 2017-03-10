@@ -12,28 +12,28 @@
 <html>
 <head>
     <title>Tests</title>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <%@include file="/WEB-INF/views/template/nav.jsp"%>
-    </div>
-    <h1>Admin Page</h1>
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <h2>
-            Welcome ${pageContext.request.userPrincipal.name} | <a href="<c:url
+<div class="container-fluid">
+    <%@include file="/WEB-INF/views/template/nav.jsp" %>
+</div>
+<h1>Admin Page</h1>
+<c:if test="${pageContext.request.userPrincipal.name != null}">
+    <h2>
+        Welcome ${pageContext.request.userPrincipal.name} | <a href="<c:url
             value="/j_spring_security_logout"/> ">Logout</a>
-        </h2>
-    </c:if>
-    <div class="container">
-        <p>You can modify the calendar hire</p>
-        <a href="<c:url value="/client/MeetingCalendar" />" > Apointment Calendar</a>
-    </div>
-    <div class="container">
-        <p>You can modify doctors hire</p>
-        <a href="<c:url value="/registerD" />" > Doctor Manager</a>
-    </div>
+    </h2>
+</c:if>
+<div class="container">
+    <p>You can modify the calendar hire</p>
+    <a href="<c:url value="/client/MeetingCalendar" />"> Apointment Calendar</a>
+</div>
+<div class="container">
+    <p>You can modify doctors hire</p>
+    <a href="<c:url value="/registerD" />"> Doctor Manager</a>
+</div>
 
 
 </body>

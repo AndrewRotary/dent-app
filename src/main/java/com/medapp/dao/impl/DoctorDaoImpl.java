@@ -66,8 +66,8 @@ public class DoctorDaoImpl implements DoctorDao {
   }
 
   public void editDoctor(Doctor doctor) {
-      Session session = sessionFactory.getCurrentSession();
-      session.saveOrUpdate(doctor);
-      session.flush();
+    Session session = sessionFactory.getCurrentSession();
+    session.saveOrUpdate(doctor);
+    session.flush();
   }
 }

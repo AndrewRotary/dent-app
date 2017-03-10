@@ -12,35 +12,35 @@
 <html>
 <head>
     <title>Apointments</title>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
 </head>
 <body>
 
 <div class="container-fluid">
-    <%@include file="/WEB-INF/views/template/nav.jsp"%>
+    <%@include file="/WEB-INF/views/template/nav.jsp" %>
 </div>
 <div class="container text-center">
     <h1>Edit the Apointment</h1>
 
-    <form:form action="${pageContext.request.contextPath}/client/MeetingCalendar/editMeeting" method="post" commandName="meeting">
+    <form:form action="${pageContext.request.contextPath}/client/MeetingCalendar/editMeeting" method="post"
+               commandName="meeting">
 
         <form:hidden path="meetingId" value="${meeting.meetingId}"/>
 
 
-
         <%--<select name="doctorId">--%>
-            <%--<c:forEach items="${doctors}" var="doctor">--%>
-                <%--<option value="${doctor.doctorId}">${doctor.doctorName}</option>--%>
-            <%--</c:forEach>--%>
+        <%--<c:forEach items="${doctors}" var="doctor">--%>
+        <%--<option value="${doctor.doctorId}">${doctor.doctorName}</option>--%>
+        <%--</c:forEach>--%>
         <%--</select>--%>
 
         <div class="form-group col-xs-3">
             <label for="choose-time">Choose datetime</label>
-            <form:input path="DateTime" id="choose-time" type="date" value="${meeting.dateTime}" />
+            <form:input path="DateTime" id="choose-time" type="date" value="${meeting.dateTime}"/>
         </div>
         <div class="col-xs-3">
             <label for="choose-time">Choose datetime</label>
-            <form:input path="hourTime" id="hourTime" name="hourTime" value="${meeting.hourTime}"  type="text"/>
+            <form:input path="hourTime" id="hourTime" name="hourTime" value="${meeting.hourTime}" type="text"/>
         </div>
 
         <input type="submit" value="submit" class="col-xs-3">

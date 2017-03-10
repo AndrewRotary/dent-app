@@ -12,21 +12,21 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ro">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="Serviciu pentru Programarea la medic">
 <meta name="keywords" content="Dinti, programare, dental, stomatologie ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Andrei Rotari">
 <link rel="shortcut icon" href="<c:url value="/resources/images/favicon.ico" />" type="image/x-icon">
 <head>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp" %>
     <title>In curs de dezvoltare</title>
 </head>
 
 <body>
 
-<%@include file="/WEB-INF/views/template/nav.jsp"%>
+<%@include file="/WEB-INF/views/template/nav.jsp" %>
 <div class="inner-wr container">
     <section class="row">
         <div class="col-xs-10 col-lg-offset-1">
@@ -40,7 +40,8 @@
                         <div><c:out value="${n.info}"></c:out>
                             <div><c:out value="${n.dateCreated}"></c:out></div>
                         </div>
-                        <div><img width="200" height="200" src="<c:url value="/resources/images/news/${n.id}.jpg" />" alt=""></div>
+                        <div><img width="200" height="200" src="<c:url value="/resources/images/news/${n.id}.jpg" />"
+                                  alt=""></div>
                     </div>
                 </c:forEach>
             </div>

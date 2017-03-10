@@ -11,22 +11,23 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ro">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="Serviciu pentru Programarea la medic">
 <meta name="keywords" content="Dinti, programare, dental, stomatologie ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Andrei Rotari">
 
 <head>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp" %>
     <title>In curs de dezvoltare</title>
 </head>
 <body>
-<%@include file="/WEB-INF/views/template/nav.jsp"%>
+<%@include file="/WEB-INF/views/template/nav.jsp" %>
 <div class="container inner-wr">
     <h1 class="text-center mt-40 text-meeting-top">Adaugă Serviciu.</h1>
-    <form:form action="${pageContext.request.contextPath}/addServiciu" method="post" id="serviciu" commandName="serviciu">
+    <form:form action="${pageContext.request.contextPath}/addServiciu" method="post" id="serviciu"
+               commandName="serviciu">
         <div class="form-group">
             <label>Denumire</label>
             <form:input path="name" cols="5" class="form-control"/>
@@ -41,14 +42,14 @@
         </div>
         <div class="form-group">
             <label class="control-label" for="serviceImage">Imaginea serviciului</label>
-            <form:input id="serviceImage" path="serviceImage" type="file" class="btn btn-info" lang="ro" />
+            <form:input id="serviceImage" path="serviceImage" type="file" class="btn btn-info" lang="ro"/>
         </div>
-           <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Submit</button>
 
 
     </form:form>
 
 </div>
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
+<%@include file="/WEB-INF/views/template/footer.jsp" %>
 </body>
 </html>

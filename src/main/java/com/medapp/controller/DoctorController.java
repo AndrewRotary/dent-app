@@ -192,7 +192,7 @@ public class DoctorController {
     String start[] = request.getParameterValues("start[]");
     String end[] = request.getParameterValues("end[]");
     for (int i = 0; i < titles.length; i++) {
-      String toWork = request.getParameter( titles[i]+"toWork");
+      String toWork = request.getParameter(titles[i] + "toWork");
       WorckTime day = new WorckTime();
       day.setWeek(i);
       day.setTitle(titles[i]);
@@ -217,7 +217,7 @@ public class DoctorController {
     String[] id = request.getParameterValues("id[]");
 
     for (int i = 0; i < titles.length; i++) {
-      String toWork = request.getParameter( titles[i]+"toWork");
+      String toWork = request.getParameter(titles[i] + "toWork");
       WorckTime day = new WorckTime();
       day.setTitle(titles[i]);
       day.setDoctor(doctor);
@@ -242,14 +242,14 @@ public class DoctorController {
   }
 
   @RequestMapping("/doctor/addNews")
-  public String addNews(Model model){
+  public String addNews(Model model) {
     News news = new News();
     model.addAttribute("news", news);
     return "addNews";
   }
 
   @RequestMapping(value = "/doctor/addNews", method = RequestMethod.POST)
-  public String addNewsPost(@Valid @ModelAttribute("news") News news, Model model, HttpServletRequest request){
+  public String addNewsPost(@Valid @ModelAttribute("news") News news, Model model, HttpServletRequest request) {
     MultipartFile newsImage = news.getNewsImage();
     newsDao.addNews(news);
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
@@ -267,13 +267,13 @@ public class DoctorController {
   }
 
   @RequestMapping("/doctor/editNews/{Id}")
-  public String editNews(@PathVariable Long Id, Model model){
+  public String editNews(@PathVariable Long Id, Model model) {
     model.addAttribute("news", newsDao.getNewsById(Id));
     return "editNews";
   }
 
   @RequestMapping(value = "/doctor/editNews", method = RequestMethod.POST)
-  public String editNewsPost(@Valid @ModelAttribute("news") News news, Model model, HttpServletRequest request){
+  public String editNewsPost(@Valid @ModelAttribute("news") News news, Model model, HttpServletRequest request) {
     MultipartFile newsImage = news.getNewsImage();
     newsDao.editNews(news);
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
@@ -291,41 +291,31 @@ public class DoctorController {
   }
 
   @RequestMapping("/doctor/newsManager")
-  public String showNews( Model model){
+  public String showNews(Model model) {
     model.addAttribute("news", newsDao.getAllNews());
     return "newsManager";
   }
 
   @RequestMapping(value = "/doctor/deleteNews/{Id}")
-  public String deleteNews(@PathVariable Long Id){
-      newsDao.deleteNews(Id);
+  public String deleteNews(@PathVariable Long Id) {
+    newsDao.deleteNews(Id);
     return "redirect:/doctor/newsManager";
   }
 
   @RequestMapping("/doctor/editDoctor")
-  public String editDoctor(Model model,@AuthenticationPrincipal User activeUser){
+  public String editDoctor(Model model, @AuthenticationPrincipal User activeUser) {
     Users user = usersService.getUsersByUsername(activeUser.getUsername());
     Doctor myDoc = doctorDao.getDoctorById(user.getDoctor().getDoctorId());
-    model.addAttribute("doctor", doctorDao.getDoctorById(Id));
+    model.addAttribute("doctor", myDoc);
     return "editDoctor";
   }
 
-  @RequestMapping(value = "/editDoctor", method = RequestMethod.POST)
+  @RequestMapping(value = "/doctor/editDoctor", method = RequestMethod.POST)
   public String editDoctorPost(@Valid @ModelAttribute("doctor") Doctor doctor, BindingResult result,
-                                   Model model, HttpServletRequest request) {
+                                HttpServletRequest request) {
 
     if (result.hasErrors()) {
       return "registerDoctor";
-    }
-
-    List<Doctor> doctorList = doctorService.getAllDoctors();
-    List<Users> usersList = usersService.getAllUsers();
-
-    for (int i = 0; i < doctorList.size(); i++) {
-      if (doctor.getDoctorEmail().equals(doctorList.get(i).getDoctorEmail())) {
-        model.addAttribute("emailMsgg", "Email already exists");
-        return "registerDoctor";
-      }
     }
     doctor.setEnabled(true);
     doctorDao.editDoctor(doctor);
@@ -340,7 +330,7 @@ public class DoctorController {
         throw new RuntimeException("Product image saving failed.", e);
       }
     }
-    return "redirect:/";
+    return "redirect:/doctor";
   }
 }
 

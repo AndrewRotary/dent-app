@@ -14,70 +14,40 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ro">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="Serviciu pentru Programarea la medic">
 <meta name="keywords" content="Dinti, programare, dental, stomatologie ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Andrei Rotari">
 <link rel="shortcut icon" href="<c:url value="/resources/images/favicon.ico" />" type="image/x-icon">
 <head>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp" %>
     <title>In curs de dezvoltare</title>
 </head>
 
 <body>
 
-<%@include file="/WEB-INF/views/template/nav.jsp"%>
+<%@include file="/WEB-INF/views/template/nav.jsp" %>
 <div class="inner-wr container">
     <section class="row">
         <div class="col-xs-10 col-lg-offset-1">
             <h3 class="section-title text-center">Ultimele Știri</h3>
             <div class="owl-carousels owl-carousel">
                 <c:forEach items="${news}" var="n">
-                    <div>
-                        <h1><c:out value="${n.title}"></c:out></h1>
-                        <div><c:out value="${n.info}"></c:out>
+                    <div class="wr-news">
+                        <h1 class="news-title"><c:out value="${n.title}"></c:out></h1>
+                        <div class="news-about"><c:out value="${n.info}"></c:out>
                             <div><c:out value="${n.dateCreated}"></c:out></div>
                         </div>
-                        <div>
-                            <img src="<c:url value="/resources/images/news/${n.id}.jpg" />" alt="">
+                        <div class="news-img-wr">
+                            <img class="img-news" src="<c:url value="/resources/images/news/${n.id}.jpg" />" alt="">
                         </div>
                     </div>
                 </c:forEach>
-             </div>
+            </div>
         </div>
     </section>
-    <%--<section class="row">--%>
-        <%--<div class="col-xs-10 col-lg-offset-1">--%>
-            <%--<h3 class="section-title text-center">Ultimele Știri</h3>--%>
-            <%--<div class="owl-carousels owl-carousel">--%>
-                <%--<div> <img src="<c:url value="/resources/images/slide-2.png" />"/></div>--%>
-                <%--<div> <img src="<c:url value="/resources/images/slide-3.jpg" />"/> </div>--%>
-                <%--<div>--%>
-                    <%--<h1>Ultimele noutăți</h1>--%>
-                <%--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper sit amet urna ut posuere.--%>
-                    <%--Phasellus in risus varius, consequat felis at, luctus turpis. Curabitur aliquet nec ante vel volutpat.--%>
-                    <%--Nunc venenatis aliquam varius. Quisque egestas purus libero, a sollicitudin neque tincidunt vel.--%>
-                    <%--Fusce viverra gravida ligula vel finibus. Aliquam ut euismod orci, ac dapibus urna. Proin mollis est ante.--%>
-                    <%--Donec blandit, justo et tempus interdum, risus tortor pulvinar leo, quis ultricies diam sapien iaculis ante.--%>
-                    <%--Donec ac ultricies urna. Integer tempus ligula orci, quis tincidunt ligula vestibulum quis.--%>
-                    <%--Vestibulum ac velit dapibus augue vulputate vulputate ut ac arcu. Morbi mi justo, pharetra vel vulputate nec,--%>
-                    <%--dignissim scelerisque dui. Aliquam feugiat tellus a velit porta volutpat. Mauris pellentesque accumsan sapien non pharetra.--%>
-                    <%--Proin vulputate dapibus ligula sagittis aliquet. Ut congue lorem malesuada, suscipit magna ac, placerat magna.--%>
-                    <%--Pellentesque non pellentesque eros. Pellentesque interdum erat sed tortor congue aliquet.--%>
-                    <%--Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.--%>
-                    <%--Vivamus dictum dolor non dapibus vehicula. Sed volutpat tortor eget enim ornare, nec vestibulum lacus finibus.--%>
-                    <%--Integer ultricies malesuada eros ac suscipit. Duis et tempus sapien. Etiam ullamcorper egestas mi nec dictum.--%>
-                    <%--Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.--%>
-                    <%--Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.--%>
-                    <%--Proin id turpis in felis hendrerit cursus. Suspendisse dapibus est a ultricies rhoncus.--%>
-                    <%--Suspendisse vitae nulla nec nisi gravida sagittis. Donec eget commodo dui.--%>
-                    <%--Maecenas sagittis metus sapien, quis volutpat mauris convallis ac.</p>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-    <%--</section>--%>
 </div>
 <div class="inner-wr container">
     <section class="text-center">
@@ -88,15 +58,22 @@
                     <div class="wr-img">
                         <img src="<c:url value="/resources/images/${doctor.doctorId}.png" /> " alt="image"/>
                         <div class="img-overlay">
-                            <span class="phone">Tl: ${doctor.doctorPhone}</span>
-                            <span class="phone">Email: ${doctor.doctorEmail}</span>
-                            <a href="#"><i class="fa fa-facebook fa-fw"></i></a>
-                            <a href="#"><i class="fa fa-skype fa-fw"></i></a>
+                            <span class="phone">Orele de lucru</span>
+                            <c:forEach items="${doctor.worckTimes}" var="w">
+                                <c:choose>
+                                    <c:when test="${w.dountWork == true}">
+                                        <span class="phone"><c:out value="${w.title}"/>: <c:out value="${w.start}"/> - <c:out value="${w.end}"/></span>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <span class="phone"><c:out value="${w.title}"/>: zi de odihna</span>
+                                    </c:otherwise>
+                                </c:choose>
+                            </c:forEach>
                         </div>
                     </div>
                     <article>
                         <h4>${doctor.doctorName} ${doctor.doctorSurname}</h4>
-                        <p>Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+                        <p>${doctor.about}</p>
                         <span>${doctor.doctorDegree}</span>
                     </article>
                 </div>
@@ -134,7 +111,9 @@
                     <div class="col-md-4  col-xs-12 select-doctor">
                         <select id="myDropdown">
                             <c:forEach items="${doctorTop}" var="doctorTop">
-                                <option value="${doctorTop.doctorId}" data-imagesrc="<c:url value="/resources/images/${doctorTop.doctorId}.png" /> " data-description="${doctorTop.doctorDegree}">${doctorTop.doctorName} ${doctorTop.doctorSurname}</option>
+                                <option value="${doctorTop.doctorId}"
+                                        data-imagesrc="<c:url value="/resources/images/${doctorTop.doctorId}.png" /> "
+                                        data-description="${doctorTop.doctorDegree}">${doctorTop.doctorName} ${doctorTop.doctorSurname}</option>
                             </c:forEach>
                         </select>
                     </div>
@@ -150,41 +129,47 @@
                     </tr>
                     <%
                         {
-                            Month aMonth = Month.getMonth( Integer.parseInt(currentMonthString), Integer.parseInt(currentYearString) );
-                            int [][] days = aMonth.getDays();
-                            for( int i=0; i<aMonth.getNumberOfWeeks(); i++ )
-                            {
-                    %><tr><%
-                    for( int j=1; j<7; j++ )
-                    {
-                        if( days[i][j] == 0 )
-                        {
-                %><td class="empty_day_cell">&nbsp;</td><%
-                }
-                else
-                {
-                    // this is "today"
-                    if( currentDayInt <= days[i][j] && currentMonthInt == aMonth.getMonth() && currentYearInt == aMonth.getYear() )
-                    {
-                %><td class="today_cell">
-                    <button type="button" data-toggle="modal" data-target="#modalAfisareOre" class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" ><%=days[i][j]%> </button>
-                </td><%
-                }
-                else
-                {
-                %>
-                    <td>
-                        <button disabled type="button" title="Nedisponibil" class="demo01" data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>" data-year="<%=intYear%>" value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>" ><%=days[i][j]%> </button>
-
-                    </td>
-                    <%
-                                }
-                            } // end outer if
-                        } // end for
+                            Month aMonth = Month.getMonth(Integer.parseInt(currentMonthString), Integer.parseInt(currentYearString));
+                            int[][] days = aMonth.getDays();
+                            for (int i = 0; i < aMonth.getNumberOfWeeks(); i++) {
                     %>
-                </tr>
-                    <%}
-                    }
+                    <tr><%
+                        for (int j = 1; j < 7; j++) {
+                            if (days[i][j] == 0) {
+                    %>
+                        <td class="empty_day_cell">&nbsp;</td>
+                        <%
+                        } else {
+                            // this is "today"
+                            if (currentDayInt <= days[i][j] && currentMonthInt == aMonth.getMonth() && currentYearInt == aMonth.getYear()) {
+                        %>
+                        <td class="today_cell">
+                            <button type="button" data-toggle="modal" data-target="#modalAfisareOre" class="demo01"
+                                    data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>"
+                                    data-year="<%=intYear%>"
+                                    value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>"><%=days[i][j]%>
+                            </button>
+                        </td>
+                        <%
+                        } else {
+                        %>
+                        <td>
+                            <button disabled type="button" title="Nedisponibil" class="demo01"
+                                    data-day="<%=days[i][j] %>" data-month="<% out.print(intMonth + 1);%>"
+                                    data-year="<%=intYear%>"
+                                    value="<%=intYear%>-<%out.print(intMonth + 1);%>-<%=days[i][j] %>"><%=days[i][j]%>
+                            </button>
+
+                        </td>
+                        <%
+                                    }
+                                } // end outer if
+                            } // end for
+                        %>
+                    </tr>
+                    <%
+                            }
+                        }
                     %>
                 </table>
             </div>
@@ -212,29 +197,30 @@
         </div>
     </div>
 </div>
-    <section class="wr-servicii container">
-        <h3 class="text-center section-title">Lista Serviciilor</h3>
-        <div class="service-slider owl-carousel">
-            <c:forEach items="${serviciuList}" var="serviciu">
-                <div class="wr-serviciu">
-                    <div class="serviciu-name">${serviciu.name}</div>
-                    <div class="serviciu-about">${serviciu.about}</div>
-                    <div class="serviciu-price"><a href="<spring:url value="editNews/${serviciu.serviciuId}"/>" >Detalii</a></div>
+<section class="wr-servicii container">
+    <h3 class="text-center section-title">Lista Serviciilor</h3>
+    <div class="service-slider owl-carousel">
+        <c:forEach items="${serviciuList}" var="serviciu">
+            <div class="wr-serviciu">
+                <div class="serviciu-name">${serviciu.name}</div>
+                <div class="serviciu-about">${serviciu.about}</div>
+                <div class="serviciu-price"><a href="<spring:url value="editNews/${serviciu.serviciuId}"/>">Detalii</a>
                 </div>
-            </c:forEach>
-        </div>
-    </section>
+            </div>
+        </c:forEach>
+    </div>
+</section>
 <div class="bg-4 text-center container">
     <div id="map"></div>
 </div>
-    <%@include file="/WEB-INF/views/template/footer.jsp"%>
+<%@include file="/WEB-INF/views/template/footer.jsp" %>
 <script>
-    $( document ).ready(function() {
+    $(document).ready(function () {
         //DropdownJs
         $('#myDropdown').ddslick({
             width: ' 100%',
             background: '#e8f5f4',
-            onSelected: function(selectedData){
+            onSelected: function (selectedData) {
                 var value = selectedData.selectedData.value;
                 DoctorId = value;
             }

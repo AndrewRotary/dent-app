@@ -1,31 +1,0 @@
-
-ssquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿±ªü8†Ú“”«+
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-Rsquid:S1197"8Move the array designator from the variable to the type.(•Âª×ıÿÿÿÿ
-ysquid:S1192"]Define a constant instead of duplicating this literal "Product image saving failed." 4 times.(À°İÈ8Û¼ì“«+
-Msquid:S1197"8Move the array designator from the variable to the type.(¥ò‘Ë
-qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ùÈ‡Åøÿÿÿÿ
-Msquid:S1197"8Move the array designator from the variable to the type.(¥ò‘Ë
-^squid:S1854"=Remove this useless assignment to local variable "usersList".(ø“Š™ıÿÿÿÿ8ı”Ï—«+
-ssquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğĞÚ–8ò™é“«+
-lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–üü„
-lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Ü¥â
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Û¼ì“«+
-esquid:S1192"KDefine a constant instead of duplicating this literal "worckTimes" 3 times.(¾àË§şÿÿÿÿ
-Msquid:S1197"8Move the array designator from the variable to the type.(Î½®
-Rsquid:S1197"8Move the array designator from the variable to the type.(•Âª×ıÿÿÿÿ
-Msquid:S1197"8Move the array designator from the variable to the type.(Î½®
-csquid:S1192"ODefine a constant instead of duplicating this literal "registerDoctor" 7 times.(Ñì%
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(§Ğòüÿÿÿÿ
-Osquid:S1481".Remove this unused "usersList" local variable.(ø“Š™ıÿÿÿÿ8ı”Ï—«+
-ksquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ßßG
-\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(À°İÈ
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(À°İÈ8ÏË—«+
-qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È›çıÿÿÿÿ
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÏË—«+
-dsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÀúÛ˜
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-csquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(À°İÈ8Û¼ì“«+
-\squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(À°İÈ
-Ksquid:S1481"*Remove this unused "myDoc" local variable.(¼¼¥¬ÿÿÿÿÿ8ê¾Ş—«+
-Zsquid:S1854"9Remove this useless assignment to local variable "myDoc".(¼¼¥¬ÿÿÿÿÿ8ê¾Ş—«+

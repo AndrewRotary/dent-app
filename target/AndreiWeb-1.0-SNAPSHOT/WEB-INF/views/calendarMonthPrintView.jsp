@@ -1,13 +1,12 @@
 <%@ page import="com.medapp.Calendar.Month" errorPage="error.jsp" %>
 
 
-
 <%@ include file="calendarCommon.jsp" %>
 
 <html>
 <head>
     <title>devdaily.com calendar :: month view</title>
-    <link href="<a:url value="/resources/css/custom.css" />" rel="stylesheet" media="screen" />
+    <link href="<a:url value="/resources/css/custom.css" />" rel="stylesheet" media="screen"/>
 </head>
 
 <body id="print_view_page">
@@ -30,28 +29,26 @@
         </tr>
         <%
             {
-                Month aMonth = Month.getMonth( Integer.parseInt(currentMonthString), Integer.parseInt(currentYearString) );
-                int [][] days = aMonth.getDays();
-                for( int i=0; i<aMonth.getNumberOfWeeks(); i++ )
-                {%>
+                Month aMonth = Month.getMonth(Integer.parseInt(currentMonthString), Integer.parseInt(currentYearString));
+                int[][] days = aMonth.getDays();
+                for (int i = 0; i < aMonth.getNumberOfWeeks(); i++) {%>
         <tr>
             <%
-                for( int j=0; j<7; j++ )
-                {
-                    if( days[i][j] == 0 )
-                    {%>
+                for (int j = 0; j < 7; j++) {
+                    if (days[i][j] == 0) {%>
             <td class="empty_day_cell">&nbsp;</td>
-            <%}
-            else
-            {
+            <%
+            } else {
             %>
-            <td align="right" valign="top" class="day_cell"><%=days[i][j]%></td>
+            <td align="right" valign="top" class="day_cell"><%=days[i][j]%>
+            </td>
             <%
                     }
                 } // end for %>
         </tr>
-        <%}
-        }
+        <%
+                }
+            }
         %>
     </table>
 </div>

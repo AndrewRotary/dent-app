@@ -11,25 +11,26 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ro">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="Serviciu pentru Programarea la medic">
 <meta name="keywords" content="Dinti, programare, dental, stomatologie ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Andrei Rotari">
 
 <head>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp" %>
     <title>In curs de dezvoltare</title>
 </head>
 
 <body>
 <header class="container-fluid">
-    <%@include file="/WEB-INF/views/template/nav.jsp"%>
+    <%@include file="/WEB-INF/views/template/nav.jsp" %>
 </header>
 
 <div class="inner-wr container">
-    <form:form action="${pageContext.request.contextPath}/doctor/editDocSchedulerMon" method="post" id="worckTime" commandName="worckTime">
+    <form:form action="${pageContext.request.contextPath}/doctor/editDocSchedulerMon" method="post" id="worckTime"
+               commandName="worckTime">
         <c:forEach items="${worckTimes}" var="day">
             <div class="col-xs-6">
                 <div class=" form-group"><c:out value="${day.title}"></c:out></div>
@@ -44,8 +45,11 @@
                     <input name="end[]" class="form-control timepicker2" value="${day.end}" type="text"/>
                 </div>
                 <div class=" form-group">
-                    <label><input type="radio" value="true" name="<c:out value="${day.title}toWork" />"  <c:if test="${day.dountWork == 'true'}">checked="checked"</c:if>/>Zi de lucru</label>
-                    <label><input type="radio" value="false" name="<c:out value="${day.title}toWork" />"  <c:if test="${day.dountWork == 'false'}">checked="checked"</c:if>/>Zi de odihna</label>
+                    <label><input type="radio" value="true" name="<c:out value="${day.title}toWork" />"
+                                  <c:if test="${day.dountWork == 'true'}">checked="checked"</c:if>/>Zi de lucru</label>
+                    <label><input type="radio" value="false" name="<c:out value="${day.title}toWork" />"
+                                  <c:if test="${day.dountWork == 'false'}">checked="checked"</c:if>/>Zi de
+                        odihna</label>
                 </div>
             </div>
         </c:forEach>
@@ -54,16 +58,16 @@
 </div>
 
 <div class="mt-10"></div>
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
+<%@include file="/WEB-INF/views/template/footer.jsp" %>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('input.timepicker').timepicker({
             timeFormat: 'HH:mm:ss',
             minTime: '08:00:00',
             // 11:45:00 AM,
             maxHour: 20,
             maxMinutes: 30,
-            startTime: new Date(0,0,0,8,0,0),
+            startTime: new Date(0, 0, 0, 8, 0, 0),
             // 3:00:00 PM - noon
             interval: 60
             // 15 minutes
@@ -74,7 +78,7 @@
             // 11:45:00 AM,
             maxHour: 20,
             maxMinutes: 30,
-            startTime: new Date(0,0,0,18,0,0),
+            startTime: new Date(0, 0, 0, 18, 0, 0),
             // 3:00:00 PM - noon
             interval: 60
             // 15 minutes

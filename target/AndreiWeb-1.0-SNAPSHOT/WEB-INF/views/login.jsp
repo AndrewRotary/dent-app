@@ -16,28 +16,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp" %>
     <title>In curs de dezvoltare</title>
 </head>
 <body>
 <header>
     <div class="container-fluid">
-        <%@include file="/WEB-INF/views/template/nav.jsp"%>
+        <%@include file="/WEB-INF/views/template/nav.jsp" %>
     </div>
 </header>
 <div class="wr-register clearfix">
     <c:if test="${not empty msg}">
         <div class="msg"></div>
     </c:if>
-    <form name="loginForm" class="form-register" action="<c:url value="/j_spring_security_check"/>" method="post" >
-          <c:if test="${not empty error}">
-              <div class="error" style="collor: #ff0766">${error}</div>
-          </c:if>
-          <div class="form-group">
-              <label for="user">Nume Utilizator:</label>
-              <input type="text" name="username" class="form-control input-register" id="user">
-          </div>
+    <form name="loginForm" class="form-register" action="<c:url value="/j_spring_security_check"/>" method="post">
+        <c:if test="${not empty error}">
+            <div class="error" style="collor: #ff0766">${error}</div>
+        </c:if>
+        <div class="form-group">
+            <label for="user">Nume Utilizator:</label>
+            <input type="text" name="username" class="form-control input-register" id="user">
+        </div>
         <div class="form-group">
             <label for="pwd">Parola de autentificare:</label>
             <input type="password" name="password" class="form-control input-register" id="pwd">
@@ -48,7 +48,7 @@
         </div>
     </form>
 </div>
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
+<%@include file="/WEB-INF/views/template/footer.jsp" %>
 
 
 </body>

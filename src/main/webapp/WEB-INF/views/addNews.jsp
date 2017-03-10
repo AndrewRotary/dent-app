@@ -20,26 +20,26 @@
     <%@include file="/WEB-INF/views/template/nav.jsp" %>
 </header>
 <div class="inner-wr">
-<form:form action="${pageContext.request.contextPath}/doctor/addNews" method="post" id="addNews"
-           commandName="news" enctype="multipart/form-data">
-    <div class="form-group">
-        <label for="">title</label>
-        <form:input class="form-control" type="text" path="title"/>
-    </div>
-    <div class="form-group">
-        <label for="">info</label>
-        <form:textarea class="form-control" type="text" path="info"></form:textarea>
-    </div>
-    <div class="form-group">
-        <label for="">Link Video</label>
-        <form:input class="form-control" type="text" path="linkVideoPath"/>
-    </div>
-    <div class="form-group">
-        <label class="control-label" for="newsImage">Incarca Imaginea</label>
-        <form:input id="newsImage" path="newsImage" type="file" class="" lang="ro" />
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form:form>
+    <form:form action="${pageContext.request.contextPath}/doctor/addNews" method="post" id="addNews"
+               commandName="news" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="">title</label>
+            <form:input class="form-control" type="text" path="title"/>
+        </div>
+        <div class="form-group">
+            <label for="">info</label>
+            <form:textarea class="form-control" type="text" path="info"></form:textarea>
+        </div>
+        <div class="form-group">
+            <label for="">Link Video</label>
+            <form:input class="form-control" type="text" path="linkVideoPath"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="newsImage">Incarca Imaginea</label>
+            <form:input id="newsImage" path="newsImage" type="file" class="" lang="ro"/>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form:form>
 </div>
 <%@include file="/WEB-INF/views/template/footer.jsp" %>
 </body>

@@ -11,23 +11,24 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ro">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="Serviciu pentru Programarea la medic">
 <meta name="keywords" content="Dinti, programare, dental, stomatologie ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Andrei Rotari">
 
 <head>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp" %>
     <title>In curs de dezvoltare</title>
 </head>
 <body>
-<%@include file="/WEB-INF/views/template/nav.jsp"%>
+<%@include file="/WEB-INF/views/template/nav.jsp" %>
 <div class="container inner-wr">
     <a href="<spring:url value="doctor/CalendarExtended"/>" class="btn btn-info">Calendar Pacienti</a>
     <a href="<spring:url value="doctor/addDocScheduler"/>" class="btn btn-info">Editează calendar evenimente</a>
     <a href="<spring:url value="doctor/newsManager"/>" class="btn btn-info">Editează noutatile</a>
+    <a href="<spring:url value="doctor/editDoctor"/>" class="btn btn-info">Editează Profil</a>
     <h1 class="text-center mt-40 text-meeting-top">Lista Pacienților.</h1>
     <div class="table-responsive">
         <!-- Table -->
@@ -47,8 +48,11 @@
                     <td> ${client.clientPhone}</td>
                     <td>
                         <c:choose>
-                            <c:when test="${client.fisa != null}">  <a href="<spring:url value="/editFisa/${client.fisa.fisaId}"/> " class="btn btn-warning"> Editează fișă medicală </a> </c:when>
-                            <c:otherwise>  <a href="<spring:url value="/doctor/addFisa/${client.clientId}"/> " class="btn btn-info"> Adaugă Fișă Medicală </a></c:otherwise>
+                            <c:when test="${client.fisa != null}"> <a
+                                    href="<spring:url value="/editFisa/${client.fisa.fisaId}"/> "
+                                    class="btn btn-warning"> Editează fișă medicală </a> </c:when>
+                            <c:otherwise> <a href="<spring:url value="/doctor/addFisa/${client.clientId}"/> "
+                                             class="btn btn-info"> Adaugă Fișă Medicală </a></c:otherwise>
                         </c:choose>
 
                     </td>
@@ -70,17 +74,18 @@
             </tr>
             <c:forEach items="${servicii}" var="serviciu">
                 <tr>
-                    <%--<td>--%>
+                        <%--<td>--%>
                         <%--<c:choose>--%>
-                            <%--<c:when test="${serviciu.serviceImage == null}"> <img src="<c:url value="/resources/images/serviceImage/dentist.png" /> " class="img-service" alt="image"/></c:when>--%>
-                            <%--<c:otherwise><img src="<c:url value="/resources/images/serviceImage/${serviciu.serviciuId}.png" />" class="img-service" alt="image"/></c:otherwise>--%>
+                        <%--<c:when test="${serviciu.serviceImage == null}"> <img src="<c:url value="/resources/images/serviceImage/dentist.png" /> " class="img-service" alt="image"/></c:when>--%>
+                        <%--<c:otherwise><img src="<c:url value="/resources/images/serviceImage/${serviciu.serviciuId}.png" />" class="img-service" alt="image"/></c:otherwise>--%>
                         <%--</c:choose>--%>
-                    <%--</td>--%>
+                        <%--</td>--%>
                     <td> ${serviciu.name}</td>
                     <td> ${serviciu.about}</td>
                     <td> ${serviciu.price} MDL</td>
                     <td>
-                          <a href="<spring:url value="/editServiciu/${serviciu.serviciuId}"/> " class="btn btn-warning"> Editează Serviciul </a>
+                        <a href="<spring:url value="/editServiciu/${serviciu.serviciuId}"/> " class="btn btn-warning">
+                            Editează Serviciul </a>
                     </td>
                 </tr>
             </c:forEach>
@@ -90,6 +95,6 @@
 
 </div>
 
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
+<%@include file="/WEB-INF/views/template/footer.jsp" %>
 </body>
 </html>

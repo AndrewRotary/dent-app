@@ -9,11 +9,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
     <title>Title</title>
 </head>
 <body>
-<%@include file="/WEB-INF/views/template/nav.jsp"%>
+<%@include file="/WEB-INF/views/template/nav.jsp" %>
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
@@ -23,9 +23,9 @@
                     <a href="<spring:url value="/" />" class="btn btn-default">Products</a>
                 </p>
             </section>
-            </div>
         </div>
     </div>
+</div>
 
 </body>
 </html>

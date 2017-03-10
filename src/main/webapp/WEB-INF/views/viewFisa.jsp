@@ -11,19 +11,19 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ro">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <meta name="description" content="Serviciu pentru Programarea la medic">
 <meta name="keywords" content="Dinti, programare, dental, stomatologie ">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Andrei Rotari">
 
 <head>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
-    <%@include file="/WEB-INF/views/template/js-libs.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
+    <%@include file="/WEB-INF/views/template/js-libs.jsp" %>
     <title>In curs de dezvoltare</title>
 </head>
 <body>
-<%@include file="/WEB-INF/views/template/nav.jsp"%>
+<%@include file="/WEB-INF/views/template/nav.jsp" %>
 <div class="container">
     <h1 class="text-center mt-40 text-meeting-top">Lista Pacienților.</h1>
     <div class="table-responsive">
@@ -40,9 +40,9 @@
                 <tr>
                     <td> ${fisa.diagnosticul} </td>
                     <td> ${fisa.client}</td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </c:forEach>
         </table>
@@ -50,6 +50,6 @@
     </div>
 </div>
 
-<%@include file="/WEB-INF/views/template/footer.jsp"%>
+<%@include file="/WEB-INF/views/template/footer.jsp" %>
 </body>
 </html>

@@ -12,22 +12,23 @@
 <html>
 <head>
     <title>Apointments</title>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
 </head>
 <body>
 
-    <div class="container-fluid">
-        <%@include file="/WEB-INF/views/template/nav.jsp"%>
-    </div>
+<div class="container-fluid">
+    <%@include file="/WEB-INF/views/template/nav.jsp" %>
+</div>
 <div class="container text-center">
     <h1>Edit the Apointment</h1>
 
-    <form:form action="${pageContext.request.contextPath}/admin/ApointmentCalendar/editApointment" method="post" commandName="apointment">
+    <form:form action="${pageContext.request.contextPath}/admin/ApointmentCalendar/editApointment" method="post"
+               commandName="apointment">
 
-    <form:hidden path="id" value="${apointment.id}"/>
+        <form:hidden path="id" value="${apointment.id}"/>
         <div class="form-group col-xs-3">
             <label for="UserID">UserId</label>
-            <form:input path="UserId" id="UserID" value="${apointment.userId}"  />
+            <form:input path="UserId" id="UserID" value="${apointment.userId}"/>
         </div>
 
         <div class="form-group col-xs-3">
@@ -38,7 +39,7 @@
         </div>
         <div class="form-group col-xs-3">
             <label for="choose-time">Choose datetime</label>
-            <form:input path="ApointmentDate" id="choose-time" type="date" value="${apointment.apointmentDate}" />
+            <form:input path="ApointmentDate" id="choose-time" type="date" value="${apointment.apointmentDate}"/>
         </div>
         <input type="submit" value="submit" class="col-xs-3">
         <a href="<c:url value="/admin/ApointmentCalendar"/> ">Cancell</a>

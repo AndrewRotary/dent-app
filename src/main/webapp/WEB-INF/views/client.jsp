@@ -12,12 +12,12 @@
 <html>
 <head>
     <title>Tests</title>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
 </head>
 
 <body>
 <div class="container-fluid">
-    <%@include file="/WEB-INF/views/template/nav.jsp"%>
+    <%@include file="/WEB-INF/views/template/nav.jsp" %>
 </div>
 <h1>Client Page</h1>
 <c:if test="${pageContext.request.userPrincipal.name != null}">
@@ -28,9 +28,8 @@
 </c:if>
 <div class="container">
     <p>You can modify the calendar hire</p>
-    <a href="<c:url value="/client/MeetingCalendar" />" > Meeting Calendar</a>
+    <a href="<c:url value="/client/MeetingCalendar" />"> Meeting Calendar</a>
 </div>
-
 
 
 </body>

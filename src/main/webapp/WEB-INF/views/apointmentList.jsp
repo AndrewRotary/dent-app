@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Apointments</title>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
 </head>
 <body>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -25,7 +25,7 @@
 <html>
 <head>
     <title>Apointments</title>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
 </head>
 <body>
 <p>Hire you can change Apointment Table</p>

@@ -13,5 +13,6 @@
         <span class="col-xs-4 col-tn-12 text-center"><i class="fa fa-phone fa-fw"></i> (323) 7 22 33 </span>
         <span class="col-xs-4 col-tn-12 text-center"><i class="fa fa-envelope fa-fw"></i> Medical@gmail.com</span>
     </div>
-    <div class="text-center info-licenta">Lucrare pentru Teză de Licență autor <a href="https://www.facebook.com/rotari.andrey">Andrei Rotari</a></div>
+    <div class="text-center info-licenta">Lucrare pentru Teză de Licență autor <a
+            href="https://www.facebook.com/rotari.andrey">Andrei Rotari</a></div>
 </footer>

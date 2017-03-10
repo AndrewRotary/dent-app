@@ -74,19 +74,27 @@ public class MeetingController {
     List<WorckTime> worckTimes = myDoc.getWorckTimes();
     java.util.GregorianCalendar cal = new java.util.GregorianCalendar();
     cal.setTime(date);
-    Integer thisDay = cal.get((java.util.Calendar.DAY_OF_WEEK))-2;
+    Integer thisDay = cal.get((java.util.Calendar.DAY_OF_WEEK)) - 2;
     for (int i = 0; i < worckTimes.size(); i++) {
       if (!worckTimes.get(i).isDountWork() && worckTimes.get(i).getWeek() == thisDay) {
         return "busyDay";
       }
-      if(worckTimes.get(i).getWeek() == thisDay){
+      if (worckTimes.get(i).getWeek() == thisDay) {
         Integer hourStart = worckTimes.get(i).getStart().getHours();
         Integer hourEnd = worckTimes.get(i).getEnd().getHours();
-        for (int j = hourStart; j < hourEnd; j++) {
-          Meeting meeting = new Meeting();
-          meeting.setHourTime(Time.valueOf(j + ":00:00"));
-          meeting.setDateTime(date);
-          SortedMitings.add(meeting);
+        for (int x = 8; x <= 18; x++) {
+          if (x < hourStart) {
+            Meeting meeting = new Meeting();
+            meeting.setHourTime(Time.valueOf(x + ":00:00"));
+            meeting.setDateTime(date);
+            SortedMitings.add(meeting);
+          }
+          if (x > hourEnd-1) {
+            Meeting meeting = new Meeting();
+            meeting.setHourTime(Time.valueOf(x + ":00:00"));
+            meeting.setDateTime(date);
+            SortedMitings.add(meeting);
+          }
         }
       }
 
@@ -166,7 +174,7 @@ public class MeetingController {
   }
 
   @RequestMapping(value = "/client/MeetingCalendar/addMeeting", method = RequestMethod.POST)
-  public String addMeetingPost( @ModelAttribute("meeting") Meeting meeting,@ModelAttribute("doctor") Doctor doctor) {
+  public String addMeetingPost(@ModelAttribute("meeting") Meeting meeting, @ModelAttribute("doctor") Doctor doctor) {
     meeting.setDoctor(doctor);
     meetingDao.addMeeting(meeting);
     return "redirect:/client/MeetingCalendar";
@@ -194,7 +202,7 @@ public class MeetingController {
     if (result.hasErrors()) {
       return "editMeeting";
     }
-     meetingService.editMeeting(meeting);
+    meetingService.editMeeting(meeting);
     return "/home";
   }
 }

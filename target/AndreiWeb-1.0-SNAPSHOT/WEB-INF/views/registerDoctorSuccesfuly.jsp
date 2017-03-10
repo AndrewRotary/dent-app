@@ -10,10 +10,10 @@
 <html>
 <head>
     <title>Doctor Registered</title>
-    <%@include file="/WEB-INF/views/template/headering.jsp"%>
+    <%@include file="/WEB-INF/views/template/headering.jsp" %>
 </head>
 <body>
-<%@include file="/WEB-INF/views/template/nav.jsp"%>
+<%@include file="/WEB-INF/views/template/nav.jsp" %>
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">

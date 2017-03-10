@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:security="http://www.springframework.org/schema/security"
        xmlns:webflow-config="http://www.springframework.org/schema/webflow-config"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/security
@@ -11,15 +11,16 @@
        http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd">
 
 
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://eu-cdbr-west-01.cleardb.com/heroku_3fad8f5892347e6?reconnect=true&amp;Unicode=true&amp;characterEncoding=UTF-8" />
-        <property name="username" value="b2711df57570a4" />
-        <property name="password" value="95f10753" />
+        <property name="url"
+                  value="jdbc:mysql://eu-cdbr-west-01.cleardb.com/heroku_3fad8f5892347e6?reconnect=true&amp;Unicode=true&amp;characterEncoding=UTF-8"/>
+        <property name="username" value="b2711df57570a4"/>
+        <property name="password" value="95f10753"/>
     </bean>
     <!--mysql://b2711df57570a4:95f10753@eu-cdbr-west-01.cleardb.com/heroku_3fad8f5892347e6?reconnect=true-->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dataSource"/>
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
@@ -43,17 +44,17 @@
         <property name="maxUploadSize" value="1024000"/>
     </bean>
 
- <security:http auto-config="true">
-        <security:intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
-        <security:intercept-url pattern="/doctor/**" access="ROLE_DOCTOR" />
+    <security:http auto-config="true">
+        <security:intercept-url pattern="/admin/**" access="ROLE_ADMIN"/>
+        <security:intercept-url pattern="/doctor/**" access="ROLE_DOCTOR"/>
         <security:form-login
-            login-page="/login"
-            default-target-url="/"
-            authentication-failure-url="/login?error"
-            username-parameter="username"
-            password-parameter="password" />
+                login-page="/login"
+                default-target-url="/"
+                authentication-failure-url="/login?error"
+                username-parameter="username"
+                password-parameter="password"/>
         <security:logout
-            logout-success-url="/login?logout"/>
+                logout-success-url="/login?logout"/>
     </security:http>
 
     <security:authentication-manager>
@@ -69,7 +70,6 @@
     <webflow-config:flow-registry id="flowRegistry" base-path="/WEB-INF/flows">
         <webflow-config:flow-location path="/checkout/checkout-flow.xml" id="checkout"/>
     </webflow-config:flow-registry>
-
 
 
     <bean id="flowHandlerMapping" class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">

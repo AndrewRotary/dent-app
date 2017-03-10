@@ -10,11 +10,11 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-        <div class="main container-fluid">
-            <section class="text-center">
-                <h1 class="h1-main">Medicii Oficiului "Dinți Sănătoși SRL"</h1>
-                <div class="doctor-slider">
-                <c:forEach items="${doctors}" var="doctor">
+<div class="main container-fluid">
+    <section class="text-center">
+        <h1 class="h1-main">Medicii Oficiului "Dinți Sănătoși SRL"</h1>
+        <div class="doctor-slider">
+            <c:forEach items="${doctors}" var="doctor">
                 <div class="about-doctor col-lg-3 col-sm-6 col-xs-12">
                     <div class="wr-img">
                         <img src="<c:url value="/resources/images/${doctor.doctorId}.png" /> " alt="image"/>
@@ -27,11 +27,12 @@
                     </div>
                     <article>
                         <h4>${doctor.doctorName} ${doctor.doctorSurname}</h4>
-                        <p>Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.</p>
+                        <p>Reference site about Lorem Ipsum, giving information on its origins, as well as a random
+                            Lipsum generator.</p>
                         <span>${doctor.doctorDegree}</span>
                     </article>
                 </div>
-                </c:forEach>
-                </div>
+            </c:forEach>
+        </div>
     </section>
 </div>

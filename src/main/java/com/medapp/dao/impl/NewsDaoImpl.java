@@ -18,7 +18,7 @@ import java.util.List;
  */
 @Repository
 @Transactional
-public class NewsDaoImpl implements NewsDao{
+public class NewsDaoImpl implements NewsDao {
 
   @Autowired
   private SessionFactory sessionFactory;

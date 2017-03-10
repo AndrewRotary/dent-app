@@ -40,15 +40,18 @@
                 <input hidden name="title[]" value="${day.title}"/>
                 <div class="form-group">
                     <label> <span class="glyphicon glyphicon-time"></span> Inceput: </label>
-                        <input type='text' class="form-control timepicker" name="start[]" />
+                    <input type='text' class="form-control timepicker" name="start[]"/>
                 </div>
                 <div class=" form-group">
                     <label> <span class="glyphicon glyphicon-time"></span> Sfirsit: </label>
                     <input name="end[]" class="form-control timepicker2" type="text"/>
                 </div>
                 <div class=" form-group">
-                    <label><input type="radio" value="true" name="<c:out value="${day.title}toWork" />"  <c:if test="${day.dountWork == 'true'}">checked="checked"</c:if>/>Zi de lucru</label>
-                    <label><input type="radio" value="false" name="<c:out value="${day.title}toWork" />"  <c:if test="${day.dountWork == 'false'}">checked="checked"</c:if>/>Zi de odihna</label>
+                    <label><input type="radio" value="true" name="<c:out value="${day.title}toWork" />"
+                                  <c:if test="${day.dountWork == 'true'}">checked="checked"</c:if>/>Zi de lucru</label>
+                    <label><input type="radio" value="false" name="<c:out value="${day.title}toWork" />"
+                                  <c:if test="${day.dountWork == 'false'}">checked="checked"</c:if>/>Zi de
+                        odihna</label>
                 </div>
             </div>
         </c:forEach>
@@ -61,14 +64,14 @@
 <div class="mt-10"></div>
 <%@include file="/WEB-INF/views/template/footer.jsp" %>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('input.timepicker').timepicker({
             timeFormat: 'HH:mm:ss',
             minTime: '08:00:00',
             // 11:45:00 AM,
             maxHour: 20,
             maxMinutes: 30,
-            startTime: new Date(0,0,0,8,0,0),
+            startTime: new Date(0, 0, 0, 8, 0, 0),
             // 3:00:00 PM - noon
             interval: 60
             // 15 minutes
@@ -79,7 +82,7 @@
             // 11:45:00 AM,
             maxHour: 20,
             maxMinutes: 30,
-            startTime: new Date(0,0,0,18,0,0),
+            startTime: new Date(0, 0, 0, 18, 0, 0),
             // 3:00:00 PM - noon
             interval: 60
             // 15 minutes

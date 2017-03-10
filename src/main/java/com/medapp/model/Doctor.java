@@ -46,6 +46,8 @@ public class Doctor implements Serializable {
   @JoinColumn(name = "usersId")
   private Users users;
 
+  private String about;
+
   public int getDoctorId() {
     return doctorId;
   }
@@ -140,5 +142,13 @@ public class Doctor implements Serializable {
 
   public void setWorckTimes(List<WorckTime> worckTimes) {
     this.worckTimes = worckTimes;
+  }
+
+  public String getAbout() {
+    return about;
+  }
+
+  public void setAbout(String about) {
+    this.about = about;
   }
 }

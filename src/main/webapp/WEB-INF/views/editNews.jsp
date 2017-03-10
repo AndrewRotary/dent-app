@@ -37,7 +37,7 @@
         </div>
         <div class="form-group">
             <label class="control-label" for="newsImage">Incarca Imaginea</label>
-            <form:input id="newsImage" path="newsImage" type="file" class="" lang="ro" />
+            <form:input id="newsImage" path="newsImage" type="file" class="" lang="ro"/>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form:form>

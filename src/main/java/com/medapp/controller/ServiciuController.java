@@ -40,7 +40,7 @@ public class ServiciuController {
   }
 
   @RequestMapping(value = "/addServiciu", method = RequestMethod.POST, produces = "text/plain;charset=UTF-8")
-  public String addFisaPost(HttpServletRequest request,@ModelAttribute("serviciu") Serviciu serviciu) throws UnsupportedEncodingException {
+  public String addFisaPost(HttpServletRequest request, @ModelAttribute("serviciu") Serviciu serviciu) throws UnsupportedEncodingException {
     request.setCharacterEncoding("UTF-8");
     MultipartFile serviceImage = serviciu.getServiceImage();
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
