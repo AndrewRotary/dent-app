@@ -102,8 +102,8 @@ public class DoctorController {
 
     MultipartFile doctorImage = doctor.getDoctorImage();
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-    path = Paths.get(rootDirectory + "WEB-INF/resources/images/" + doctor.getDoctorId() + ".png");
-//            path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ doctor.getDoctorId() + ".png");
+//    path = Paths.get(rootDirectory + "WEB-INF/resources/images/" + doctor.getDoctorId() + ".png");
+            path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ doctor.getDoctorId() + ".png");
 
 
     if (doctorImage != null && !doctorImage.isEmpty()) {
@@ -253,7 +253,8 @@ public class DoctorController {
     MultipartFile newsImage = news.getNewsImage();
     newsDao.addNews(news);
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-    path = Paths.get(rootDirectory + "WEB-INF/resources/images/news/" + news.getId() + ".jpg");
+//    path = Paths.get(rootDirectory + "WEB-INF/resources/images/news/" + news.getId() + ".jpg");
+    path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ news.getId() + ".png");
     if (newsImage != null && !newsImage.isEmpty()) {
       try {
         newsImage.transferTo(new File(path.toString()));
