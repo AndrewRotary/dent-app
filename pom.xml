@@ -16,8 +16,6 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
-
         <!--Spring MVC support-->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -61,8 +59,6 @@
             <artifactId>spring-webflow</artifactId>
             <version>2.3.3.RELEASE</version>
         </dependency>
-
-
         <!--Tag libs support for view layer-->
         <dependency>
             <groupId>jstl</groupId>
@@ -75,8 +71,6 @@
             <version>1.1.2</version>
             <scope>runtime</scope>
         </dependency>
-
-
         <!--ORM and Persistence layer support-->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -115,11 +109,11 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.6.4</version>
         </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.190</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.h2database</groupId>-->
+            <!--<artifactId>h2</artifactId>-->
+            <!--<version>1.4.190</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -131,13 +125,11 @@
             <artifactId>postgresql</artifactId>
             <version>9.1-901.jdbc4</version>
         </dependency>
-
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
-
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
@@ -148,34 +140,27 @@
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
         </dependency>
-
-
         <!--Spring Security support-->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
             <version>3.2.5.RELEASE</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
             <version>3.2.5.RELEASE</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>3.2.5.RELEASE</version>
         </dependency>
-
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.1.1</version>
         </dependency>
-
-
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
