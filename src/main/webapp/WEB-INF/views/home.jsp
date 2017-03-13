@@ -111,7 +111,7 @@
                     </a>
                     <div class="col-md-4  col-xs-12 select-doctor">
                         <select id="myDropdown">
-                            <c:forEach items="${doctorTop}" var="doctorTop">
+                            <c:forEach items="${doctors}" var="doctorTop">
                                 <option value="${doctorTop.doctorId}"
                                         data-imagesrc="<c:url value="/resources/images/${doctorTop.doctorId}.png" /> "
                                         data-description="${doctorTop.doctorDegree}">${doctorTop.doctorName} ${doctorTop.doctorSurname}</option>

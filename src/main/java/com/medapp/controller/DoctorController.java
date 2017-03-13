@@ -253,8 +253,8 @@ public class DoctorController {
     MultipartFile newsImage = news.getNewsImage();
     newsDao.addNews(news);
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-//    path = Paths.get(rootDirectory + "WEB-INF/resources/images/news/" + news.getId() + ".jpg");
-    path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ news.getId() + ".png");
+    path = Paths.get(rootDirectory + "WEB-INF/resources/images/news/" + news.getId() + ".png");
+//    path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ news.getId() + ".png");
     if (newsImage != null && !newsImage.isEmpty()) {
       try {
         newsImage.transferTo(new File(path.toString()));
@@ -271,7 +271,7 @@ public class DoctorController {
   public String editNews(@PathVariable Long Id, Model model, HttpServletRequest request) {
     model.addAttribute("news", newsDao.getNewsById(Id));
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-    path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ 1 + ".png");
+    path = Paths.get(rootDirectory + "//WEB-INF//resources//images//"+ 1 + ".png");
     String root = path.toString();
     model.addAttribute("path", root);
     return "editNews";

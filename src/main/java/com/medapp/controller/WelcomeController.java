@@ -46,10 +46,8 @@ public class WelcomeController {
     List<Serviciu> serviciuList = serviciuDao.getAllServices();
     List<Doctor> doctors = doctorDao.getAllDoctors();
     List<Meeting> meetings = meetingDao.getAllMeetings();
-    List<Doctor> doctorsCl = doctorDao.getAllDoctors();
     List<News> newsList = newsDao.getAllNews();
     model.addAttribute("news", newsList);
-    model.addAttribute("doctorTop", doctorsCl);
     model.addAttribute("meetingsDao", meetings);
     model.addAttribute("doctors", doctors);
     model.addAttribute("serviciuList", serviciuList);
