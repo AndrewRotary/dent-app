@@ -268,8 +268,12 @@ public class DoctorController {
   }
 
   @RequestMapping("/doctor/editNews/{Id}")
-  public String editNews(@PathVariable Long Id, Model model) {
+  public String editNews(@PathVariable Long Id, Model model, HttpServletRequest request) {
     model.addAttribute("news", newsDao.getNewsById(Id));
+    String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+    path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ 1 + ".png");
+    String root = path.toString();
+    model.addAttribute("path", root);
     return "editNews";
   }
 
