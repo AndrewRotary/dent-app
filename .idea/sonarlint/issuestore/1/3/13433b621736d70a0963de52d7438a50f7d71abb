@@ -1,5 +1,0 @@
-
-csquid:S1192"IDefine a constant instead of duplicating this literal "serviciu" 3 times.(¯Ï«´üÿÿÿÿ
-msquid:S1450"SRemove the "path" field and declare it as a local variable in the relevant methods.(ŒàÛşÿÿÿÿ
-asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ş—ºıÿÿÿÿ
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
