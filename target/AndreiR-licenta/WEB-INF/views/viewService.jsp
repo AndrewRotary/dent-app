@@ -29,8 +29,6 @@
             <div><c:out value="${serviciu.name}"/></div>
             <label>Detalii</label>
             <div><c:out value="${serviciu.about}"/></div>
-            <label>Preț</label>
-            <div><c:out value="${serviciu.price}"/></div>
 </div>
 <%@include file="/WEB-INF/views/template/footer.jsp" %>
 </body>

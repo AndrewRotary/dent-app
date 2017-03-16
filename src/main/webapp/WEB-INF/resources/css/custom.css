@@ -481,15 +481,16 @@ main {
     position: relative;
     height: 350px;
     overflow: hidden;
+
 }
 
 .about-doctor .img-overlay {
     background-color: rgba(0, 0, 0, 0.68);
-    height: 100%;
+    height: 98%;
     z-index: 20;
     position: absolute;
     width: 100%;
-    padding-top: 18%;
+    padding-top: 10%;
     display: none;
     font-size: 30px;
     text-align: center;
@@ -512,36 +513,34 @@ main {
 }
 
 .about-doctor img {
-    margin: auto;
+    width: 60% !important;
+    height: 60%;
+    margin: 0px;
+    right: 0;
+    left: 20%;
+    top: 10%;
     position: absolute;
-    max-height: 100%;
-    max-width: 100%;
-    top: 0%;
-    bottom: 0%;
-    right: 0%;
-    left: 0%;
+    border: 4px solid #b2dfdb;
+    border-radius: 50%;
 }
 
 .about-doctor article {
     background-color: #fff;
     text-align: center;
-    padding: 10px;
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    margin-top: -60px;
-    margin-bottom: 20px;
+    margin-top: -26%;
+
     z-index: 100;
-    border-radius: 15px;
-    border-bottom: 5px solid #b2dfdb;
+
 }
 
 .about-doctor h3,
 .about-doctor h4 {
-    margin: 5px auto 5px;
     color: #434343;
-    font: 400 28px / 48px 'Open Sans';
+    font: 400 24px / 30px 'Open Sans';
 }
 
 .about-doctor p {
@@ -1826,8 +1825,9 @@ main {
     margin-top: 30px;
     background-color: #f0ede5;
     color: #434343;
-    padding: 75px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+    border-color: #daedf4;
+   padding: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .bg-4 a,
@@ -1847,10 +1847,16 @@ bg-4 span {
 }
 
 .inner-wr {
-    padding: 75px;
-    background-color: #fff;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+    padding: 10px;
+    box-shadow: 0 1px 2px 0 rgba(178, 223, 219, 0.2);
     margin: 30px auto;
+    background: #fff;
+    border-color: #daedf4;
+    color: #404040;
+    font-size: 13px;
+    font-weight: normal;
+    border-width: 1px;
+    border-style: solid;
 }
 
 .inner-wr-nav {
@@ -1874,9 +1880,10 @@ body {
 
 .wr-servicii {
     background: rgba(243, 127, 129, 0.28);
-    padding: 75px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+    padding: 10px;
+    border-color: #daedf4;
     margin-top: 30px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .wr-serviciu {
@@ -1984,6 +1991,7 @@ body {
     text-align: center;
     font-size: 25px;
     padding: 15px 0;
+    color: #35baf6;
 }
 .news-about{
     font-size: 20px;
@@ -1998,8 +2006,24 @@ body {
     margin: auto;
 }
 .wr-news{
-    border: 10px solid #f5fcff;
-    padding: 5%;
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 15px;
+    white-space: normal;
+    min-height:400px;
+}
+.wr-news:before{
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #ddd;
+    margin: 15px 0 0 -9px;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
 }
 .news-date{
     font-size: 10px;

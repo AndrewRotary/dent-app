@@ -29,11 +29,8 @@
 </header>
 
 <div class="inner-wr container">
-
-
     <form:form action="${pageContext.request.contextPath}/doctor/addDocScheduler" method="post" id="worckTime"
                commandName="worckTime">
-
         <c:forEach items="${worckTimes}" var="day">
             <div class="col-xs-6">
                 <div class=" form-group"><c:out value="${day.title}"></c:out></div>
@@ -58,7 +55,6 @@
         <input type="submit" id="btn btn-info" value="Confirma" class="col-xs-3">
         <%--<a href="<c:url value="/"/> "><i class="fa fa-times-circle" aria-hidden="true"></i> Inapoi</a>--%>
     </form:form>
-
 </div>
 
 <div class="mt-10"></div>

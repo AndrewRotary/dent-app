@@ -40,9 +40,6 @@
             <form:input id="newsImage" path="newsImage" type="file" class="" lang="ro"/>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-        <span><c:out value="${path}"></c:out> <br>${path}</span>
-
-
     </form:form>
 </div>
 <%@include file="/WEB-INF/views/template/footer.jsp" %>

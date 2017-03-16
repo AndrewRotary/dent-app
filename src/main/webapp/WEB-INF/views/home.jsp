@@ -31,31 +31,30 @@
 <%@include file="/WEB-INF/views/template/nav.jsp" %>
 <div class="inner-wr container">
     <section class="row">
-        <div class="col-xs-10 col-lg-offset-1">
-            <h3 class="section-title text-center">Ultimele Știri</h3>
             <div class="owl-carousels owl-carousel">
                 <c:forEach items="${news}" var="n">
-                    <div class="wr-news">
-                        <h1 class="news-title"><c:out value="${n.title}"></c:out></h1>
-                        <div class="news-about"><c:out value="${n.info}"></c:out>
-
+                    <div class="row">
+                        <div class="col-xs-3 news-title"><c:out value="${n.title}"></c:out></div>
+                        <div class="wr-news col-xs-8">
+                        <div class=" news-about"><c:out value="${n.info}"></c:out>
                         </div>
                         <div class="news-img-wr">
-                            <img class="img-news" src="<c:url value="/resources/images/news/${n.id}.jpg" />" alt="">
+                            <img class="img-news" src="<c:url value="/resources/images/news/${n.id}.png" />" alt="">
                         </div>
                         <div class="news-date">Data: <c:out value="${n.dateCreated}"></c:out></div>
+                        </div>
                     </div>
                 </c:forEach>
             </div>
-        </div>
+
     </section>
 </div>
-<div class="inner-wr container">
+<div class=" container">
     <section class="text-center">
         <h3 class="section-title text-center">Lista Medicilor</h3>
         <div class="doctor-slider owl-carousel">
             <c:forEach items="${doctors}" var="doctor">
-                <div class="about-doctor">
+                <div class="about-doctor inner-wr">
                     <div class="wr-img">
                         <img src="<c:url value="/resources/images/${doctor.doctorId}.png" /> " alt="image"/>
                         <div class="img-overlay">
