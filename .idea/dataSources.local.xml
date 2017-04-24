@@ -13,5 +13,23 @@
       <user-name>sa</user-name>
       <resolve-scope>TEST:PUBLIC</resolve-scope>
     </data-source>
+    <data-source name="heroku mysql" uuid="fe17fe96-2894-44fe-b483-a3c2635bc5fc">
+      <database-info product="MySQL" version="5.5.40-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>b2711df57570a4</user-name>
+      <resolve-scope>heroku_3fad8f5892347e6:</resolve-scope>
+      <ssh-properties>
+        <enabled>false</enabled>
+        <proxy-host>eu-cdbr-west-01.cleardb.com/heroku_3fad8f5892347e6</proxy-host>
+        <proxy-port>3306</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>b2711df57570a4</user>
+        <use-password>true</use-password>
+      </ssh-properties>
+    </data-source>
   </component>
 </project>

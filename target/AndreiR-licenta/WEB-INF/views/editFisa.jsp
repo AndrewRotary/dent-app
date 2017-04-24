@@ -30,7 +30,7 @@
     <form:form action="${pageContext.request.contextPath}/editFisa" method="post" id="fisa" commandName="fisa">
         <form:hidden path="fisaId" value="${fisa.fisaId}"/>
         <form:hidden path="dintii.dintiiId" class="form-control" value="${fisa.dintii.dintiiId}"/>
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-md-6 col-sm-12">
             <div class="form-group">
                 <label>Diagnosticul</label>
                 <form:input path="diagnosticul" value="${fisa.diagnosticul}" class="form-control"/>
@@ -56,7 +56,7 @@
                 <form:input path="stareaMucoaseiEtc" value="${fisa.stareaMucoaseiEtc}" class="form-control"/>
             </div>
         </div>
-        <div class="col-lg-6 col-sm-12">
+        <div class="col-md-6 col-sm-12">
             <h1>Dinții de sus</h1>
             <table class="table table-striped">
                 <thead>
@@ -605,7 +605,6 @@
                 <button type="submit" class="btn btn-info">Editeză</button>
             </div>
         </div>
-
     </form:form>
     <c:if test="${fisa.dateEdited != null}">
         <p>Ultima oară a fost editat pe data de: ${fisa.dateEdited}</p>

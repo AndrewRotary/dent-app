@@ -253,7 +253,7 @@ public class DoctorController {
     MultipartFile newsImage = news.getNewsImage();
     newsDao.addNews(news);
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-    path = Paths.get( "C:/Users/student/IdeaProjects/dent/dent-app/src/main/webapp/WEB-INF/resources/images/news"+ news.getId() + ".png");
+    path = Paths.get( "E:/IT/medic-app/dent-app/src/main/webapp/WEB-INF/resources/images/news/"+ news.getId() + ".png");
 //    path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+ news.getId() + ".png");
     if (newsImage != null && !newsImage.isEmpty()) {
       try {
@@ -278,7 +278,7 @@ public class DoctorController {
     MultipartFile newsImage = news.getNewsImage();
     newsDao.editNews(news);
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-    path = Paths.get( "C:/Users/student/IdeaProjects/dent/dent-app/src/main/webapp/WEB-INF/resources/images/news/"+ news.getId() + ".png");
+    path = Paths.get( "E:/IT/medic-app/dent-app/src/main/webapp/WEB-INF/resources/images/news/"+ news.getId() + ".jpg");
     if (newsImage != null && !newsImage.isEmpty()) {
       try {
         newsImage.transferTo(new File(path.toString()));
@@ -322,7 +322,7 @@ public class DoctorController {
     doctorDao.editDoctor(doctor);
     MultipartFile doctorImage = doctor.getDoctorImage();
     String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-    path = Paths.get(rootDirectory + "WEB-INF/resources/images/" + doctor.getDoctorId() + ".png");
+    path = Paths.get(rootDirectory + "WEB-INF/resources/images/" + doctor.getDoctorId() + ".jpg");
     if (doctorImage != null && !doctorImage.isEmpty()) {
       try {
         doctorImage.transferTo(new File(path.toString()));
